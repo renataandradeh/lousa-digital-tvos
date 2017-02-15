@@ -48,6 +48,14 @@ class GameViewController: UIViewController {
             view.presentScene(scene)
         }
     }
+    
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+        if let scene = (view as? SKView)?.scene {
+            return [scene]
+        } else {
+            return []
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

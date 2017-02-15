@@ -24,7 +24,7 @@ class Button : SKSpriteNode {
     
     func buttonDidLoseFocus() {
         isFocused = false
-        removeAllActions()
+        run(SKAction.scale(to: 1, duration: 0.5), withKey: "buttonAnimation")
     }
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
@@ -48,9 +48,15 @@ class Button : SKSpriteNode {
         run(animation, withKey: "buttonAnimation")
     }
     
+    func movingAnimation(position: CGPoint ){
+        
+        let animation = SKAction.group([SKAction.scale(by: 0.8, duration: 0.2), SKAction.move(to: position, duration: 0.2)])
+        self.run(animation, withKey: "buttonAnimation")
+    }
+    
     override public var canBecomeFocused: Bool {
         get {
             return true
         }
-    }
+    }  
 }

@@ -43,8 +43,7 @@ class CountingGame: SKScene {
             print("errou")
         }else if (button2?.isFocused)!{
             if button2?.position != box?.position{
-                let animation = SKAction.group([SKAction.scale(by: 0.8, duration: 0.2), SKAction.move(to: (box?.position)!, duration: 0.2)])
-                button2?.run(animation, withKey: "buttonAnimation")
+                button2?.movingAnimation(position: (box?.position)!)
             }
         }
     }

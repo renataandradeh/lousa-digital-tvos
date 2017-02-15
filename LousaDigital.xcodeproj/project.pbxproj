@@ -13,6 +13,21 @@
 		0712ECC41E537E1C0026AF80 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712ECC31E537E1C0026AF80 /* 7.png */; };
 		07C66B441E54757D00E5A818 /* MatchingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C66B431E54757D00E5A818 /* MatchingGame.swift */; };
 		07C66B461E54758C00E5A818 /* MatchingGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B451E54758C00E5A818 /* MatchingGame.sks */; };
+		07C66B4E1E5485D100E5A818 /* object5.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B491E5485D100E5A818 /* object5.png */; };
+		07C66B4F1E5485D100E5A818 /* object4.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B4A1E5485D100E5A818 /* object4.png */; };
+		07C66B501E5485D100E5A818 /* object3.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B4B1E5485D100E5A818 /* object3.png */; };
+		07C66B511E5485D100E5A818 /* object2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B4C1E5485D100E5A818 /* object2.png */; };
+		07C66B521E5485D100E5A818 /* object1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B4D1E5485D100E5A818 /* object1.png */; };
+		07C66B5A1E54889500E5A818 /* letter5.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B551E54889500E5A818 /* letter5.png */; };
+		07C66B5B1E54889500E5A818 /* letter4.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B561E54889500E5A818 /* letter4.png */; };
+		07C66B5C1E54889500E5A818 /* letter3.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B571E54889500E5A818 /* letter3.png */; };
+		07C66B5D1E54889500E5A818 /* letter2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B581E54889500E5A818 /* letter2.png */; };
+		07C66B5E1E54889500E5A818 /* letter1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B591E54889500E5A818 /* letter1.png */; };
+		07C66B641E54910600E5A818 /* shadow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B5F1E54910600E5A818 /* shadow1.png */; };
+		07C66B651E54910600E5A818 /* shadow2.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B601E54910600E5A818 /* shadow2.png */; };
+		07C66B661E54910600E5A818 /* shadow3.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B611E54910600E5A818 /* shadow3.png */; };
+		07C66B671E54910600E5A818 /* shadow4.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B621E54910600E5A818 /* shadow4.png */; };
+		07C66B681E54910600E5A818 /* shadow5.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B631E54910600E5A818 /* shadow5.png */; };
 		07DEA58C1E539071007F4EEC /* CountingGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07DEA58B1E539071007F4EEC /* CountingGame.sks */; };
 		07DEA58E1E539115007F4EEC /* CountingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DEA58D1E539115007F4EEC /* CountingGame.swift */; };
 		07FF3F561E51E44C00625748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F551E51E44C00625748 /* AppDelegate.swift */; };
@@ -52,6 +67,21 @@
 		0712ECC31E537E1C0026AF80 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		07C66B431E54757D00E5A818 /* MatchingGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingGame.swift; sourceTree = "<group>"; };
 		07C66B451E54758C00E5A818 /* MatchingGame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MatchingGame.sks; sourceTree = "<group>"; };
+		07C66B491E5485D100E5A818 /* object5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object5.png; sourceTree = "<group>"; };
+		07C66B4A1E5485D100E5A818 /* object4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object4.png; sourceTree = "<group>"; };
+		07C66B4B1E5485D100E5A818 /* object3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object3.png; sourceTree = "<group>"; };
+		07C66B4C1E5485D100E5A818 /* object2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object2.png; sourceTree = "<group>"; };
+		07C66B4D1E5485D100E5A818 /* object1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object1.png; sourceTree = "<group>"; };
+		07C66B551E54889500E5A818 /* letter5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = letter5.png; sourceTree = "<group>"; };
+		07C66B561E54889500E5A818 /* letter4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = letter4.png; sourceTree = "<group>"; };
+		07C66B571E54889500E5A818 /* letter3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = letter3.png; sourceTree = "<group>"; };
+		07C66B581E54889500E5A818 /* letter2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = letter2.png; sourceTree = "<group>"; };
+		07C66B591E54889500E5A818 /* letter1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = letter1.png; sourceTree = "<group>"; };
+		07C66B5F1E54910600E5A818 /* shadow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow1.png; sourceTree = "<group>"; };
+		07C66B601E54910600E5A818 /* shadow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow2.png; sourceTree = "<group>"; };
+		07C66B611E54910600E5A818 /* shadow3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow3.png; sourceTree = "<group>"; };
+		07C66B621E54910600E5A818 /* shadow4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow4.png; sourceTree = "<group>"; };
+		07C66B631E54910600E5A818 /* shadow5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow5.png; sourceTree = "<group>"; };
 		07DEA58B1E539071007F4EEC /* CountingGame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CountingGame.sks; sourceTree = "<group>"; };
 		07DEA58D1E539115007F4EEC /* CountingGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingGame.swift; sourceTree = "<group>"; };
 		07FF3F521E51E44C00625748 /* LousaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LousaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,12 +131,87 @@
 		0712ECBC1E537C990026AF80 /* Arts */ = {
 			isa = PBXGroup;
 			children = (
+				07C66B6B1E54A22700E5A818 /* CountingGame */,
+				07C66B471E5485A400E5A818 /* MatchingGame */,
+			);
+			name = Arts;
+			sourceTree = "<group>";
+		};
+		07C66B471E5485A400E5A818 /* MatchingGame */ = {
+			isa = PBXGroup;
+			children = (
+				07C66B481E5485B900E5A818 /* Objects */,
+				07C66B541E54875200E5A818 /* Shadows */,
+				07C66B531E54874A00E5A818 /* Letters */,
+			);
+			name = MatchingGame;
+			sourceTree = "<group>";
+		};
+		07C66B481E5485B900E5A818 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				07C66B491E5485D100E5A818 /* object5.png */,
+				07C66B4A1E5485D100E5A818 /* object4.png */,
+				07C66B4B1E5485D100E5A818 /* object3.png */,
+				07C66B4C1E5485D100E5A818 /* object2.png */,
+				07C66B4D1E5485D100E5A818 /* object1.png */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		07C66B531E54874A00E5A818 /* Letters */ = {
+			isa = PBXGroup;
+			children = (
+				07C66B551E54889500E5A818 /* letter5.png */,
+				07C66B561E54889500E5A818 /* letter4.png */,
+				07C66B571E54889500E5A818 /* letter3.png */,
+				07C66B581E54889500E5A818 /* letter2.png */,
+				07C66B591E54889500E5A818 /* letter1.png */,
+			);
+			name = Letters;
+			sourceTree = "<group>";
+		};
+		07C66B541E54875200E5A818 /* Shadows */ = {
+			isa = PBXGroup;
+			children = (
+				07C66B5F1E54910600E5A818 /* shadow1.png */,
+				07C66B601E54910600E5A818 /* shadow2.png */,
+				07C66B611E54910600E5A818 /* shadow3.png */,
+				07C66B621E54910600E5A818 /* shadow4.png */,
+				07C66B631E54910600E5A818 /* shadow5.png */,
+			);
+			name = Shadows;
+			sourceTree = "<group>";
+		};
+		07C66B691E54A1C800E5A818 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				07FF3F571E51E44C00625748 /* GameScene.sks */,
+				07DEA58B1E539071007F4EEC /* CountingGame.sks */,
+				07C66B451E54758C00E5A818 /* MatchingGame.sks */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		07C66B6A1E54A1EC00E5A818 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				07DEA58D1E539115007F4EEC /* CountingGame.swift */,
+				07FF3F881E51E55500625748 /* Button.swift */,
+				07C66B431E54757D00E5A818 /* MatchingGame.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		07C66B6B1E54A22700E5A818 /* CountingGame */ = {
+			isa = PBXGroup;
+			children = (
 				0712ECBF1E537E0D0026AF80 /* 2.png */,
 				0712ECC11E537E150026AF80 /* 6.png */,
 				0712ECC31E537E1C0026AF80 /* 7.png */,
 				0712ECBD1E537CA90026AF80 /* apples.png */,
 			);
-			name = Arts;
+			name = CountingGame;
 			sourceTree = "<group>";
 		};
 		07FF3F491E51E44C00625748 = {
@@ -132,18 +237,14 @@
 		07FF3F541E51E44C00625748 /* LousaDigital */ = {
 			isa = PBXGroup;
 			children = (
-				0712ECBC1E537C990026AF80 /* Arts */,
 				07FF3F551E51E44C00625748 /* AppDelegate.swift */,
-				07FF3F881E51E55500625748 /* Button.swift */,
-				07FF3F571E51E44C00625748 /* GameScene.sks */,
-				07DEA58B1E539071007F4EEC /* CountingGame.sks */,
-				07DEA58D1E539115007F4EEC /* CountingGame.swift */,
-				07C66B431E54757D00E5A818 /* MatchingGame.swift */,
-				07C66B451E54758C00E5A818 /* MatchingGame.sks */,
+				07FF3F5F1E51E44C00625748 /* GameViewController.swift */,
+				07C66B6A1E54A1EC00E5A818 /* Managers */,
+				07C66B691E54A1C800E5A818 /* Scenes */,
+				0712ECBC1E537C990026AF80 /* Arts */,
 				07FF3F591E51E44C00625748 /* Actions.sks */,
 				07FF3F5B1E51E44C00625748 /* Game.xcassets */,
 				07FF3F5D1E51E44C00625748 /* GameScene.swift */,
-				07FF3F5F1E51E44C00625748 /* GameViewController.swift */,
 				07FF3F611E51E44C00625748 /* Main.storyboard */,
 				07FF3F641E51E44C00625748 /* Assets.xcassets */,
 				07FF3F661E51E44C00625748 /* Info.plist */,
@@ -280,15 +381,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				0712ECC41E537E1C0026AF80 /* 7.png in Resources */,
+				07C66B671E54910600E5A818 /* shadow4.png in Resources */,
+				07C66B4F1E5485D100E5A818 /* object4.png in Resources */,
+				07C66B5B1E54889500E5A818 /* letter4.png in Resources */,
+				07C66B641E54910600E5A818 /* shadow1.png in Resources */,
 				07FF3F581E51E44C00625748 /* GameScene.sks in Resources */,
 				07FF3F5A1E51E44C00625748 /* Actions.sks in Resources */,
 				0712ECC01E537E0D0026AF80 /* 2.png in Resources */,
 				07DEA58C1E539071007F4EEC /* CountingGame.sks in Resources */,
+				07C66B521E5485D100E5A818 /* object1.png in Resources */,
+				07C66B5E1E54889500E5A818 /* letter1.png in Resources */,
+				07C66B511E5485D100E5A818 /* object2.png in Resources */,
 				07FF3F5C1E51E44C00625748 /* Game.xcassets in Resources */,
+				07C66B4E1E5485D100E5A818 /* object5.png in Resources */,
 				07C66B461E54758C00E5A818 /* MatchingGame.sks in Resources */,
+				07C66B5D1E54889500E5A818 /* letter2.png in Resources */,
+				07C66B661E54910600E5A818 /* shadow3.png in Resources */,
+				07C66B5C1E54889500E5A818 /* letter3.png in Resources */,
 				07FF3F631E51E44C00625748 /* Main.storyboard in Resources */,
+				07C66B651E54910600E5A818 /* shadow2.png in Resources */,
+				07C66B501E5485D100E5A818 /* object3.png in Resources */,
 				0712ECBE1E537CA90026AF80 /* apples.png in Resources */,
 				0712ECC21E537E150026AF80 /* 6.png in Resources */,
+				07C66B681E54910600E5A818 /* shadow5.png in Resources */,
+				07C66B5A1E54889500E5A818 /* letter5.png in Resources */,
 				07FF3F651E51E44C00625748 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
