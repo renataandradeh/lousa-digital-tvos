@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0712ECBE1E537CA90026AF80 /* apples.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712ECBD1E537CA90026AF80 /* apples.png */; };
+		0712ECC01E537E0D0026AF80 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712ECBF1E537E0D0026AF80 /* 2.png */; };
+		0712ECC21E537E150026AF80 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712ECC11E537E150026AF80 /* 6.png */; };
+		0712ECC41E537E1C0026AF80 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0712ECC31E537E1C0026AF80 /* 7.png */; };
+		07C66B441E54757D00E5A818 /* MatchingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C66B431E54757D00E5A818 /* MatchingGame.swift */; };
+		07C66B461E54758C00E5A818 /* MatchingGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B451E54758C00E5A818 /* MatchingGame.sks */; };
+		07DEA58C1E539071007F4EEC /* CountingGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07DEA58B1E539071007F4EEC /* CountingGame.sks */; };
+		07DEA58E1E539115007F4EEC /* CountingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DEA58D1E539115007F4EEC /* CountingGame.swift */; };
 		07FF3F561E51E44C00625748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F551E51E44C00625748 /* AppDelegate.swift */; };
 		07FF3F581E51E44C00625748 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07FF3F571E51E44C00625748 /* GameScene.sks */; };
 		07FF3F5A1E51E44C00625748 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07FF3F591E51E44C00625748 /* Actions.sks */; };
@@ -17,6 +25,7 @@
 		07FF3F651E51E44C00625748 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07FF3F641E51E44C00625748 /* Assets.xcassets */; };
 		07FF3F701E51E44C00625748 /* LousaDigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F6F1E51E44C00625748 /* LousaDigitalTests.swift */; };
 		07FF3F7B1E51E44C00625748 /* LousaDigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F7A1E51E44C00625748 /* LousaDigitalUITests.swift */; };
+		07FF3F891E51E55500625748 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F881E51E55500625748 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0712ECBD1E537CA90026AF80 /* apples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apples.png; sourceTree = "<group>"; };
+		0712ECBF1E537E0D0026AF80 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		0712ECC11E537E150026AF80 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		0712ECC31E537E1C0026AF80 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		07C66B431E54757D00E5A818 /* MatchingGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingGame.swift; sourceTree = "<group>"; };
+		07C66B451E54758C00E5A818 /* MatchingGame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MatchingGame.sks; sourceTree = "<group>"; };
+		07DEA58B1E539071007F4EEC /* CountingGame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CountingGame.sks; sourceTree = "<group>"; };
+		07DEA58D1E539115007F4EEC /* CountingGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingGame.swift; sourceTree = "<group>"; };
 		07FF3F521E51E44C00625748 /* LousaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LousaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FF3F551E51E44C00625748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07FF3F571E51E44C00625748 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -53,6 +70,7 @@
 		07FF3F761E51E44C00625748 /* LousaDigitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LousaDigitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FF3F7A1E51E44C00625748 /* LousaDigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LousaDigitalUITests.swift; sourceTree = "<group>"; };
 		07FF3F7C1E51E44C00625748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07FF3F881E51E55500625748 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +98,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0712ECBC1E537C990026AF80 /* Arts */ = {
+			isa = PBXGroup;
+			children = (
+				0712ECBF1E537E0D0026AF80 /* 2.png */,
+				0712ECC11E537E150026AF80 /* 6.png */,
+				0712ECC31E537E1C0026AF80 /* 7.png */,
+				0712ECBD1E537CA90026AF80 /* apples.png */,
+			);
+			name = Arts;
+			sourceTree = "<group>";
+		};
 		07FF3F491E51E44C00625748 = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +132,14 @@
 		07FF3F541E51E44C00625748 /* LousaDigital */ = {
 			isa = PBXGroup;
 			children = (
+				0712ECBC1E537C990026AF80 /* Arts */,
 				07FF3F551E51E44C00625748 /* AppDelegate.swift */,
+				07FF3F881E51E55500625748 /* Button.swift */,
 				07FF3F571E51E44C00625748 /* GameScene.sks */,
+				07DEA58B1E539071007F4EEC /* CountingGame.sks */,
+				07DEA58D1E539115007F4EEC /* CountingGame.swift */,
+				07C66B431E54757D00E5A818 /* MatchingGame.swift */,
+				07C66B451E54758C00E5A818 /* MatchingGame.sks */,
 				07FF3F591E51E44C00625748 /* Actions.sks */,
 				07FF3F5B1E51E44C00625748 /* Game.xcassets */,
 				07FF3F5D1E51E44C00625748 /* GameScene.swift */,
@@ -244,10 +279,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0712ECC41E537E1C0026AF80 /* 7.png in Resources */,
 				07FF3F581E51E44C00625748 /* GameScene.sks in Resources */,
 				07FF3F5A1E51E44C00625748 /* Actions.sks in Resources */,
+				0712ECC01E537E0D0026AF80 /* 2.png in Resources */,
+				07DEA58C1E539071007F4EEC /* CountingGame.sks in Resources */,
 				07FF3F5C1E51E44C00625748 /* Game.xcassets in Resources */,
+				07C66B461E54758C00E5A818 /* MatchingGame.sks in Resources */,
 				07FF3F631E51E44C00625748 /* Main.storyboard in Resources */,
+				0712ECBE1E537CA90026AF80 /* apples.png in Resources */,
+				0712ECC21E537E150026AF80 /* 6.png in Resources */,
 				07FF3F651E51E44C00625748 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +316,10 @@
 			files = (
 				07FF3F5E1E51E44C00625748 /* GameScene.swift in Sources */,
 				07FF3F601E51E44C00625748 /* GameViewController.swift in Sources */,
+				07C66B441E54757D00E5A818 /* MatchingGame.swift in Sources */,
 				07FF3F561E51E44C00625748 /* AppDelegate.swift in Sources */,
+				07DEA58E1E539115007F4EEC /* CountingGame.swift in Sources */,
+				07FF3F891E51E55500625748 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +562,7 @@
 				07FF3F811E51E44C00625748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07FF3F821E51E44C00625748 /* Build configuration list for PBXNativeTarget "LousaDigitalTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +571,7 @@
 				07FF3F841E51E44C00625748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07FF3F851E51E44C00625748 /* Build configuration list for PBXNativeTarget "LousaDigitalUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +580,7 @@
 				07FF3F871E51E44C00625748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
