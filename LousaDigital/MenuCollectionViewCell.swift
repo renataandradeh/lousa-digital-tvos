@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuCollectionViewCell: UICollectionViewCell {
+class MenuCollectionViewCell: UICollectionViewCell{
     
     @IBOutlet weak var activitieImage: UIImageView!
     
@@ -20,9 +20,15 @@ class MenuCollectionViewCell: UICollectionViewCell {
     }
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        if (context.previouslyFocusedView != nil) && (context.nextFocusedView != nil){
-            if context.nextFocusedView is MenuCollectionViewCell {
-                self.setNeedsFocusUpdate()
-            }}
+
+        if self === context.previouslyFocusedView {
+            self.layer.borderWidth = 0
+        }else if self === context.nextFocusedView {
+            self.layer.borderWidth = 3.0
+            self.layer.borderColor = UIColor.blue.cgColor
+        }
+        
+        
     }
+    
 }

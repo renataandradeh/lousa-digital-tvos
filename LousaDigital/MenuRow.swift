@@ -12,6 +12,32 @@ class MenuRow: UITableViewCell {
     
     
     @IBOutlet weak var collectionViewMenu: UICollectionView!
+    
+    func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+//        if collectionViewMenu == self.collectionViewMenu {
+//            print(context.nextFocusedIndexPath as Any)
+//            let indexPath = context.nextFocusedIndexPath
+//            print("OK!!")
+//            if indexPath != nil {
+//                let cell = collectionView.cellForItem(at: indexPath!)
+////                cell?.layer.borderWidth = 2.0
+////               cell?.layer.borderColor = UIColor.blue.cgColor
+//            }
+//            
+//        }
+    }
+    
+//    func selectItem(at indexPath: IndexPath?, animated: Bool, scrollPosition: UICollectionViewScrollPosition){
+//        let cell = collectionViewMenu.cellForItem(at: indexPath!)
+//        cell?.layer.borderWidth = 2.0
+//        cell?.layer.borderColor = UIColor.blue.cgColor
+//    }
+//    
+//    func deselectItem(at indexPath: IndexPath, animated: Bool){
+//        
+//    }
+
+    
 }
 
 extension MenuRow: UICollectionViewDataSource{
@@ -27,16 +53,6 @@ extension MenuRow: UICollectionViewDataSource{
         return cell
     }
     
-   
-    
-    func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
     
 }
 extension MenuRow: UICollectionViewDelegateFlowLayout{
@@ -48,4 +64,6 @@ extension MenuRow: UICollectionViewDelegateFlowLayout{
         return CGSize(width: itemWidth, height: itemHeight)
     }
 }
+
+
 
