@@ -41,6 +41,8 @@
 		07FF3F701E51E44C00625748 /* LousaDigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F6F1E51E44C00625748 /* LousaDigitalTests.swift */; };
 		07FF3F7B1E51E44C00625748 /* LousaDigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F7A1E51E44C00625748 /* LousaDigitalUITests.swift */; };
 		07FF3F891E51E55500625748 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F881E51E55500625748 /* Button.swift */; };
+		F1699B9F1E5486D60022208D /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1699B9D1E5486D60022208D /* MenuCollectionViewCell.swift */; };
+		F1699BA01E5486D60022208D /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1699B9E1E5486D60022208D /* MenuRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		07FF3F7A1E51E44C00625748 /* LousaDigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LousaDigitalUITests.swift; sourceTree = "<group>"; };
 		07FF3F7C1E51E44C00625748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07FF3F881E51E55500625748 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		F1699B9D1E5486D60022208D /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		F1699B9E1E5486D60022208D /* MenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +250,8 @@
 				07FF3F5B1E51E44C00625748 /* Game.xcassets */,
 				07FF3F5D1E51E44C00625748 /* GameScene.swift */,
 				07FF3F611E51E44C00625748 /* Main.storyboard */,
+				F1699B9D1E5486D60022208D /* MenuCollectionViewCell.swift */,
+				F1699B9E1E5486D60022208D /* MenuRow.swift */,
 				07FF3F641E51E44C00625748 /* Assets.xcassets */,
 				07FF3F661E51E44C00625748 /* Info.plist */,
 			);
@@ -431,9 +437,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				07FF3F5E1E51E44C00625748 /* GameScene.swift in Sources */,
+				F1699B9F1E5486D60022208D /* MenuCollectionViewCell.swift in Sources */,
 				07FF3F601E51E44C00625748 /* GameViewController.swift in Sources */,
 				07C66B441E54757D00E5A818 /* MatchingGame.swift in Sources */,
 				07FF3F561E51E44C00625748 /* AppDelegate.swift in Sources */,
+				F1699BA01E5486D60022208D /* MenuRow.swift in Sources */,
 				07DEA58E1E539115007F4EEC /* CountingGame.swift in Sources */,
 				07FF3F891E51E55500625748 /* Button.swift in Sources */,
 			);
