@@ -41,6 +41,7 @@
 		07FF3F701E51E44C00625748 /* LousaDigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F6F1E51E44C00625748 /* LousaDigitalTests.swift */; };
 		07FF3F7B1E51E44C00625748 /* LousaDigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F7A1E51E44C00625748 /* LousaDigitalUITests.swift */; };
 		07FF3F891E51E55500625748 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F881E51E55500625748 /* Button.swift */; };
+		F10EF3F71E54D7EA0047EC7F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10EF3F61E54D7EA0047EC7F /* MenuViewController.swift */; };
 		F1699B9F1E5486D60022208D /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1699B9D1E5486D60022208D /* MenuCollectionViewCell.swift */; };
 		F1699BA01E5486D60022208D /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1699B9E1E5486D60022208D /* MenuRow.swift */; };
 /* End PBXBuildFile section */
@@ -103,6 +104,7 @@
 		07FF3F7A1E51E44C00625748 /* LousaDigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LousaDigitalUITests.swift; sourceTree = "<group>"; };
 		07FF3F7C1E51E44C00625748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07FF3F881E51E55500625748 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		F10EF3F61E54D7EA0047EC7F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F1699B9D1E5486D60022208D /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1699B9E1E5486D60022208D /* MenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -243,6 +245,7 @@
 			children = (
 				07FF3F551E51E44C00625748 /* AppDelegate.swift */,
 				07FF3F5F1E51E44C00625748 /* GameViewController.swift */,
+				F10EF3F81E54D8FD0047EC7F /* Menu */,
 				07C66B6A1E54A1EC00E5A818 /* Managers */,
 				07C66B691E54A1C800E5A818 /* Scenes */,
 				0712ECBC1E537C990026AF80 /* Arts */,
@@ -250,8 +253,6 @@
 				07FF3F5B1E51E44C00625748 /* Game.xcassets */,
 				07FF3F5D1E51E44C00625748 /* GameScene.swift */,
 				07FF3F611E51E44C00625748 /* Main.storyboard */,
-				F1699B9D1E5486D60022208D /* MenuCollectionViewCell.swift */,
-				F1699B9E1E5486D60022208D /* MenuRow.swift */,
 				07FF3F641E51E44C00625748 /* Assets.xcassets */,
 				07FF3F661E51E44C00625748 /* Info.plist */,
 			);
@@ -274,6 +275,16 @@
 				07FF3F7C1E51E44C00625748 /* Info.plist */,
 			);
 			path = LousaDigitalUITests;
+			sourceTree = "<group>";
+		};
+		F10EF3F81E54D8FD0047EC7F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F1699B9E1E5486D60022208D /* MenuRow.swift */,
+				F1699B9D1E5486D60022208D /* MenuCollectionViewCell.swift */,
+				F10EF3F61E54D7EA0047EC7F /* MenuViewController.swift */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +451,7 @@
 				F1699B9F1E5486D60022208D /* MenuCollectionViewCell.swift in Sources */,
 				07FF3F601E51E44C00625748 /* GameViewController.swift in Sources */,
 				07C66B441E54757D00E5A818 /* MatchingGame.swift in Sources */,
+				F10EF3F71E54D7EA0047EC7F /* MenuViewController.swift in Sources */,
 				07FF3F561E51E44C00625748 /* AppDelegate.swift in Sources */,
 				F1699BA01E5486D60022208D /* MenuRow.swift in Sources */,
 				07DEA58E1E539115007F4EEC /* CountingGame.swift in Sources */,

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="dEh-eV-dlg">
             <objects>
-                <viewController id="499-42-d0g" customClass="GameViewController" customModule="LousaDigital" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="499-42-d0g" customClass="MenuViewController" customModule="LousaDigital" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TiC-Vw-u93"/>
                         <viewControllerLayoutGuide type="bottom" id="3TX-uQ-fmp"/>
@@ -21,20 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="175" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="Iv6-X7-sMy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="297" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="Iv6-X7-sMy">
                                 <rect key="frame" x="0.0" y="124" width="1920" height="956"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="175" id="pxJ-jm-E7M" customClass="MenuRow" customModule="LousaDigital" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="66" width="1920" height="175"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="297" id="pxJ-jm-E7M" customClass="MenuRow" customModule="LousaDigital" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="66" width="1920" height="297"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pxJ-jm-E7M" id="zeR-Ij-Vcn">
-                                            <rect key="frame" x="0.0" y="0.0" width="1904" height="175"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1904" height="297"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4ND-Jc-QKa">
-                                                    <rect key="frame" x="8" y="0.0" width="1912" height="175"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <rect key="frame" x="8" y="0.0" width="1912" height="297"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="hhr-Ko-c9G">
                                                         <size key="itemSize" width="135" height="66"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -55,7 +55,6 @@
                                                                     </imageView>
                                                                 </subviews>
                                                             </view>
-                                                            <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <connections>
                                                                 <outlet property="activitieImage" destination="4xn-hk-LIb" id="heu-4b-9oJ"/>
                                                             </connections>
@@ -93,7 +92,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableViewMenu" destination="Iv6-X7-sMy" id="EoW-rM-Pc3"/>
+                        <outlet property="tableViewMenu" destination="Iv6-X7-sMy" id="rhd-n8-p1G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFW-Nd-Df7" userLabel="First Responder" sceneMemberID="firstResponder"/>

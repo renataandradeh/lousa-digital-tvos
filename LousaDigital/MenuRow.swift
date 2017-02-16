@@ -13,7 +13,12 @@ class MenuRow: UITableViewCell {
     
     @IBOutlet weak var collectionViewMenu: UICollectionView!
     
+
+    
     func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        
+       // collectionViewMenu.addGestureRecognizer(tapGesture)
+        
 //        if collectionViewMenu == self.collectionViewMenu {
 //            print(context.nextFocusedIndexPath as Any)
 //            let indexPath = context.nextFocusedIndexPath
@@ -48,10 +53,13 @@ extension MenuRow: UICollectionViewDataSource{
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "activitiesCell", for: indexPath)
        
         return cell
     }
+    
+    
     
     
 }

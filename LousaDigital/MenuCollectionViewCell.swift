@@ -19,16 +19,44 @@ class MenuCollectionViewCell: UICollectionViewCell{
         return true
     }
     
+    override func awakeFromNib() {
+        self.layer.cornerRadius = 20
+        self.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
+    }
+    lazy private var motionEffectGroup: UIMotionEffectGroup = {
+        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        horizontalMotionEffect.minimumRelativeValue = -8.0
+        horizontalMotionEffect.maximumRelativeValue = 8.0
+        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        verticalMotionEffect.minimumRelativeValue = -8.0
+        verticalMotionEffect.maximumRelativeValue = 8.0
+        let motionEffectGroup = UIMotionEffectGroup()
+        motionEffectGroup.motionEffects = [horizontalMotionEffect,verticalMotionEffect]
+            
+        return motionEffectGroup
+    }()
+    
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
 
         if self === context.previouslyFocusedView {
-            self.layer.borderWidth = 0
+            coordinator.addCoordinatedAnimations({
+            self.transform = CGAffineTransform.identity
+            self.layer.shadowOpacity = 0.0
+            self.layer.shadowOffset = CGSize(width: 0, height: 15)
+            self.backgroundColor = self.backgroundColor?.withAlphaComponent(0.5)
+            self.removeMotionEffect(self.motionEffectGroup)}, completion: nil)
         }else if self === context.nextFocusedView {
-            self.layer.borderWidth = 3.0
-            self.layer.borderColor = UIColor.blue.cgColor
+            coordinator.addCoordinatedAnimations({
+                self.transform = CGAffineTransform(scaleX: 1.01, y: 1.01)
+               self.layer.shadowOpacity = 0.2
+            self.layer.shadowOffset = CGSize(width: 0, height: 15)
+                self.backgroundColor = self.backgroundColor?.withAlphaComponent(1.0)
+            self.addMotionEffect(self.motionEffectGroup)}, completion: nil)
+            print(context.nextFocusedView)
         }
         
         
     }
+   
     
 }
