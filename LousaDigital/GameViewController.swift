@@ -19,14 +19,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
         gameScene = GameScene(fileNamed: "GameScene")
         countingGame = CountingGame(fileNamed: "CountingGame")
         matchingGame = MatchingGame(fileNamed: "MatchingGame")
         
-       // presentScene(scene: matchingGame!)
+        presentScene(scene: matchingGame!)
         
 //        if let view = self.view as! SKView? {
 //            gameScene = GameScene(fileNamed:"GameScene")
@@ -46,6 +43,7 @@ class GameViewController: UIViewController {
     }
     
     func presentScene(scene : SKScene){
+        self.view = SKView()
         if let view = self.view as! SKView? {
             scene.scaleMode = .aspectFill
             view.presentScene(scene)

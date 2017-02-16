@@ -48,8 +48,7 @@ class Button : SKSpriteNode {
         run(animation, withKey: "buttonAnimation")
     }
     
-    func movingAnimation(position: CGPoint ){
-        
+    func movingAnimation(position: CGPoint){
         let animation = SKAction.group([SKAction.scale(by: 0.8, duration: 0.2), SKAction.move(to: position, duration: 0.2)])
         self.run(animation, withKey: "buttonAnimation")
     }

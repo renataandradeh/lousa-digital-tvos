@@ -40,6 +40,12 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return false
     }
     
+    @IBAction func goActivities(_ sender: Any) {
+        //transição da MenuViewController para GameViewController
+        let game = GameViewController()
+        present(game, animated: true, completion: nil)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
