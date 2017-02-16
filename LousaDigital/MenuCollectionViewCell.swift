@@ -52,7 +52,7 @@ class MenuCollectionViewCell: UICollectionViewCell{
             self.layer.shadowOffset = CGSize(width: 0, height: 15)
                 self.backgroundColor = self.backgroundColor?.withAlphaComponent(1.0)
             self.addMotionEffect(self.motionEffectGroup)}, completion: nil)
-            print(context.nextFocusedView)
+            //print(context.nextFocusedView)
         }
         
         
