@@ -45,6 +45,13 @@ class MenuRow: UITableViewCell {
     
 }
 
+extension MenuRow: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Fooooi")
+        print(indexPath)
+    }
+}
+
 extension MenuRow: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 12

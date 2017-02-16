@@ -21,6 +21,8 @@ class GameViewController: UIViewController {
         
         
         
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(("tapAction:")))
+        view.addGestureRecognizer(tapGesture)
         
         gameScene = GameScene(fileNamed: "GameScene")
         countingGame = CountingGame(fileNamed: "CountingGame")
