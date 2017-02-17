@@ -16,8 +16,10 @@ class MatchingGame: SKScene {
 
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
-    
+
     var letter1 : Button?
+    
+    let endGame = EndGame()
     
     override func didMove(to: SKView) {
         
@@ -51,6 +53,11 @@ class MatchingGame: SKScene {
                         if letter.name == "letter\(randomNumber)"{
                             //animação da letra movendo
                             letter.movingAnimation(position: (matchBox?.position)!)
+                           
+                            //Animação provisória para a tela de Game Over
+                            self.run(SKAction.fadeOut(withDuration: 0.8)){
+                                self.view?.presentScene(EndGame(fileNamed: "EndGame"))
+                            }
                         }else{
                             print("errou")
                         }
@@ -61,6 +68,7 @@ class MatchingGame: SKScene {
      }
 
     override var preferredFocusEnvironments: [UIFocusEnvironment]{
+        letter1?.isFocused = true
         letter1?.focusAnimation()
         return[letter1!]
     }

@@ -10,6 +10,8 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+var gameViewController : GameViewController?
+
 class GameViewController: UIViewController {
     
     var gameScene : SKScene?
