@@ -41,7 +41,9 @@ class EndGame: SKScene {
                 self.view?.presentScene(MatchingGame(fileNamed: "MatchingGame"))
             }
         }else if (home?.isFocused)!{
-            
+            self.run(SKAction.fadeOut(withDuration: 0.8)){
+                self.view?.presentScene(Menu(fileNamed: "Menu"))
+            }
         }
         
     }

@@ -8,24 +8,23 @@
 
 import UIKit
 import SpriteKit
-import GameplayKit
 
 var gameViewController : GameViewController?
 
 class GameViewController: UIViewController {
     
-    var gameScene : SKScene?
+    var menu : SKScene?
     var countingGame : SKScene?
     var matchingGame : SKScene?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gameScene = GameScene(fileNamed: "GameScene")
+        menu = Menu(fileNamed: "Menu")
         countingGame = CountingGame(fileNamed: "CountingGame")
         matchingGame = MatchingGame(fileNamed: "MatchingGame")
         
-        presentScene(scene: matchingGame!)
+        presentScene(scene: menu!)
         
 //        if let view = self.view as! SKView? {
 //            gameScene = GameScene(fileNamed:"GameScene")

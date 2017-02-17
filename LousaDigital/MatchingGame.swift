@@ -27,6 +27,8 @@ class MatchingGame: SKScene {
         matchBox = childNode(withName: "matchBox") as? SKSpriteNode
         
         letter1 = childNode(withName: "letter1") as? Button
+        letter1?.isFocused = true
+        letter1?.focusAnimation()
 
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
@@ -68,8 +70,6 @@ class MatchingGame: SKScene {
      }
 
     override var preferredFocusEnvironments: [UIFocusEnvironment]{
-        letter1?.isFocused = true
-        letter1?.focusAnimation()
         return[letter1!]
     }
 

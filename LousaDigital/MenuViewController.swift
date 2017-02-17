@@ -15,7 +15,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
