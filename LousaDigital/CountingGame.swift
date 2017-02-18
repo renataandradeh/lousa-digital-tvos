@@ -11,7 +11,9 @@ import SpriteKit
 class CountingGame: SKScene {
     
     var box : SKSpriteNode?
+    
     var randomAnswer : UInt32?
+    var answerPosition : Button?
  
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
@@ -27,16 +29,11 @@ class CountingGame: SKScene {
         
         fillNumbers()
         fillSpacesWithObjects(number: randomAnswer!)
-
+        
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
         tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
         self.view!.addGestureRecognizer(tapGeneralSelection)
-        
-        //Tap Play Pause
-        tapPlayPause.addTarget(self, action: #selector(pressedSelect))
-        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-        self.view!.addGestureRecognizer(tapPlayPause)
     }
     
     private func fillNumbers(){
@@ -52,6 +49,7 @@ class CountingGame: SKScene {
         let randomPosition = arc4random_uniform(3)+1
         
         let number = childNode(withName: "number\(randomPosition)") as? SKSpriteNode
+        answerPosition = number as? Button
         number?.texture = SKTexture(imageNamed: "number\(randomAnswer!)")
         numbers.removeFirst()
         
@@ -66,51 +64,55 @@ class CountingGame: SKScene {
     
     
     private func fillSpacesWithObjects(number: UInt32){
+        let randomObject = arc4random_uniform(5)+1
         switch number {
         case 1:
-            let space = childNode(withName: "space3") as? SKSpriteNode
-            space?.texture = SKTexture(imageNamed: "object\(number)")
+            createObject(i: 3, randomObject: randomObject, scale: 5)
+            
         case 2:
             var i = 1
             for _ in 1...2 {
-                let space = childNode(withName: "space\(i)") as? SKSpriteNode
-                space?.texture = SKTexture(imageNamed: "object\(number)")
+                createObject(i: i, randomObject: randomObject, scale: 3)
                 i = 5
             }
         case 3:
             var i = 1
             for _ in 1...3 {
-                let space = childNode(withName: "space\(i)") as? SKSpriteNode
-                space?.texture = SKTexture(imageNamed: "object\(number)")
+                createObject(i: i, randomObject: randomObject, scale: 2)
                 i += 2
             }
         case 4:
             for i in 1...5 {
                 if i != 3 {
-                    let space = childNode(withName: "space\(i)") as? SKSpriteNode
-                    space?.texture = SKTexture(imageNamed: "object\(number)")
+                    createObject(i: i, randomObject: randomObject, scale: 1.5)
                 }
             }
         case 5:
             for i in 1...5 {
-                    let space = childNode(withName: "space\(i)") as? SKSpriteNode
-                    space?.texture = SKTexture(imageNamed: "object\(number)")
+                createObject(i: i, randomObject: randomObject, scale: 1.2)
             }
         default:
             print("opção inválida")
         }
     }
-    
-    
+ 
+    private func createObject(i: Int, randomObject : UInt32, scale: CGFloat){
+        let space = childNode(withName: "space\(i)") as? SKSpriteNode
+        space?.setScale(scale)
+        space?.texture = SKTexture(imageNamed: "object\(randomObject)")
+    }
     
     func pressedSelect(){
-        //teste
-//        if (button1?.isFocused)! {
-//            print("errou")
-//        }else if (button2?.isFocused)!{
-//            if button2?.position != box?.position{
-//                button2?.movingAnimation(position: (box?.position)!)
-//            }
-//        }
+        for i in 1...3 {
+            let number = childNode(withName: "number\(i)") as? Button
+            if (number?.isFocused)! && number == answerPosition{
+                number?.associatingAnimation(position: (box?.position)!)
+                //Animação provisória para a tela de Game Over
+                self.run(SKAction.fadeOut(withDuration: 0.8)){
+                    self.view?.presentScene(EndGame(fileNamed: "EndGame"))
+                }
+            }
+        }
     }
+    
 }

@@ -48,14 +48,33 @@ class Button : SKSpriteNode {
         run(animation, withKey: "buttonAnimation")
     }
     
-    func movingAnimation(position: CGPoint){
-        let animation = SKAction.group([SKAction.scale(by: 0.8, duration: 0.2), SKAction.move(to: position, duration: 0.2)])
-        self.run(animation, withKey: "buttonAnimation")
+    func associatingAnimation(position: CGPoint){
+        self.zPosition = 2
+        let actionDuration : Double = 1.0
+        let maxScale : CGFloat = 2.5
+        let actionScaleUp = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
+            let percentage = elapsedTime/CGFloat(actionDuration)
+            self.alpha = 1 - percentage
+            self.setScale(1 + percentage * maxScale)
+            self.position = CGPoint(x: 0, y: 0)
+        })
+        let actionScaleDown = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
+            let percentage = elapsedTime/CGFloat(actionDuration)
+            self.alpha = 1 + percentage
+            self.run(SKAction.scale(to: 0.8, duration: actionDuration))
+            self.position = (position)
+        })
+        
+        self.run(SKAction.sequence([actionScaleUp, actionScaleDown]))
+        
+        
+//        let animation = SKAction.group([SKAction.scale(by: 0.8, duration: 0.2), SKAction.move(to: position, duration: 0.2)])
+//        self.run(animation, withKey: "buttonAnimation")
     }
     
     override public var canBecomeFocused: Bool {
         get {
             return true
         }
-    }  
+    }
 }
