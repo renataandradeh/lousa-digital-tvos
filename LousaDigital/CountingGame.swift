@@ -14,14 +14,23 @@ class CountingGame: SKScene {
     
     var randomAnswer : UInt32?
     var answerPosition : Button?
+    
+    var number1 : Button?
  
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
     
     override func didMove(to: SKView) {
         
-        //Preenchendo a cena com os elementos
+        //Setando a cena ativa para facilitar as transições
+        activeScene = self.name
         
+        //Definindo o primeiro foco
+        number1 = childNode(withName: "number1") as? Button
+        number1?.isFocused = true
+        number1?.focusAnimation()
+        
+        //Preenchendo a cena com os elementos
         randomAnswer = arc4random_uniform(5)+1
         
         box = childNode(withName: "box") as? SKSpriteNode
@@ -106,11 +115,7 @@ class CountingGame: SKScene {
         for i in 1...3 {
             let number = childNode(withName: "number\(i)") as? Button
             if (number?.isFocused)! && number == answerPosition{
-                number?.associatingAnimation(position: (box?.position)!)
-                //Animação provisória para a tela de Game Over
-                self.run(SKAction.fadeOut(withDuration: 0.8)){
-                    self.view?.presentScene(EndGame(fileNamed: "EndGame"))
-                }
+                number?.associatingAnimation(position: (box?.position)!, activeView: self.view!)
             }
         }
     }

@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-var gameViewController : GameViewController?
+var activeScene : String?
 
 class GameViewController: UIViewController {
     
@@ -24,7 +24,10 @@ class GameViewController: UIViewController {
         countingGame = CountingGame(fileNamed: "CountingGame")
         matchingGame = MatchingGame(fileNamed: "MatchingGame")
         
+        activeScene = menu?.name
+        
         presentScene(scene: menu!)
+        
         
 //        if let view = self.view as! SKView? {
 //            gameScene = GameScene(fileNamed:"GameScene")

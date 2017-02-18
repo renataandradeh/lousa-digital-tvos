@@ -12,16 +12,16 @@ class EndGame: SKScene {
     
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
-    var restart : Button?
-    var home : Button?
+    var restart : Button!
+    var home : Button!
     
     override func didMove(to view: SKView) {
         
         restart = childNode(withName: "restart") as? Button
         home = childNode(withName: "home") as? Button
         
-        restart?.isFocused = true
-        restart?.focusAnimation()
+        restart.isFocused = true
+        restart.focusAnimation()
         
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
@@ -32,18 +32,32 @@ class EndGame: SKScene {
         tapPlayPause.addTarget(self, action: #selector(pressedSelect))
         tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
         self.view!.addGestureRecognizer(tapPlayPause)
-
+        
     }
     
     func pressedSelect(){
-        if (restart?.isFocused)!{
-            self.run(SKAction.fadeOut(withDuration: 0.8)){
-                self.view?.presentScene(MatchingGame(fileNamed: "MatchingGame"))
-            }
-        }else if (home?.isFocused)!{
-            self.run(SKAction.fadeOut(withDuration: 0.8)){
-                self.view?.presentScene(Menu(fileNamed: "Menu"))
-            }
+        let selectedScene : SKScene?
+        if (self.restart.isFocused){
+            guard let sceneName = activeScene else { return }
+            selectedScene  = { () -> SKScene? in
+                switch(sceneName) {
+                case "MatchingGame":
+                    return MatchingGame(fileNamed: sceneName)
+                case "CountingGame":
+                    return CountingGame(fileNamed: sceneName)
+                default:
+                    return Menu(fileNamed: "Menu")
+                }
+            }()
+        } else if (self.home.isFocused) {
+            selectedScene = Menu(fileNamed: "Menu")
+        } else {
+            selectedScene = nil
+            print("Focou em um nó que não está tratado")
+        }
+        self.run(SKAction.fadeOut(withDuration: 0.8)) {
+            guard let view = self.view else { return }
+            view.presentScene(selectedScene)
         }
         
     }

@@ -23,9 +23,10 @@ class MatchingGame: SKScene {
     
     override func didMove(to: SKView) {
         
-        object = childNode(withName: "object") as? SKSpriteNode
-        matchBox = childNode(withName: "matchBox") as? SKSpriteNode
+        //Setando a cena ativa para facilitar as transições
+        activeScene = self.name
         
+        //Definindo o primeiro foco
         letter1 = childNode(withName: "letter1") as? Button
         letter1?.isFocused = true
         letter1?.focusAnimation()
@@ -40,7 +41,11 @@ class MatchingGame: SKScene {
         tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
         self.view!.addGestureRecognizer(tapPlayPause)
         
+        //Randomizando o objeto e preenchendo a matchBox
         randomNumber = arc4random_uniform(5) + 1
+        
+        object = childNode(withName: "object") as? SKSpriteNode
+        matchBox = childNode(withName: "matchBox") as? SKSpriteNode
         
         object?.texture = SKTexture(imageNamed: "object\(randomNumber)")
         matchBox?.texture = SKTexture(imageNamed: "shadow\(randomNumber)")
@@ -55,13 +60,7 @@ class MatchingGame: SKScene {
                         if letter.name == "letter\(randomNumber)"{
                             
                             //animação da letra movendo
-                            letter.associatingAnimation(position: (matchBox?.position)!)
-
-//
-//                            //Animação provisória para a tela de Game Over
-//                            self.run(SKAction.fadeOut(withDuration: 0.8)){
-//                                self.view?.presentScene(EndGame(fileNamed: "EndGame"))
-//                            }
+                            letter.associatingAnimation(position: (matchBox?.position)!, activeView: self.view!)
                             
                         }else{
                             //Voz falando: "Try Again!"
@@ -71,7 +70,7 @@ class MatchingGame: SKScene {
                 }
             }
         }
-     }
+    }
 
     override var preferredFocusEnvironments: [UIFocusEnvironment]{
         return[letter1!]
