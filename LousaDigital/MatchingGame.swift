@@ -55,12 +55,13 @@ class MatchingGame: SKScene {
                         if letter.name == "letter\(randomNumber)"{
                             //animação da letra movendo
                             letter.movingAnimation(position: (matchBox?.position)!)
-                           
+
                             //Animação provisória para a tela de Game Over
                             self.run(SKAction.fadeOut(withDuration: 0.8)){
                                 self.view?.presentScene(EndGame(fileNamed: "EndGame"))
                             }
                         }else{
+                            //Voz falando: "Try Again!"
                             print("errou")
                         }
                     }

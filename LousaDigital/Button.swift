@@ -42,7 +42,7 @@ class Button : SKSpriteNode {
     }
     
     func focusAnimation() {
-        let scaleUp = SKAction.scale(by: 2, duration: 0.5)
+        let scaleUp = SKAction.scale(by: 2.0, duration: 0.5)
         let scaleDown = SKAction.scale(by: 0.5, duration: 0.5)
         let animation = SKAction.repeatForever(SKAction.group([scaleUp, scaleDown]))
         run(animation, withKey: "buttonAnimation")
