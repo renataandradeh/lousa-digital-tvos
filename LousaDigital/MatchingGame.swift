@@ -22,9 +22,6 @@ class MatchingGame: SKScene {
     var letters : [Button]!
     
     let endGame = EndGame()
-    
-    var emitter1 : SKNode?
-    var emitter2 : SKNode?
  
     override func didMove(to: SKView) {
         
@@ -41,9 +38,9 @@ class MatchingGame: SKScene {
         self.view!.addGestureRecognizer(tapGeneralSelection)
         
         //Tap Play Pause
-        tapPlayPause.addTarget(self, action: #selector(pressedSelect))
-        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-        self.view!.addGestureRecognizer(tapPlayPause)
+//        tapPlayPause.addTarget(self, action: #selector(pressedSelect))
+//        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
+//        self.view!.addGestureRecognizer(tapPlayPause)
         
         //Randomizando o objeto e preenchendo a matchBox
         randomNumber = arc4random_uniform(5) + 1
@@ -53,10 +50,7 @@ class MatchingGame: SKScene {
         
         object?.texture = SKTexture(imageNamed: "object\(randomNumber)")
         matchBox?.texture = SKTexture(imageNamed: "shadow\(randomNumber)")
-        
-        //Partículas de estrelinhas
-        emitter1 = childNode(withName: "emitter1")
-        emitter2 = childNode(withName: "emitter2")
+    
         letters = self["letter*"] as! [Button]
     }
 
@@ -66,17 +60,15 @@ class MatchingGame: SKScene {
                 //animação da letra movendo
                 self.deactivateLettersFocuses()
                 letter.associatingAnimation(position: (matchBox?.position)!, activeView: self.view!) {
-                    let wait = SKAction.wait(forDuration: 5.0)
+                    let wait = SKAction.wait(forDuration: 3.0)
                     let block = SKAction.run({
-                        self.addChild(self.endGame)
+                            self.addChild(self.endGame)
                     })
                     self.run(SKAction.sequence([wait, block]), completion:{
                         self.setNeedsFocusUpdate()
                         self.updateFocusIfNeeded()
                     })
                 }
-                
-                EndGame.emittingStars(scene: self, position1: (emitter1?.position)!, position2: (emitter2?.position)!)
                 
             }else if letter.isFocused && letter.name != "letter\(randomNumber)"{
                 //Voz falando: "Try Again!"

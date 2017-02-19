@@ -12,24 +12,38 @@ class EndGame: SKNode {
     
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
-    var backgrond : SKSpriteNode!
+    var background : SKSpriteNode!
+    var endScreen : SKSpriteNode!
     var restart : Button!
     var home : Button!
+    
+    var emitterPosition1 : CGPoint?
+    var emitterPosition2 : CGPoint?
     
     override init() {
         super.init()
         
         let endGameScene = SKScene(fileNamed: "EndGame")!
-        backgrond = endGameScene.childNode(withName: "background") as! SKSpriteNode!
-        restart = backgrond.childNode(withName: "restart") as? Button
-        home = backgrond.childNode(withName: "home") as? Button
-        backgrond.removeFromParent()
-        addChild(backgrond)
+        background = endGameScene.childNode(withName: "background") as! SKSpriteNode
+        endScreen = background.childNode(withName: "endScreen") as! SKSpriteNode
+        restart = endScreen.childNode(withName: "restart") as? Button
+        home = endScreen.childNode(withName: "home") as? Button
+        background.removeFromParent()
+        background.alpha = 0
+        addChild(background)
+        
+        
+        //Adicionando partículas de estrelinhas
+        emitterPosition1 = endScreen.childNode(withName: "emitterPosition1")?.position
+        emitterPosition2 = endScreen.childNode(withName: "emitterPosition2")?.position
 
         run(SKAction.run({
-            //Definindo o primeiro foco
             self.addedToSuperview()
         }))
+        self.background.run(SKAction.fadeIn(withDuration: 1), completion:{
+            self.endScreenAnimation()
+        })
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,18 +61,24 @@ class EndGame: SKNode {
         tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
         self.scene!.view?.addGestureRecognizer(tapPlayPause)
     }
+    
+    private func endScreenAnimation() {
+        let moveEndScreen = SKAction.move(to: background.position, duration: 0.25)
+        endScreen.run(moveEndScreen)
+        emittingStars()
+    }
  
-    class func emittingStars(scene: SKScene, position1: CGPoint, position2: CGPoint){
-        let wait = SKAction.wait(forDuration: 3.5)
+    private func emittingStars(){
+        let wait = SKAction.wait(forDuration: 2.0)
         let emitting = SKAction.run({
             for i in 1...2{
                 let emitter = SKEmitterNode(fileNamed: "emitter_stars")!
-                scene.addChild(emitter)
-                emitter.position = i == 1 ? position1 : position2
-                emitter.resetSimulation()
+                self.endScreen.addChild(emitter)
+                emitter.position = (i == 1 ? self.emitterPosition1 : self.emitterPosition2)!
+                //emitter.resetSimulation()
             }
         })
-        scene.run(SKAction.sequence([wait, emitting]))
+        self.run(SKAction.sequence([wait, emitting]))
     }
 
     func pressedSelect(){

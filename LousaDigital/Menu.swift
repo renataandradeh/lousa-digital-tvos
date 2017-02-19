@@ -13,13 +13,14 @@ class Menu: SKScene {
     let tapGeneralSelection = UITapGestureRecognizer()
     var allButtons : [Button]?
     
+    var buttonMatching : Button?
+
     override func didMove(to view: SKView) {
-    
-        //Definindo o primeiro foco
-        setNeedsFocusUpdate()
-        updateFocusIfNeeded()
+        
+        activeScene = self.name
         
         allButtons = self["button*"] as? [Button]
+        allButtons?.first?.buttonDidGetFocus()
         
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
@@ -47,8 +48,4 @@ class Menu: SKScene {
             self.view?.presentScene(scene)
         }
     }
-    override var preferredFocusEnvironments: [UIFocusEnvironment]{
-        return[allButtons![0]]
-    }
-    
 }

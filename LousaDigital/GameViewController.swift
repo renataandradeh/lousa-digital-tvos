@@ -14,20 +14,15 @@ var activeScene : String?
 class GameViewController: UIViewController {
     
     var menu : SKScene?
-    var countingGame : SKScene?
-    var matchingGame : SKScene?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         menu = Menu(fileNamed: "Menu")
-        countingGame = CountingGame(fileNamed: "CountingGame")
-        matchingGame = MatchingGame(fileNamed: "MatchingGame")
         
         activeScene = menu?.name
         
         presentScene(scene: menu!)
-        
         
 //        if let view = self.view as! SKView? {
 //            gameScene = GameScene(fileNamed:"GameScene")
@@ -45,20 +40,12 @@ class GameViewController: UIViewController {
 //            view.showsNodeCount = true
 //        }
     }
-    
+
     func presentScene(scene : SKScene){
         self.view = SKView()
         if let view = self.view as! SKView? {
             scene.scaleMode = .aspectFill
             view.presentScene(scene)
-        }
-    }
-    
-    override var preferredFocusEnvironments: [UIFocusEnvironment] {
-        if let scene = (view as? SKView)?.scene {
-            return [scene]
-        } else {
-            return []
         }
     }
 
@@ -67,13 +54,11 @@ class GameViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
     
-    
-
-    
-    
-   
-    
-    
-    
-   
+//    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+//        if let scene = (view as? SKView)?.scene {
+//            return [scene]
+//        } else {
+//            return []
+//        }
+//    }
 }
