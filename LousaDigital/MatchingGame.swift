@@ -17,19 +17,23 @@ class MatchingGame: SKScene {
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
 
-    var letter1 : Button?
+    //var letter1 : Button?
+    
+    var letters : [Button]!
     
     let endGame = EndGame()
     
+    var emitter1 : SKNode?
+    var emitter2 : SKNode?
+ 
     override func didMove(to: SKView) {
         
         //Setando a cena ativa para facilitar as transições
         activeScene = self.name
         
         //Definindo o primeiro foco
-        letter1 = childNode(withName: "letter1") as? Button
-        letter1?.isFocused = true
-        letter1?.focusAnimation()
+        setNeedsFocusUpdate()
+        updateFocusIfNeeded()
 
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
@@ -50,30 +54,41 @@ class MatchingGame: SKScene {
         object?.texture = SKTexture(imageNamed: "object\(randomNumber)")
         matchBox?.texture = SKTexture(imageNamed: "shadow\(randomNumber)")
         
+        //Partículas de estrelinhas
+        emitter1 = childNode(withName: "emitter1")
+        emitter2 = childNode(withName: "emitter2")
+        letters = self["letter*"] as! [Button]
     }
-    
+
     func pressedSelect(){
-        for letter in children {
-            if type(of: letter) == Button.self{
-                if let letter = letter as? Button{
-                    if letter.isFocused{
-                        if letter.name == "letter\(randomNumber)"{
-                            
-                            //animação da letra movendo
-                            letter.associatingAnimation(position: (matchBox?.position)!, activeView: self.view!)
-                            
-                        }else{
-                            //Voz falando: "Try Again!"
-                            print("errou")
-                        }
-                    }
+        for letter in letters{
+            if letter.isFocused && letter.name == "letter\(randomNumber)" {
+                //animação da letra movendo
+                self.deactivateLettersFocuses()
+                letter.associatingAnimation(position: (matchBox?.position)!, activeView: self.view!) {
+                    let wait = SKAction.wait(forDuration: 5.0)
+                    let block = SKAction.run({
+                        self.addChild(self.endGame)
+                    })
+                    self.run(SKAction.sequence([wait, block]), completion:{
+                        self.setNeedsFocusUpdate()
+                        self.updateFocusIfNeeded()
+                    })
                 }
+                
+                EndGame.emittingStars(scene: self, position1: (emitter1?.position)!, position2: (emitter2?.position)!)
+                
+            }else if letter.isFocused && letter.name != "letter\(randomNumber)"{
+                //Voz falando: "Try Again!"
+                print("errou")
             }
         }
     }
-
-    override var preferredFocusEnvironments: [UIFocusEnvironment]{
-        return[letter1!]
+    
+    func deactivateLettersFocuses() {
+        for letter in letters{
+            letter.isFocused = false
+            letter.isFocusable = false
+        }
     }
-
 }

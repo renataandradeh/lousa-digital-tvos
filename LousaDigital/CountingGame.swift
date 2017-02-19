@@ -15,10 +15,12 @@ class CountingGame: SKScene {
     var randomAnswer : UInt32?
     var answerPosition : Button?
     
-    var number1 : Button?
+    var allNumbers : [Button]?
  
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
+    
+    let endGame = EndGame()
     
     override func didMove(to: SKView) {
         
@@ -26,9 +28,10 @@ class CountingGame: SKScene {
         activeScene = self.name
         
         //Definindo o primeiro foco
-        number1 = childNode(withName: "number1") as? Button
-        number1?.isFocused = true
-        number1?.focusAnimation()
+        setNeedsFocusUpdate()
+        updateFocusIfNeeded()
+        
+        allNumbers = self["number*"] as! [Button]
         
         //Preenchendo a cena com os elementos
         randomAnswer = arc4random_uniform(5)+1
@@ -98,7 +101,7 @@ class CountingGame: SKScene {
             }
         case 5:
             for i in 1...5 {
-                createObject(i: i, randomObject: randomObject, scale: 1.2)
+                createObject(i: i, randomObject: randomObject, scale: 1.3)
             }
         default:
             print("opção inválida")
@@ -111,13 +114,29 @@ class CountingGame: SKScene {
         space?.texture = SKTexture(imageNamed: "object\(randomObject)")
     }
     
-    func pressedSelect(){
-        for i in 1...3 {
-            let number = childNode(withName: "number\(i)") as? Button
-            if (number?.isFocused)! && number == answerPosition{
-                number?.associatingAnimation(position: (box?.position)!, activeView: self.view!)
-            }
+    private func deactivateNumbers(){
+        for number in allNumbers!{
+            number.isFocused = false
+            number.isFocusable = false
         }
     }
     
+    func pressedSelect(){
+        for number in (self["number*"] as? [Button])! {
+            if (number.isFocused) && number == answerPosition{
+                deactivateNumbers()
+                number.associatingAnimation(position: (box?.position)!, activeView: self.view!) {
+                    let wait = SKAction.wait(forDuration: 5.0)
+                    let block = SKAction.run({
+                        self.addChild(self.endGame)
+                    })
+                    self.run(SKAction.sequence([wait, block]), completion:{
+                        self.setNeedsFocusUpdate()
+                        self.updateFocusIfNeeded()
+                    })
+                }
+            }
+        }
+    }
+
 }

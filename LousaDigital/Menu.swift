@@ -10,17 +10,16 @@ import SpriteKit
 
 class Menu: SKScene {
     
-    var matchingGame : Button?
-    var countingGame : Button?
     let tapGeneralSelection = UITapGestureRecognizer()
+    var allButtons : [Button]?
     
     override func didMove(to view: SKView) {
-        matchingGame = childNode(withName: "matchingGame") as? Button
-        matchingGame?.isFocused = true
-        matchingGame?.focusAnimation()
+    
+        //Definindo o primeiro foco
+        setNeedsFocusUpdate()
+        updateFocusIfNeeded()
         
-        countingGame = childNode(withName: "countingGame") as? Button
-
+        allButtons = self["button*"] as? [Button]
         
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
@@ -29,11 +28,16 @@ class Menu: SKScene {
     }
     
     func pressedSelect(){
-        if let matchingGame = matchingGame, let countingGame = countingGame{
-            if matchingGame.isFocused{
-                presentGame(scene: MatchingGame(fileNamed: "MatchingGame")!)
-            }else if countingGame.isFocused{
-                presentGame(scene: CountingGame(fileNamed: "CountingGame")!)
+        for button in allButtons!{
+            if button.isFocused{
+                switch button.name! {
+                case "buttonMatching":
+                    presentGame(scene: MatchingGame(fileNamed: "MatchingGame")!)
+                case "buttonCounting":
+                    presentGame(scene: CountingGame(fileNamed: "CountingGame")!)
+                default:
+                    print("Cena não existe")
+                }
             }
         }
     }
@@ -42,6 +46,9 @@ class Menu: SKScene {
         self.run(SKAction.fadeOut(withDuration: 0.8)){
             self.view?.presentScene(scene)
         }
+    }
+    override var preferredFocusEnvironments: [UIFocusEnvironment]{
+        return[allButtons![0]]
     }
     
 }
