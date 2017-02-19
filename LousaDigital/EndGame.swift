@@ -20,6 +20,8 @@ class EndGame: SKNode {
     var emitterPosition1 : CGPoint?
     var emitterPosition2 : CGPoint?
     
+    var shadow : SKSpriteNode?
+    
     override init() {
         super.init()
         
@@ -31,7 +33,6 @@ class EndGame: SKNode {
         background.removeFromParent()
         background.alpha = 0
         addChild(background)
-        
         
         //Adicionando partículas de estrelinhas
         emitterPosition1 = endScreen.childNode(withName: "emitterPosition1")?.position

@@ -27,10 +27,6 @@ class CountingGame: SKScene {
         //Setando a cena ativa para facilitar as transições
         activeScene = self.name
         
-        //Definindo o primeiro foco
-        setNeedsFocusUpdate()
-        updateFocusIfNeeded()
-        
         allNumbers = self["number*"] as! [Button]
         
         //Preenchendo a cena com os elementos
@@ -40,6 +36,11 @@ class CountingGame: SKScene {
         box?.texture = SKTexture(imageNamed: "shadowNumber\(randomAnswer!)")
         
         fillNumbers()
+        
+        //Definindo o primeiro foco
+        setNeedsFocusUpdate()
+        updateFocusIfNeeded()
+        
         fillSpacesWithObjects(number: randomAnswer!)
         
         //Touch Pressed
@@ -126,7 +127,7 @@ class CountingGame: SKScene {
             if (number.isFocused) && number == answerPosition{
                 deactivateNumbers()
                 number.associatingAnimation(position: (box?.position)!, activeView: self.view!) {
-                    let wait = SKAction.wait(forDuration: 5.0)
+                    let wait = SKAction.wait(forDuration: 2.0)
                     let block = SKAction.run({
                         self.addChild(self.endGame)
                     })

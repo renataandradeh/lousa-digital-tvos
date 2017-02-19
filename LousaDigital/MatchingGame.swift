@@ -60,7 +60,7 @@ class MatchingGame: SKScene {
                 //animação da letra movendo
                 self.deactivateLettersFocuses()
                 letter.associatingAnimation(position: (matchBox?.position)!, activeView: self.view!) {
-                    let wait = SKAction.wait(forDuration: 3.0)
+                    let wait = SKAction.wait(forDuration: 2.0)
                     let block = SKAction.run({
                             self.addChild(self.endGame)
                     })

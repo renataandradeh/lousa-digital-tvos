@@ -12,9 +12,12 @@ class Button : SKSpriteNode {
 
     var isFocused = false
     var isFocusable = true
+    var shadow : SKSpriteNode?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        shadow = SKSpriteNode(texture: self.texture, color: .black, size: self.size)
+        alpha = 0.5
         isUserInteractionEnabled = true
     }
     
@@ -46,19 +49,36 @@ class Button : SKSpriteNode {
     
     func focusAnimation() {
         if isFocused{
-            let scaleUp = SKAction.scale(by: 2.0, duration: 0.5)
-            let scaleDown = SKAction.scale(by: 0.5, duration: 0.5)
-            let animation = SKAction.repeatForever(SKAction.group([scaleUp, scaleDown]))
+            shadow?.texture = self.texture
+            
+            let increaseAlpha = SKAction.fadeAlpha(to: 1, duration: 0.2)
+            let scaleUp = SKAction.scale(to: 1.2, duration: 0.2)
+            let animation = SKAction.group([increaseAlpha, scaleUp])
             run(animation, withKey: "buttonAnimation")
+            
+            shadow?.blendMode = SKBlendMode.alpha
+            shadow?.colorBlendFactor = 1
+            shadow?.anchorPoint = CGPoint(x: 0.53, y: 0.55)
+            shadow?.removeFromParent()
+            self.addChild(shadow!)
+            shadow?.run(SKAction.fadeAlpha(to: 0.3, duration: 0.2))
+            shadow?.zPosition = self.zPosition-1
+            
+
         }else if !isFocused{
-            run(SKAction.scale(to: 1, duration: 0.5), withKey: "buttonAnimation")
+            let decreaseAlpha = SKAction.fadeAlpha(to: 0.5, duration: 0.2)
+            let scaleDown = SKAction.scale(to: 1.0, duration: 0.2)
+            let animation = SKAction.group([decreaseAlpha, scaleDown])
+            run(animation, withKey: "buttonAnimation")
+            shadow?.run(SKAction.fadeAlpha(to: 0, duration: 0.2))
         }
     }
     
     func associatingAnimation(position: CGPoint, activeView: SKView, completion: (()->())?){
         self.zPosition = 2
-        let actionDuration : Double = 1.0
+        let actionDuration : Double = 0.8
         let maxScale : CGFloat = 2.5
+        
         let actionScaleUp = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
             let percentage = elapsedTime/CGFloat(actionDuration)
             self.alpha = 1 - percentage/2
@@ -76,6 +96,9 @@ class Button : SKSpriteNode {
             self.removeAction(forKey: "buttonAnimation")
             completion?()
         })
+        //removendo a sombra
+        shadow?.run(SKAction.fadeOut(withDuration: 2.0))
+        
     }
     
     
