@@ -34,10 +34,10 @@ class Menu: SKScene {
                 switch button.name! {
                 case "buttonMatching":
                     presentGame(scene: MatchingGame(fileNamed: "MatchingGame")!)
-                    owl.speak("You've selected the Matching game! Woow! I'm an owl!")
+                    //owl.speak("You've selected the Matching game! Woow! I'm an owl!")
                 case "buttonCounting":
                     presentGame(scene: CountingGame(fileNamed: "CountingGame")!)
-                    owl.speak("You've selected the Counting! Woow! Olha o gás!")
+                    //owl.speak("You've selected the Counting! Woow! Olha o gás!")
                 default:
                     print("Cena não existe")
                 }

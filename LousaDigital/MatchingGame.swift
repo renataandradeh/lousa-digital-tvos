@@ -38,9 +38,9 @@ class MatchingGame: SKScene {
         self.view!.addGestureRecognizer(tapGeneralSelection)
         
         //Tap Play Pause
-//        tapPlayPause.addTarget(self, action: #selector(pressedSelect))
-//        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-//        self.view!.addGestureRecognizer(tapPlayPause)
+        tapPlayPause.addTarget(self, action: #selector(pressedPlay))
+        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
+        self.view!.addGestureRecognizer(tapPlayPause)
         
         //Randomizando o objeto e preenchendo a matchBox
         randomNumber = arc4random_uniform(5) + 1
@@ -73,6 +73,14 @@ class MatchingGame: SKScene {
             }else if letter.isFocused && letter.name != "letter\(randomNumber)"{
                 //Voz falando: "Try Again!"
                 print("errou")
+            }
+        }
+    }
+    
+    func pressedPlay(){
+        for letter in letters{
+            if letter.isFocused{
+                owl.speak((letter.buttonType?.rawValue)!)
             }
         }
     }

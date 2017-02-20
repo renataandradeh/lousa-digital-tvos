@@ -34,7 +34,12 @@ class VoiceManager {
         let speechExpression = AVSpeechUtterance(string: text)
         speechExpression.pitchMultiplier = self.speechPitch
         speechExpression.voice = self.speechLanguage
+        speechExpression.rate = 0.45
         speechSynthesizer.speak(speechExpression)
+    }
+    
+    func stopSpeaking() {
+        speechSynthesizer.stopSpeaking(at: .immediate)
     }
     
 }

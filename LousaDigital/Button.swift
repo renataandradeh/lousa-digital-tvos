@@ -8,16 +8,52 @@
 
 import SpriteKit
 
+enum ButtonType : String {
+    case letter1 = "a"
+    case letter2 = "e"
+    case letter3 = "i"
+    case letter4 = "o"
+    case letter5 = "u"
+    case number1 = "1"
+    case number2 = "2"
+    case number3 = "3"
+    case number4 = "4"
+    case number5 = "5"
+    case buttonMatching = "Matching Game"
+    case buttonCounting = "Counting Game"
+    case notDefinedYet = ""
+    
+    init(buttonName: String){
+        switch buttonName{
+            case "letter1" : self = .letter1
+            case "letter2" : self = .letter2
+            case "letter3" : self = .letter3
+            case "letter4" : self = .letter4
+            case "letter5" : self = .letter5
+            case "number1" : self = .number1
+            case "number2" : self = .number2
+            case "number3" : self = .number3
+            case "number4" : self = .number4
+            case "number5" : self = .number5
+            case "buttonMatching" : self = .buttonMatching
+            case "buttonCounting" : self = .buttonCounting
+            default : self = .notDefinedYet
+        }
+    }
+}
+
 class Button : SKSpriteNode {
 
     var isFocused = false
     var isFocusable = true
     var shadow : SKSpriteNode?
+    var buttonType : ButtonType?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         shadow = SKSpriteNode(texture: self.texture, color: .black, size: self.size)
         alpha = 0.5
+        self.buttonType = ButtonType(buttonName: self.name!)
         isUserInteractionEnabled = true
     }
     
@@ -50,7 +86,6 @@ class Button : SKSpriteNode {
     func focusAnimation() {
         if isFocused{
             shadow?.texture = self.texture
-            
             let increaseAlpha = SKAction.fadeAlpha(to: 1, duration: 0.2)
             let scaleUp = SKAction.scale(to: 1.2, duration: 0.2)
             let animation = SKAction.group([increaseAlpha, scaleUp])
@@ -64,7 +99,6 @@ class Button : SKSpriteNode {
             shadow?.run(SKAction.fadeAlpha(to: 0.3, duration: 0.2))
             shadow?.zPosition = self.zPosition-1
             
-
         }else if !isFocused{
             let decreaseAlpha = SKAction.fadeAlpha(to: 0.5, duration: 0.2)
             let scaleDown = SKAction.scale(to: 1.0, duration: 0.2)
@@ -77,7 +111,7 @@ class Button : SKSpriteNode {
     func associatingAnimation(position: CGPoint, activeView: SKView, completion: (()->())?){
         self.zPosition = 2
         let actionDuration : Double = 0.8
-        let maxScale : CGFloat = 2.5
+        let maxScale : CGFloat = 2.0
         
         let actionScaleUp = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
             let percentage = elapsedTime/CGFloat(actionDuration)

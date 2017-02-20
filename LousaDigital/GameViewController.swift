@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 
 var activeScene : String?
+let owl = VoiceManager()
 
 class GameViewController: UIViewController {
     

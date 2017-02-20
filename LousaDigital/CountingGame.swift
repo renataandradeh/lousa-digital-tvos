@@ -47,6 +47,11 @@ class CountingGame: SKScene {
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
         tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
         self.view!.addGestureRecognizer(tapGeneralSelection)
+        
+        //Tap Play Pause
+        tapPlayPause.addTarget(self, action: #selector(pressedPlay))
+        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
+        self.view!.addGestureRecognizer(tapPlayPause)
     }
     
     private func fillNumbers(){
@@ -61,15 +66,18 @@ class CountingGame: SKScene {
         
         let randomPosition = arc4random_uniform(3)+1
         
-        let number = childNode(withName: "number\(randomPosition)") as? SKSpriteNode
-        answerPosition = number as? Button
+        let number = childNode(withName: "number\(randomPosition)") as? Button
+        answerPosition = number
         number?.texture = SKTexture(imageNamed: "number\(randomAnswer!)")
+        number?.buttonType = ButtonType(buttonName: "number\(randomAnswer!)")
         numbers.removeFirst()
         
         for i in 1...3{
-            let number = childNode(withName: "number\(i)") as? SKSpriteNode
+            let number = childNode(withName: "number\(i)") as? Button
             if i != Int(randomPosition){
                 number?.texture = SKTexture(imageNamed:"number\(numbers[0])")
+                number?.buttonType = ButtonType(buttonName:"number\(numbers[0])")
+
                 numbers.removeFirst()
             }
         }
@@ -136,6 +144,14 @@ class CountingGame: SKScene {
                         self.updateFocusIfNeeded()
                     })
                 }
+            }
+        }
+    }
+    
+    func pressedPlay(){
+        for number in (self["number*"] as? [Button])! {
+            if number.isFocused{
+                owl.speak((number.buttonType?.rawValue)!)
             }
         }
     }
