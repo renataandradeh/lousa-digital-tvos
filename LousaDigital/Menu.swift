@@ -12,6 +12,7 @@ class Menu: SKScene {
     
     let tapGeneralSelection = UITapGestureRecognizer()
     var allButtons : [Button]?
+    let owl = VoiceManager()
     
     var buttonMatching : Button?
 
@@ -21,7 +22,6 @@ class Menu: SKScene {
         
         allButtons = self["button*"] as? [Button]
         allButtons?.first?.buttonDidGetFocus()
-        
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
         tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
@@ -34,8 +34,10 @@ class Menu: SKScene {
                 switch button.name! {
                 case "buttonMatching":
                     presentGame(scene: MatchingGame(fileNamed: "MatchingGame")!)
+                    owl.speak("You've selected the Matching game! Woow! I'm an owl!")
                 case "buttonCounting":
                     presentGame(scene: CountingGame(fileNamed: "CountingGame")!)
+                    owl.speak("You've selected the Counting! Woow! Olha o gás!")
                 default:
                     print("Cena não existe")
                 }

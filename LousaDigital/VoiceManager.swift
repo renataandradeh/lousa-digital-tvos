@@ -26,13 +26,13 @@ class VoiceManager {
     
     init() {
         speechSynthesizer = AVSpeechSynthesizer()
-        speechPitch = 1.5
-        speechLanguage = AVSpeechSynthesisVoice(identifier: "en-US")!
+        speechPitch = 2.0
+        speechLanguage = AVSpeechSynthesisVoice(language: "en-US")!
     }
     
-    private func speak(_ text: String) {
+    func speak(_ text: String) {
         let speechExpression = AVSpeechUtterance(string: text)
-        speechExpression.rate = self.speechPitch
+        speechExpression.pitchMultiplier = self.speechPitch
         speechExpression.voice = self.speechLanguage
         speechSynthesizer.speak(speechExpression)
     }
