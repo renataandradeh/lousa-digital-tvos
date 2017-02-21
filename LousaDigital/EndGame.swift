@@ -75,7 +75,7 @@ class EndGame: SKNode {
     }
     
     private func endScreenAnimation() {
-        let moveEndScreen = SKAction.move(to: background.position, duration: 0.25)
+        let moveEndScreen = SKAction.moveTo(y: background.size.height/4.5, duration: 0.25)
         let moveOwl = SKAction.moveTo(y: -(background.size.height/2.9), duration: 0.25)
 
         endScreen.run(moveEndScreen)

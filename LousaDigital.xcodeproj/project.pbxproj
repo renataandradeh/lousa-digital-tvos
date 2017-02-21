@@ -45,6 +45,9 @@
 		07EE6CA61E59B562005EFB78 /* shadowNumber5.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE6CA21E59B562005EFB78 /* shadowNumber5.png */; };
 		07EE6CAA1E59BCDD005EFB78 /* emitter_stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07EE6CA91E59BCDD005EFB78 /* emitter_stars.sks */; };
 		07EE6CAD1E59BDE1005EFB78 /* star_test.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE6CAC1E59BDE1005EFB78 /* star_test.png */; };
+		07F155831E5C5EE600D2127E /* bigBoard.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F155801E5C5EE600D2127E /* bigBoard.png */; };
+		07F155841E5C5EE600D2127E /* plaque.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F155811E5C5EE600D2127E /* plaque.png */; };
+		07F155851E5C5EE600D2127E /* smallBoard.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F155821E5C5EE600D2127E /* smallBoard.png */; };
 		07FF3F561E51E44C00625748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F551E51E44C00625748 /* AppDelegate.swift */; };
 		07FF3F581E51E44C00625748 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07FF3F571E51E44C00625748 /* GameScene.sks */; };
 		07FF3F5A1E51E44C00625748 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07FF3F591E51E44C00625748 /* Actions.sks */; };
@@ -119,6 +122,9 @@
 		07EE6CA21E59B562005EFB78 /* shadowNumber5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadowNumber5.png; sourceTree = "<group>"; };
 		07EE6CA91E59BCDD005EFB78 /* emitter_stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = emitter_stars.sks; path = ../emitter_stars.sks; sourceTree = "<group>"; };
 		07EE6CAC1E59BDE1005EFB78 /* star_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_test.png; sourceTree = "<group>"; };
+		07F155801E5C5EE600D2127E /* bigBoard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigBoard.png; sourceTree = "<group>"; };
+		07F155811E5C5EE600D2127E /* plaque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plaque.png; sourceTree = "<group>"; };
+		07F155821E5C5EE600D2127E /* smallBoard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smallBoard.png; sourceTree = "<group>"; };
 		07FF3F521E51E44C00625748 /* LousaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LousaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FF3F551E51E44C00625748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07FF3F571E51E44C00625748 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 		0712ECBC1E537C990026AF80 /* Arts */ = {
 			isa = PBXGroup;
 			children = (
+				07F155791E5C5E2E00D2127E /* Backgrounds */,
 				07C66B481E5485B900E5A818 /* Objects */,
 				07C0B11F1E57931C001C6733 /* Menu */,
 				0734C01C1E5720F500C1FC4B /* EndGame */,
@@ -317,6 +324,16 @@
 			);
 			name = Particles;
 			path = LousaDigital;
+			sourceTree = "<group>";
+		};
+		07F155791E5C5E2E00D2127E /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				07F155801E5C5EE600D2127E /* bigBoard.png */,
+				07F155811E5C5EE600D2127E /* plaque.png */,
+				07F155821E5C5EE600D2127E /* smallBoard.png */,
+			);
+			name = Backgrounds;
 			sourceTree = "<group>";
 		};
 		07FF3F491E51E44C00625748 = {
@@ -510,6 +527,8 @@
 				07FF3F581E51E44C00625748 /* GameScene.sks in Resources */,
 				07EE6CAD1E59BDE1005EFB78 /* star_test.png in Resources */,
 				07FF3F5A1E51E44C00625748 /* Actions.sks in Resources */,
+				07F155851E5C5EE600D2127E /* smallBoard.png in Resources */,
+				07F155841E5C5EE600D2127E /* plaque.png in Resources */,
 				07DEA58C1E539071007F4EEC /* CountingGame.sks in Resources */,
 				075666B11E5A41180009FE7A /* number2.png in Resources */,
 				0734C0181E5718D300C1FC4B /* letter4.png in Resources */,
@@ -526,6 +545,7 @@
 				07C0B11C1E5785FD001C6733 /* Menu.sks in Resources */,
 				07EE6CAA1E59BCDD005EFB78 /* emitter_stars.sks in Resources */,
 				07EE6C9D1E59B504005EFB78 /* number4.png in Resources */,
+				07F155831E5C5EE600D2127E /* bigBoard.png in Resources */,
 				0734C0171E5718D300C1FC4B /* letter3.png in Resources */,
 				0734C01E1E57211200C1FC4B /* EndGame.sks in Resources */,
 				07FF3F631E51E44C00625748 /* Main.storyboard in Resources */,

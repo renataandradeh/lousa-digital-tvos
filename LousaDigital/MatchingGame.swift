@@ -16,8 +16,6 @@ class MatchingGame: SKScene {
 
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
-
-    //var letter1 : Button?
     
     var letters : [Button]!
     
