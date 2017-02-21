@@ -59,6 +59,7 @@
 		07FF3F701E51E44C00625748 /* LousaDigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F6F1E51E44C00625748 /* LousaDigitalTests.swift */; };
 		07FF3F7B1E51E44C00625748 /* LousaDigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F7A1E51E44C00625748 /* LousaDigitalUITests.swift */; };
 		07FF3F891E51E55500625748 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F881E51E55500625748 /* Button.swift */; };
+		C6986D011E5C658500BBE73D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6986D001E5C658500BBE73D /* SoundManager.swift */; };
 		C6A374E41E5B29D5000DB97F /* petit.png in Resources */ = {isa = PBXBuildFile; fileRef = C6A374E31E5B29D5000DB97F /* petit.png */; };
 		C6A374E61E5B2A44000DB97F /* VoiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A374E51E5B2A44000DB97F /* VoiceManager.swift */; };
 		F10EF3F71E54D7EA0047EC7F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10EF3F61E54D7EA0047EC7F /* MenuViewController.swift */; };
@@ -142,6 +143,7 @@
 		07FF3F7A1E51E44C00625748 /* LousaDigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LousaDigitalUITests.swift; sourceTree = "<group>"; };
 		07FF3F7C1E51E44C00625748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07FF3F881E51E55500625748 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		C6986D001E5C658500BBE73D /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		C6A374E31E5B29D5000DB97F /* petit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petit.png; sourceTree = "<group>"; };
 		C6A374E51E5B2A44000DB97F /* VoiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceManager.swift; sourceTree = "<group>"; };
 		F10EF3F61E54D7EA0047EC7F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				07C66B431E54757D00E5A818 /* MatchingGame.swift */,
 				0734C0231E57225800C1FC4B /* EndGame.swift */,
 				C6A374E51E5B2A44000DB97F /* VoiceManager.swift */,
+				C6986D001E5C658500BBE73D /* SoundManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				F1699B9F1E5486D60022208D /* MenuCollectionViewCell.swift in Sources */,
 				07FF3F601E51E44C00625748 /* GameViewController.swift in Sources */,
 				07C66B441E54757D00E5A818 /* MatchingGame.swift in Sources */,
+				C6986D011E5C658500BBE73D /* SoundManager.swift in Sources */,
 				F10EF3F71E54D7EA0047EC7F /* MenuViewController.swift in Sources */,
 				07C0B11E1E57868B001C6733 /* Menu.swift in Sources */,
 				C6A374E61E5B2A44000DB97F /* VoiceManager.swift in Sources */,
