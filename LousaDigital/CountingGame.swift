@@ -52,6 +52,7 @@ class CountingGame: SKScene {
         tapPlayPause.addTarget(self, action: #selector(pressedPlay))
         tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
         self.view!.addGestureRecognizer(tapPlayPause)
+        
     }
     
     private func fillNumbers(){
@@ -134,7 +135,7 @@ class CountingGame: SKScene {
         for number in (self["number*"] as? [Button])! {
             if (number.isFocused) && number == answerPosition{
                 deactivateNumbers()
-                number.associatingAnimation(position: (box?.position)!, activeView: self.view!) {
+                number.associatingAnimation(position: (box?.position)!, zPosFinal: 2, activeView: self.view!) {
                     let wait = SKAction.wait(forDuration: 2.0)
                     let block = SKAction.run({
                         self.addChild(self.endGame)

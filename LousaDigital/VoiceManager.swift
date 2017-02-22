@@ -26,7 +26,7 @@ class VoiceManager {
     
     init() {
         speechSynthesizer = AVSpeechSynthesizer()
-        speechPitch = 2.0
+        speechPitch = 1.5
         speechLanguage = AVSpeechSynthesisVoice(language: "en-US")!
     }
     
@@ -34,7 +34,7 @@ class VoiceManager {
         let speechExpression = AVSpeechUtterance(string: text)
         speechExpression.pitchMultiplier = self.speechPitch
         speechExpression.voice = self.speechLanguage
-        speechExpression.rate = 0.45
+        speechExpression.rate = 0.5
         speechSynthesizer.speak(speechExpression)
     }
     
