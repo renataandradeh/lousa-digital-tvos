@@ -83,31 +83,40 @@ class NumbersGame: SKScene {
     
     private func fillSpacesWithObjects(number: Int){
         let randomObject = arc4random_uniform(5)+1
-        print("ramdom \(randomObject)")
+    
         switch number {
         case 1:
+            cleanObjectsTexture()
             createObject(i: 3, randomObject: randomObject, scale: 5)
             
         case 2:
             var i = 1
+            cleanObjectsTexture()
             for _ in 1...2 {
+                
                 createObject(i: i, randomObject: randomObject, scale: 3)
                 i = 5
             }
         case 3:
             var i = 1
+            cleanObjectsTexture()
             for _ in 1...3 {
+                
                 createObject(i: i, randomObject: randomObject, scale: 2)
                 i += 2
             }
         case 4:
+            cleanObjectsTexture()
             for i in 1...5 {
                 if i != 3 {
+                    
                     createObject(i: i, randomObject: randomObject, scale: 1.5)
                 }
             }
         case 5:
+            cleanObjectsTexture()
             for i in 1...5 {
+                
                 createObject(i: i, randomObject: randomObject, scale: 1.3)
             }
         default:
@@ -116,9 +125,23 @@ class NumbersGame: SKScene {
     }
     
     private func createObject(i: Int, randomObject : UInt32, scale: CGFloat){
+        
+
+        
         let space = childNode(withName: "space\(i)") as? SKSpriteNode
         space?.setScale(scale)
-        space?.texture = SKTexture(imageNamed: "object\(rightNumber)")
+        space?.texture = SKTexture(imageNamed: "object\(rightNumber!)")
+        
+        
+    }
+    
+    func cleanObjectsTexture(){
+        for i in 1...5{
+            let space = childNode(withName: "space\(i)") as? SKSpriteNode
+            space?.texture = SKTexture()
+            space?.setScale(0)
+        }
+        
     }
 
 }
