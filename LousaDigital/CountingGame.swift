@@ -27,7 +27,7 @@ class CountingGame: SKScene {
         //Setando a cena ativa para facilitar as transições
         activeScene = self.name
         
-        allNumbers = self["number*"] as! [Button]
+        allNumbers = (self["number*"] as! [Button])
         
         //Preenchendo a cena com os elementos
         randomAnswer = arc4random_uniform(5)+1
