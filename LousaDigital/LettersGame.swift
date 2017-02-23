@@ -54,8 +54,7 @@ class LettersGame: SKScene {
                 letterBox?.texture = SKTexture(imageNamed: selectedLetter)
                 //animação da letra movendo
                 //self.deactivateLettersFocuses()
-                
-                
+  
             }
         }
     }
