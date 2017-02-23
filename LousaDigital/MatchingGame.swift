@@ -50,6 +50,7 @@ class MatchingGame: SKScene {
         matchBox?.texture = SKTexture(imageNamed: "shadow\(randomNumber)")
     
         letters = self["letter*"] as! [Button]
+        
     }
 
     func pressedSelect(){
@@ -57,7 +58,7 @@ class MatchingGame: SKScene {
             if letter.isFocused && letter.name == "letter\(randomNumber)" {
                 //animação da letra movendo
                 self.deactivateLettersFocuses()
-                letter.associatingAnimation(position: (matchBox?.position)!, activeView: self.view!) {
+                letter.associatingAnimation(position: (matchBox?.position)!, zPosFinal: 2, activeView: self.view!) {
                     let wait = SKAction.wait(forDuration: 2.0)
                     let block = SKAction.run({
                             self.addChild(self.endGame)

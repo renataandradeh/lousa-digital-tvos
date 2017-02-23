@@ -110,17 +110,21 @@ class Button : SKSpriteNode {
         }
     }
     
-    func associatingAnimation(position: CGPoint, activeView: SKView, completion: (()->())?){
-        self.zPosition = 2
+    func associatingAnimation(position: CGPoint, zPosFinal: CGFloat, activeView: SKView, completion: (()->())?){
+        
+        
+        
         let actionDuration : Double = 0.8
         let maxScale : CGFloat = 2.0
         
         let actionScaleUp = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
+            self.zPosition = 100
             let percentage = elapsedTime/CGFloat(actionDuration)
             self.alpha = 1 - percentage/2
             self.setScale(1 + percentage * maxScale)
         })
         let actionScaleDown = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
+            self.zPosition = zPosFinal
             let percentage = elapsedTime/CGFloat(actionDuration)
             self.alpha = 1 + percentage
             self.run(SKAction.scale(to: 1.5, duration: actionDuration))
