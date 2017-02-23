@@ -62,8 +62,6 @@ class NumbersGame: SKScene {
                         return
                 }
                 
-                
-                
                 print("number \(numberOfItems)")
                // object?.texture = SKTexture(imageNamed: "object\(fullNameArr[1])")
                 numberBox?.texture = SKTexture(imageNamed: selectedNumber)

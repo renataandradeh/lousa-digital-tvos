@@ -111,9 +111,7 @@ class Button : SKSpriteNode {
     }
     
     func associatingAnimation(position: CGPoint, zPosFinal: CGFloat, activeView: SKView, completion: (()->())?){
-        
-        
-        
+
         let actionDuration : Double = 0.8
         let maxScale : CGFloat = 2.0
         

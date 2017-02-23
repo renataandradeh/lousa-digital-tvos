@@ -109,6 +109,8 @@ class EndGame: SKNode {
                     return MatchingGame(fileNamed: sceneName)
                 case "CountingGame":
                     return CountingGame(fileNamed: sceneName)
+                case "WormGame":
+                    return WormGame(fileNamed: sceneName)
                 default:
                     return Menu(fileNamed: "Menu")
                 }

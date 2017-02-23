@@ -67,23 +67,25 @@ class WormGame: SKScene {
             if number.isFocused && number.name == currenteButton{
                 let body = childNode(withName: "body\(currentNumber)") as? SKSpriteNode
     
-                number.associatingAnimation(position: body!.position, zPosFinal: (body?.zPosition)! + 1, activeView: self.view!, completion: {
+                matchingFadeAnimation(number: number, position: body!.position, zPosFinal: (body?.zPosition)! + 1, activeView: self.view!, completion: {
                     self.setNeedsFocusUpdate()
                     self.updateFocusIfNeeded()
                 })
                 
-                deactivateNumberFocus(number: number)
-                
                 if currentNumber == 5 {
+                    
                     let wait = SKAction.wait(forDuration: 4.0)
                     let block = SKAction.run({
+                        self.deactivateNumberFocus()
                         self.addChild(self.endGame)
-                    })
-                    self.run(SKAction.sequence([wait, block]), completion:{
                         self.setNeedsFocusUpdate()
                         self.updateFocusIfNeeded()
                     })
+                    self.run(SKAction.sequence([wait, block]))
+                    
                 }else{
+                    number.isFocused = false
+                    number.isFocusable = false
                     currentNumber += 1
                 }
             }
@@ -94,10 +96,40 @@ class WormGame: SKScene {
 //            }
         }
     }
+    
+    func matchingFadeAnimation(number: Button, position: CGPoint, zPosFinal: CGFloat, activeView: SKView, completion: (()->())?){
+        
+        let actionDuration : Double = 0.8
+        let maxScale : CGFloat = 1.2
+        
+        let actionScaleUp = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
+            number.zPosition = 100
+            let percentage = elapsedTime/CGFloat(actionDuration)
+            number.alpha = 1 - percentage/2
+            number.setScale(1 + percentage * maxScale)
+        })
+        
+        let actionScaleDown = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
+            number.zPosition = zPosFinal
+            number.run(SKAction.fadeAlpha(to: 0, duration: 0.25))
+        })
+        self.run(SKAction.sequence([actionScaleUp, actionScaleDown]), completion: {
+            number.position = position
+            number.setScale(1.5)
+            number.isFocused = false
+            number.removeAction(forKey: "buttonAnimation")
+            number.run(SKAction.fadeAlpha(to: 1, duration: 1.0))
+            completion?()
+        })
+        //removendo a sombra
+        number.shadow?.run(SKAction.fadeOut(withDuration: 2.0))
+    }
 
-    func deactivateNumberFocus(number : Button) {
-        number.isFocused = false
-        number.isFocusable = false
+    func deactivateNumberFocus() {
+        for number in numberBodies {
+            number.isFocused = false
+            number.isFocusable = false
+        }
     }
     
     func pressedPlay(){
