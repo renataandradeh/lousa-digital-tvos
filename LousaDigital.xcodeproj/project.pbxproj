@@ -40,6 +40,10 @@
 		07C0B1231E579703001C6733 /* owl.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C0B1221E579703001C6733 /* owl.png */; };
 		07C66B441E54757D00E5A818 /* MatchingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C66B431E54757D00E5A818 /* MatchingGame.swift */; };
 		07C66B461E54758C00E5A818 /* MatchingGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07C66B451E54758C00E5A818 /* MatchingGame.sks */; };
+		07DD16981E5F2B2E00A46084 /* owlBeak.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DD16951E5F2B2E00A46084 /* owlBeak.png */; };
+		07DD16991E5F2B2E00A46084 /* owlFoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DD16961E5F2B2E00A46084 /* owlFoot.png */; };
+		07DD169A1E5F2B2E00A46084 /* owlBody.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DD16971E5F2B2E00A46084 /* owlBody.png */; };
+		07DD169C1E5F2FA300A46084 /* body3.png in Resources */ = {isa = PBXBuildFile; fileRef = 07DD169B1E5F2FA300A46084 /* body3.png */; };
 		07DEA58C1E539071007F4EEC /* CountingGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07DEA58B1E539071007F4EEC /* CountingGame.sks */; };
 		07DEA58E1E539115007F4EEC /* CountingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DEA58D1E539115007F4EEC /* CountingGame.swift */; };
 		07EE6C9C1E59B504005EFB78 /* number3.png in Resources */ = {isa = PBXBuildFile; fileRef = 07EE6C981E59B504005EFB78 /* number3.png */; };
@@ -135,6 +139,10 @@
 		07C0B1221E579703001C6733 /* owl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owl.png; sourceTree = "<group>"; };
 		07C66B431E54757D00E5A818 /* MatchingGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingGame.swift; sourceTree = "<group>"; };
 		07C66B451E54758C00E5A818 /* MatchingGame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MatchingGame.sks; sourceTree = "<group>"; };
+		07DD16951E5F2B2E00A46084 /* owlBeak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owlBeak.png; sourceTree = "<group>"; };
+		07DD16961E5F2B2E00A46084 /* owlFoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owlFoot.png; sourceTree = "<group>"; };
+		07DD16971E5F2B2E00A46084 /* owlBody.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owlBody.png; sourceTree = "<group>"; };
+		07DD169B1E5F2FA300A46084 /* body3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body3.png; sourceTree = "<group>"; };
 		07DEA58B1E539071007F4EEC /* CountingGame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CountingGame.sks; sourceTree = "<group>"; };
 		07DEA58D1E539115007F4EEC /* CountingGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingGame.swift; sourceTree = "<group>"; };
 		07EE6C981E59B504005EFB78 /* number3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = number3.png; sourceTree = "<group>"; };
@@ -213,6 +221,7 @@
 		0712ECBC1E537C990026AF80 /* Arts */ = {
 			isa = PBXGroup;
 			children = (
+				07DD16941E5F2A1D00A46084 /* Owl */,
 				07F1558C1E5C6F6A00D2127E /* WormGame */,
 				07F155791E5C5E2E00D2127E /* Backgrounds */,
 				07C66B481E5485B900E5A818 /* Objects */,
@@ -248,7 +257,6 @@
 		07C0B11F1E57931C001C6733 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				07C0B1221E579703001C6733 /* owl.png */,
 				C6A374E31E5B29D5000DB97F /* petit.png */,
 			);
 			name = Menu;
@@ -342,6 +350,17 @@
 			name = CountingGame;
 			sourceTree = "<group>";
 		};
+		07DD16941E5F2A1D00A46084 /* Owl */ = {
+			isa = PBXGroup;
+			children = (
+				07DD16951E5F2B2E00A46084 /* owlBeak.png */,
+				07DD16961E5F2B2E00A46084 /* owlFoot.png */,
+				07DD16971E5F2B2E00A46084 /* owlBody.png */,
+				07C0B1221E579703001C6733 /* owl.png */,
+			);
+			name = Owl;
+			sourceTree = "<group>";
+		};
 		07DDEE741E57B85300BFB4A2 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +426,7 @@
 			children = (
 				07F155981E5C6FEB00D2127E /* body1.png */,
 				07F155991E5C6FEB00D2127E /* body2.png */,
+				07DD169B1E5F2FA300A46084 /* body3.png */,
 				07F1559A1E5C6FEB00D2127E /* body4.png */,
 				07F1559B1E5C6FEB00D2127E /* body5.png */,
 				07F1559C1E5C6FEB00D2127E /* head.png */,
@@ -599,6 +619,7 @@
 				075666BB1E5A555F0009FE7A /* number1.png in Resources */,
 				0734C0031E5718B100C1FC4B /* object3.png in Resources */,
 				0734C00E1E5718C300C1FC4B /* shadow4.png in Resources */,
+				07DD16981E5F2B2E00A46084 /* owlBeak.png in Resources */,
 				0734C00B1E5718C300C1FC4B /* shadow1.png in Resources */,
 				077D5B9C1E5C726F0016EBFC /* numberBody5.png in Resources */,
 				075666B31E5A41200009FE7A /* shadowNumber2.png in Resources */,
@@ -609,6 +630,7 @@
 				077D5B9B1E5C726F0016EBFC /* numberBody4.png in Resources */,
 				07EE6CAD1E59BDE1005EFB78 /* star_test.png in Resources */,
 				07FF3F5A1E51E44C00625748 /* Actions.sks in Resources */,
+				07DD16991E5F2B2E00A46084 /* owlFoot.png in Resources */,
 				07F155841E5C5EE600D2127E /* plaque.png in Resources */,
 				07DEA58C1E539071007F4EEC /* CountingGame.sks in Resources */,
 				075666B11E5A41180009FE7A /* number2.png in Resources */,
@@ -628,8 +650,10 @@
 				07EE6C9E1E59B504005EFB78 /* number5.png in Resources */,
 				077D5B9A1E5C726F0016EBFC /* numberBody3.png in Resources */,
 				0734C00C1E5718C300C1FC4B /* shadow2.png in Resources */,
+				07DD169A1E5F2B2E00A46084 /* owlBody.png in Resources */,
 				07C0B11C1E5785FD001C6733 /* Menu.sks in Resources */,
 				07EE6CAA1E59BCDD005EFB78 /* emitter_stars.sks in Resources */,
+				07DD169C1E5F2FA300A46084 /* body3.png in Resources */,
 				07F1559F1E5C6FEB00D2127E /* body4.png in Resources */,
 				0784C8E81E5DB801007A1D1C /* board.png in Resources */,
 				07EE6C9D1E59B504005EFB78 /* number4.png in Resources */,

@@ -36,14 +36,11 @@ class NumbersGame: SKScene {
         tapPlayPause.addTarget(self, action: #selector(pressedPlay))
         tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
         self.view!.addGestureRecognizer(tapPlayPause)
-        
-        
-        
+
         for i in 1...5{
             numbers.append(childNode(withName: "number\(i)") as! Button)
         }
-        
-        
+ 
     }
     
     func pressedSelect(){

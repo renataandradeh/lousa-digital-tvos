@@ -100,7 +100,7 @@ class WormGame: SKScene {
     func matchingFadeAnimation(number: Button, position: CGPoint, zPosFinal: CGFloat, activeView: SKView, completion: (()->())?){
         
         let actionDuration : Double = 0.8
-        let maxScale : CGFloat = 1.2
+        let maxScale : CGFloat = 1.3
         
         let actionScaleUp = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
             number.zPosition = 100
@@ -115,7 +115,7 @@ class WormGame: SKScene {
         })
         self.run(SKAction.sequence([actionScaleUp, actionScaleDown]), completion: {
             number.position = position
-            number.setScale(1.5)
+            number.setScale(maxScale)
             number.isFocused = false
             number.removeAction(forKey: "buttonAnimation")
             number.run(SKAction.fadeAlpha(to: 1, duration: 1.0))
