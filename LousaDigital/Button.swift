@@ -21,6 +21,7 @@ enum ButtonType : String {
     case number5 = "5"
     case buttonMatching = "Matching Game"
     case buttonCounting = "Counting Game"
+    case buttonLetters = "Letters Game"
     case notDefinedYet = ""
     
     init(buttonName: String){
@@ -37,6 +38,7 @@ enum ButtonType : String {
             case "number5" : self = .number5
             case "buttonMatching" : self = .buttonMatching
             case "buttonCounting" : self = .buttonCounting
+            case "buttonLetters" : self = .buttonLetters
             default : self = .notDefinedYet
         }
     }

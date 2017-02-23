@@ -38,6 +38,10 @@ class Menu: SKScene {
                     presentGame(scene: CountingGame(fileNamed: "CountingGame")!)
                 case "buttonWorm":
                     presentGame(scene: WormGame(fileNamed: "WormGame")!)
+                case "buttonLetters":
+                    presentGame(scene: LettersGame(fileNamed: "LettersGame")!)
+                case "buttonNumbers":
+                    presentGame(scene: NumbersGame(fileNamed: "NumbersGame")!)
                 default:
                     print("Cena não existe")
                 }
