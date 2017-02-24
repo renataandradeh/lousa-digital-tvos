@@ -136,7 +136,32 @@ class Button : SKSpriteNode {
         })
         //removendo a sombra
         shadow?.run(SKAction.fadeOut(withDuration: 2.0))
+    }
+    
+    func associatingWrongAnimation(){
+
+        let colorizeRed = SKAction.colorize(with: .red, colorBlendFactor: 0.8, duration: 0.5)
+        let colorizedClear = SKAction.colorize(with: .red, colorBlendFactor: 0, duration: 0.5)
         
+        let colorizeSequence = SKAction.sequence([colorizeRed, colorizedClear])
+
+        //Criando animação de shake
+        let amplitudeX:Float = 12
+        let amplitudeY:Float = 20
+        let numberOfShakes = 5
+        var actionsArray : [SKAction] = []
+        for _ in 1...Int(numberOfShakes) {
+            let moveX = Float(arc4random_uniform(UInt32(amplitudeX))) - amplitudeX / 2
+            let moveY = Float(arc4random_uniform(UInt32(amplitudeY))) - amplitudeY / 2;
+            let shakeAction = SKAction.moveBy(x: CGFloat(moveX), y: CGFloat(moveY), duration: 0.07)
+            shakeAction.timingMode = SKActionTimingMode.easeOut;
+            actionsArray.append(shakeAction)
+            actionsArray.append(shakeAction.reversed())
+        }
+        
+        let actionSeq = SKAction.sequence(actionsArray)
+        
+        self.run(SKAction.group([colorizeSequence, actionSeq]))
     }
     
     

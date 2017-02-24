@@ -88,16 +88,13 @@ class WormGame: SKScene {
                     number.isFocusable = false
                     currentNumber += 1
                 }
+            }else if number.isFocused && number.name != currenteButton{
+                number.associatingWrongAnimation()
             }
-            
-//            }else if letter.isFocused && letter.name != "letter\(randomNumber)"{
-//                //Voz falando: "Try Again!"
-//                print("errou")
-//            }
         }
     }
     
-    func matchingFadeAnimation(number: Button, position: CGPoint, zPosFinal: CGFloat, activeView: SKView, completion: (()->())?){
+    private func matchingFadeAnimation(number: Button, position: CGPoint, zPosFinal: CGFloat, activeView: SKView, completion: (()->())?){
         
         let actionDuration : Double = 0.8
         let maxScale : CGFloat = 1.3

@@ -71,6 +71,7 @@ class MatchingGame: SKScene {
                 
             }else if letter.isFocused && letter.name != "letter\(randomNumber)"{
                 //Voz falando: "Try Again!"
+                letter.associatingWrongAnimation()
                 print("errou")
             }
         }

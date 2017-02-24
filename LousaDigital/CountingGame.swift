@@ -145,6 +145,8 @@ class CountingGame: SKScene {
                         self.updateFocusIfNeeded()
                     })
                 }
+            }else if(number.isFocused) && number != answerPosition {
+                number.associatingWrongAnimation()
             }
         }
     }
