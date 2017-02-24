@@ -42,6 +42,8 @@ class Menu: SKScene {
                     presentGame(scene: LettersGame(fileNamed: "LettersGame")!)
                 case "buttonNumbers":
                     presentGame(scene: NumbersGame(fileNamed: "NumbersGame")!)
+                case "buttonColors":
+                    presentGame(scene: ColorsGame(fileNamed: "ColorsGame")!)
                 default:
                     print("Cena não existe")
                 }

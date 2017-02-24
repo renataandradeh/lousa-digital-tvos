@@ -9,36 +9,53 @@
 import SpriteKit
 
 enum ButtonType : String {
-    case letter1 = "a"
-    case letter2 = "e"
-    case letter3 = "i"
-    case letter4 = "o"
-    case letter5 = "u"
+    case letterA = "a"
+    case letterE = "e"
+    case letterI = "i"
+    case letterO = "o"
+    case letterU = "u"
     case number1 = "1"
     case number2 = "2"
     case number3 = "3"
     case number4 = "4"
     case number5 = "5"
+    case blueColor = "blue"
+    case greenColor = "green"
+    case yellowColor = "yellow"
+    case pinkColor = "pink"
+    case purpleColor = "purple"
+    case orangeColor = "orange"
+    case redColor = "red"
     case buttonMatching = "Matching Game"
     case buttonCounting = "Counting Game"
     case buttonLetters = "Letters Game"
+    case buttonColors = "Colors Game"
+    
     case notDefinedYet = ""
     
     init(buttonName: String){
         switch buttonName{
-            case "letter1" : self = .letter1
-            case "letter2" : self = .letter2
-            case "letter3" : self = .letter3
-            case "letter4" : self = .letter4
-            case "letter5" : self = .letter5
+            case "letter1" : self = .letterA
+            case "letter2" : self = .letterE
+            case "letter3" : self = .letterI
+            case "letter4" : self = .letterO
+            case "letter5" : self = .letterU
             case "number1" : self = .number1
             case "number2" : self = .number2
             case "number3" : self = .number3
             case "number4" : self = .number4
             case "number5" : self = .number5
+            case "bluePencil" : self = .blueColor
+            case "greenPencil" : self = .greenColor
+            case "yellowPencil" : self = .yellowColor
+            case "orangePencil" : self = .orangeColor
+            case "pinkPencil" : self = .pinkColor
+            case "purplePencil" : self = .purpleColor
+            case "redPencil" : self = .redColor
             case "buttonMatching" : self = .buttonMatching
             case "buttonCounting" : self = .buttonCounting
             case "buttonLetters" : self = .buttonLetters
+            case "buttonColors" : self = .buttonColors
             default : self = .notDefinedYet
         }
     }
