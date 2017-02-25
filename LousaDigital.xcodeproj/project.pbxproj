@@ -35,6 +35,7 @@
 		077D5B9B1E5C726F0016EBFC /* numberBody4.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D5B961E5C726F0016EBFC /* numberBody4.png */; };
 		077D5B9C1E5C726F0016EBFC /* numberBody5.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D5B971E5C726F0016EBFC /* numberBody5.png */; };
 		0784C8E81E5DB801007A1D1C /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 0784C8E71E5DB801007A1D1C /* board.png */; };
+		078CCEE41E61ED9800E99544 /* ActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CCEE31E61ED9800E99544 /* ActivityScene.swift */; };
 		07C0B11C1E5785FD001C6733 /* Menu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07C0B11B1E5785FD001C6733 /* Menu.sks */; };
 		07C0B11E1E57868B001C6733 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0B11D1E57868B001C6733 /* Menu.swift */; };
 		07C0B1231E579703001C6733 /* owl.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C0B1221E579703001C6733 /* owl.png */; };
@@ -149,6 +150,7 @@
 		077D5B961E5C726F0016EBFC /* numberBody4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numberBody4.png; sourceTree = "<group>"; };
 		077D5B971E5C726F0016EBFC /* numberBody5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numberBody5.png; sourceTree = "<group>"; };
 		0784C8E71E5DB801007A1D1C /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
+		078CCEE31E61ED9800E99544 /* ActivityScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityScene.swift; sourceTree = "<group>"; };
 		07C0B11B1E5785FD001C6733 /* Menu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Menu.sks; sourceTree = "<group>"; };
 		07C0B11D1E57868B001C6733 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		07C0B1221E579703001C6733 /* owl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = owl.png; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 				07E37BF91E60D8880069ECBE /* ColorsGame.swift */,
 				0734C0231E57225800C1FC4B /* EndGame.swift */,
 				C6A374E51E5B2A44000DB97F /* VoiceManager.swift */,
+				078CCEE31E61ED9800E99544 /* ActivityScene.swift */,
 				F1D0740B1E5DDB290024933D /* LettersGame.swift */,
 				F16972C81E5E0A0F00B3F196 /* NumbersGame.swift */,
 				C6986D001E5C658500BBE73D /* SoundManager.swift */,
@@ -781,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07FF3F5E1E51E44C00625748 /* GameScene.swift in Sources */,
+				078CCEE41E61ED9800E99544 /* ActivityScene.swift in Sources */,
 				F1699B9F1E5486D60022208D /* MenuCollectionViewCell.swift in Sources */,
 				F16972C91E5E0A0F00B3F196 /* NumbersGame.swift in Sources */,
 				07FF3F601E51E44C00625748 /* GameViewController.swift in Sources */,

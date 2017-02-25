@@ -8,12 +8,8 @@
 
 import SpriteKit
 
-class WormGame: SKScene {
-
-    let tapGeneralSelection = UITapGestureRecognizer()
-    let tapPlayPause = UITapGestureRecognizer()
-    let tapMenu = UITapGestureRecognizer()
-
+class WormGame: ActivityScene {
+    
     var numberBodies : [Button] = []
     var randomNumbers : [Int]  = []
     var numberPositions : [CGPoint]  = []
@@ -48,23 +44,10 @@ class WormGame: SKScene {
         }
         
         //Definindo o primeiro foco
-        self.setNeedsFocusUpdate()
-        self.updateFocusIfNeeded()
+        setInitialFocus()
         
-        //Touch Pressed
-        tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
-        tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
-        self.view!.addGestureRecognizer(tapGeneralSelection)
-        
-        //Tap Play Pause
-        tapPlayPause.addTarget(self, action: #selector(pressedPlay))
-        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-        self.view!.addGestureRecognizer(tapPlayPause)
-        
-        //Tap Menu
-        tapMenu.addTarget(self, action: #selector(pressedMenu))
-        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
-        self.view!.addGestureRecognizer(tapMenu)
+        //Criando e adicionando os gestures à view
+        createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
     }
     
     func pressedSelect(){
@@ -96,6 +79,14 @@ class WormGame: SKScene {
                 }
             }else if number.isFocused && number.name != currenteButton{
                 number.associatingWrongAnimation()
+            }
+        }
+    }
+    
+    func pressedPlay(){
+        for number in numberBodies {
+            if number.isFocused{
+                owl.speak((number.buttonType?.rawValue)!)
             }
         }
     }
@@ -133,17 +124,5 @@ class WormGame: SKScene {
             number.isFocused = false
             number.isFocusable = false
         }
-    }
-    
-    func pressedPlay(){
-        for number in numberBodies {
-            if number.isFocused{
-                owl.speak((number.buttonType?.rawValue)!)
-            }
-        }
-    }
-    
-    func pressedMenu() {
-        self.view?.presentScene(Menu(fileNamed: "Menu"))
     }
 }

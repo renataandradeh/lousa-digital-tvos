@@ -8,47 +8,29 @@
 
 import SpriteKit
 
-class NumbersGame: SKScene {
+class NumbersGame: ActivityScene {
+    
     var object: SKSpriteNode?
     var numberBox: SKSpriteNode?
     var numbers : [Button] = []
-    let tapGeneralSelection = UITapGestureRecognizer()
-    let tapPlayPause = UITapGestureRecognizer()
-    let tapMenu = UITapGestureRecognizer()
     
     var rightNumber : Int? = nil
-    
-    
+
     var selectedNumber : String!
-    //let fullNameArr : [String]!
     
     override func didMove(to: SKView) {
         
         //Definindo o primeiro foco
-        self.setNeedsFocusUpdate()
-        self.updateFocusIfNeeded()
-        
-        
-        //object = childNode(withName: "object") as? SKSpriteNode
+        setInitialFocus()
+
         numberBox = childNode(withName: "numberBox") as? SKSpriteNode
-        
-        //Touch Pressed
-        tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
-        tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
-        self.view!.addGestureRecognizer(tapGeneralSelection)
-        //Tap Play Pause
-        tapPlayPause.addTarget(self, action: #selector(pressedPlay))
-        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-        self.view!.addGestureRecognizer(tapPlayPause)
-        //Tap Menu
-        tapMenu.addTarget(self, action: #selector(pressedMenu))
-        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
-        self.view!.addGestureRecognizer(tapMenu)
 
         for i in 1...5{
             numbers.append(childNode(withName: "number\(i)") as! Button)
         }
- 
+
+        //Criando e adicionando os gestures à view
+        createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
     }
     
     func pressedSelect(){
@@ -72,8 +54,6 @@ class NumbersGame: SKScene {
                 numberBox?.texture = SKTexture(imageNamed: selectedNumber)
                 //animação da letra movendo
                 //self.deactivateLettersFocuses()
-                
-                
             }
         }
     }
@@ -85,11 +65,7 @@ class NumbersGame: SKScene {
             }
         }
     }
-    
-    func pressedMenu() {
-        self.view?.presentScene(Menu(fileNamed: "Menu"))
-    }
-    
+
     private func fillSpacesWithObjects(number: Int){
         let randomObject = arc4random_uniform(5)+1
     

@@ -12,18 +12,16 @@ import SpriteKit
 var activeScene : String?
 let owl = VoiceManager()
 
+let tapGeneralSelection = UITapGestureRecognizer()
+let tapPlayPause = UITapGestureRecognizer()
+let tapMenu = UITapGestureRecognizer()
+
 class GameViewController: UIViewController {
-    
-    var menu : SKScene?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menu = Menu(fileNamed: "Menu")
-        
-        activeScene = menu?.name
-        
-        presentScene(scene: menu!)
+        presentScene(scene: Menu(fileNamed: "Menu")!)
         
         
 //        if let view = self.view as! SKView? {
@@ -43,7 +41,7 @@ class GameViewController: UIViewController {
 //        }
     }
 
-    func presentScene(scene : SKScene){
+    private func presentScene(scene : SKScene){
         self.view = SKView()
         if let view = self.view as! SKView? {
             scene.scaleMode = .aspectFill
@@ -55,12 +53,4 @@ class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-    
-//    override var preferredFocusEnvironments: [UIFocusEnvironment] {
-//        if let scene = (view as? SKView)?.scene {
-//            return [scene]
-//        } else {
-//            return []
-//        }
-//    }
 }

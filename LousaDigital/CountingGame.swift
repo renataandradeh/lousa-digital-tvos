@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class CountingGame: SKScene {
+class CountingGame: ActivityScene {
     
     var box : SKSpriteNode?
     
@@ -16,10 +16,6 @@ class CountingGame: SKScene {
     var answerPosition : Button?
     
     var allNumbers : [Button]?
- 
-    let tapGeneralSelection = UITapGestureRecognizer()
-    let tapPlayPause = UITapGestureRecognizer()
-    let tapMenu = UITapGestureRecognizer()
     
     let endGame = EndGame()
     
@@ -39,31 +35,12 @@ class CountingGame: SKScene {
         fillNumbers()
         
         //Definindo o primeiro foco
-        self.setNeedsFocusUpdate()
-        self.updateFocusIfNeeded()
-        
+        setInitialFocus()
         
         fillSpacesWithObjects(number: randomAnswer!)
         
-        //Touch Pressed
-        tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
-        tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
-        self.view!.addGestureRecognizer(tapGeneralSelection)
-        
-        //Tap Play Pause
-        tapPlayPause.addTarget(self, action: #selector(pressedPlay))
-        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-        self.view!.addGestureRecognizer(tapPlayPause)
-        
-        //Tap Play Pause
-        tapPlayPause.addTarget(self, action: #selector(pressedPlay))
-        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-        self.view!.addGestureRecognizer(tapPlayPause)
-        
-        //Tap Menu
-        tapMenu.addTarget(self, action: #selector(pressedMenu))
-        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
-        self.view!.addGestureRecognizer(tapMenu)
+        //Criando e adicionando os gestures à view
+        createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
         
     }
     
@@ -169,9 +146,5 @@ class CountingGame: SKScene {
                 owl.speak((number.buttonType?.rawValue)!)
             }
         }
-    }
-    
-    func pressedMenu() {
-        self.view?.presentScene(Menu(fileNamed: "Menu"))
     }
 }

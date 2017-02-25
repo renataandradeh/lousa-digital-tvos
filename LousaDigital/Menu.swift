@@ -8,12 +8,10 @@
 
 import SpriteKit
 
-class Menu: SKScene {
+class Menu: ActivityScene {
     
-    let tapGeneralSelection = UITapGestureRecognizer()
     var allButtons : [Button]?
     let owl = VoiceManager()
-    
     var buttonMatching : Button?
 
     override func didMove(to view: SKView) {
@@ -23,10 +21,9 @@ class Menu: SKScene {
         allButtons = self["button*"] as? [Button]
         allButtons?.first?.buttonDidGetFocus()
 
-        //Touch Pressed
-        tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
-        tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
-        self.view!.addGestureRecognizer(tapGeneralSelection)
+        setInitialFocus()
+        
+        createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedSelect))
     }
     
     func pressedSelect(){

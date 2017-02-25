@@ -8,12 +8,8 @@
 
 import SpriteKit
 
-class ColorsGame: SKScene {
+class ColorsGame: ActivityScene {
 
-    let tapGeneralSelection = UITapGestureRecognizer()
-    let tapPlayPause = UITapGestureRecognizer()
-    let tapMenu = UITapGestureRecognizer()
-    
     var colorPicture : SKSpriteNode?
     var pencils : [Button]!
     
@@ -23,27 +19,14 @@ class ColorsGame: SKScene {
         activeScene = self.name
         
         //Definindo o primeiro foco
-        self.setNeedsFocusUpdate()
-        self.updateFocusIfNeeded()
+        setInitialFocus()
         
         pencils = self["*Pencil"] as? [Button]
         colorPicture = childNode(withName: "colorPicture") as? SKSpriteNode
         colorPicture?.alpha = 0
         
-        //Touch Pressed
-        tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
-        tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
-        self.view!.addGestureRecognizer(tapGeneralSelection)
-        
-        //Tap Play Pause
-        tapPlayPause.addTarget(self, action: #selector(pressedPlay))
-        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-        self.view!.addGestureRecognizer(tapPlayPause)
-        
-        //Tap Menu
-        tapMenu.addTarget(self, action: #selector(pressedMenu))
-        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
-        self.view!.addGestureRecognizer(tapMenu)
+        //Criando e adicionando os gestures à view
+        self.createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
         
         run(SKAction.wait(forDuration: 1.0)){
             owl.speak("Now we gonna learn the colors. Press one of the pencils")
@@ -69,9 +52,4 @@ class ColorsGame: SKScene {
             }
         }
     }
-    
-    func pressedMenu() {
-        self.view?.presentScene(Menu(fileNamed: "Menu"))
-    }
-
 }

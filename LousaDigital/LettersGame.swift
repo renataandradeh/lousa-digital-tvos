@@ -8,40 +8,25 @@
 
 import SpriteKit
 
-class LettersGame: SKScene {
+class LettersGame: ActivityScene {
+    
     var object: SKSpriteNode?
     var letterBox: SKSpriteNode?
     var letters : [Button] = []
-    let tapGeneralSelection = UITapGestureRecognizer()
-    let tapPlayPause = UITapGestureRecognizer()
-    let tapMenu = UITapGestureRecognizer()
-    
-    
+  
     var selectedLetter : String!
     //let fullNameArr : [String]!
     
     override func didMove(to: SKView) {
         
         //Definindo o primeiro foco
-        self.setNeedsFocusUpdate()
-        self.updateFocusIfNeeded()
-        
+        setInitialFocus()
         
         object = childNode(withName: "object") as? SKSpriteNode
         letterBox = childNode(withName: "letterBox") as? SKSpriteNode
         
-        //Touch Pressed
-        tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
-        tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
-        self.view!.addGestureRecognizer(tapGeneralSelection)
-        //Tap Play Pause
-        tapPlayPause.addTarget(self, action: #selector(pressedPlay))
-        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-        self.view!.addGestureRecognizer(tapPlayPause)
-        //Tap Menu 
-        tapMenu.addTarget(self, action: #selector(pressedMenu))
-        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
-        self.view!.addGestureRecognizer(tapMenu)
+        //Criando e adicionando os gestures à view
+        self.createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
         
         for i in 1...5{
             letters.append(childNode(withName: "letter\(i)") as! Button)
@@ -73,8 +58,4 @@ class LettersGame: SKScene {
             }
         }
     }
-    func pressedMenu() {
-        self.view?.presentScene(Menu(fileNamed: "Menu"))
-    }
-
 }
