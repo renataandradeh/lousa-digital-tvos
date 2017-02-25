@@ -71,7 +71,7 @@ class Button : SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         shadow = SKSpriteNode(texture: self.texture, color: .black, size: self.size)
-        alpha = 0.5
+        alpha = 0.6
         self.buttonType = ButtonType(buttonName: self.name!)
         isUserInteractionEnabled = true
     }
@@ -111,12 +111,12 @@ class Button : SKSpriteNode {
             run(animation, withKey: "buttonAnimation")
             
             shadow?.blendMode = SKBlendMode.alpha
-            shadow?.colorBlendFactor = 1
+            shadow?.colorBlendFactor = 0.8
             shadow?.anchorPoint = CGPoint(x: 0.53, y: 0.55)
             shadow?.removeFromParent()
             self.addChild(shadow!)
             shadow?.run(SKAction.fadeAlpha(to: 0.3, duration: 0.2))
-            shadow?.zPosition = self.zPosition-1
+            shadow?.zPosition = -1
             
         }else if !isFocused{
             let decreaseAlpha = SKAction.fadeAlpha(to: 0.5, duration: 0.2)
@@ -157,8 +157,8 @@ class Button : SKSpriteNode {
     
     func associatingWrongAnimation(){
 
-        let colorizeRed = SKAction.colorize(with: .red, colorBlendFactor: 0.8, duration: 0.5)
-        let colorizedClear = SKAction.colorize(with: .red, colorBlendFactor: 0, duration: 0.5)
+        let colorizeRed = SKAction.colorize(with: .red, colorBlendFactor: 1, duration: 0.5)
+        let colorizedClear = SKAction.colorize(with: .white, colorBlendFactor: 1, duration: 0.5)
         
         let colorizeSequence = SKAction.sequence([colorizeRed, colorizedClear])
 

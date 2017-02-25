@@ -14,6 +14,8 @@ class NumbersGame: SKScene {
     var numbers : [Button] = []
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
+    let tapMenu = UITapGestureRecognizer()
+    
     var rightNumber : Int? = nil
     
     
@@ -22,8 +24,10 @@ class NumbersGame: SKScene {
     
     override func didMove(to: SKView) {
         
-        setNeedsFocusUpdate()
-        updateFocusIfNeeded()
+        //Definindo o primeiro foco
+        self.setNeedsFocusUpdate()
+        self.updateFocusIfNeeded()
+        
         
         //object = childNode(withName: "object") as? SKSpriteNode
         numberBox = childNode(withName: "numberBox") as? SKSpriteNode
@@ -36,6 +40,10 @@ class NumbersGame: SKScene {
         tapPlayPause.addTarget(self, action: #selector(pressedPlay))
         tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
         self.view!.addGestureRecognizer(tapPlayPause)
+        //Tap Menu
+        tapMenu.addTarget(self, action: #selector(pressedMenu))
+        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
+        self.view!.addGestureRecognizer(tapMenu)
 
         for i in 1...5{
             numbers.append(childNode(withName: "number\(i)") as! Button)
@@ -76,6 +84,10 @@ class NumbersGame: SKScene {
                 owl.speak((number.buttonType?.rawValue)!)
             }
         }
+    }
+    
+    func pressedMenu() {
+        self.view?.presentScene(Menu(fileNamed: "Menu"))
     }
     
     private func fillSpacesWithObjects(number: Int){
@@ -122,14 +134,9 @@ class NumbersGame: SKScene {
     }
     
     private func createObject(i: Int, randomObject : UInt32, scale: CGFloat){
-        
-
-        
         let space = childNode(withName: "space\(i)") as? SKSpriteNode
         space?.setScale(scale)
         space?.texture = SKTexture(imageNamed: "object\(rightNumber!)")
-        
-        
     }
     
     func cleanObjectsTexture(){

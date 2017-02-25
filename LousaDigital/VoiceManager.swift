@@ -34,7 +34,7 @@ class VoiceManager {
         let speechExpression = AVSpeechUtterance(string: text)
         speechExpression.pitchMultiplier = self.speechPitch
         speechExpression.voice = self.speechLanguage
-        speechExpression.rate = 0.5
+        speechExpression.rate = 0.4
         speechSynthesizer.speak(speechExpression)
     }
     

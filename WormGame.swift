@@ -12,6 +12,7 @@ class WormGame: SKScene {
 
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
+    let tapMenu = UITapGestureRecognizer()
 
     var numberBodies : [Button] = []
     var randomNumbers : [Int]  = []
@@ -47,9 +48,9 @@ class WormGame: SKScene {
         }
         
         //Definindo o primeiro foco
-        setNeedsFocusUpdate()
-        updateFocusIfNeeded()
-
+        self.setNeedsFocusUpdate()
+        self.updateFocusIfNeeded()
+        
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
         tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
@@ -59,6 +60,11 @@ class WormGame: SKScene {
         tapPlayPause.addTarget(self, action: #selector(pressedPlay))
         tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
         self.view!.addGestureRecognizer(tapPlayPause)
+        
+        //Tap Menu
+        tapMenu.addTarget(self, action: #selector(pressedMenu))
+        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
+        self.view!.addGestureRecognizer(tapMenu)
     }
     
     func pressedSelect(){
@@ -135,5 +141,9 @@ class WormGame: SKScene {
                 owl.speak((number.buttonType?.rawValue)!)
             }
         }
+    }
+    
+    func pressedMenu() {
+        self.view?.presentScene(Menu(fileNamed: "Menu"))
     }
 }

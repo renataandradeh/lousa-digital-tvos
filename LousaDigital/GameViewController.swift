@@ -25,6 +25,7 @@ class GameViewController: UIViewController {
         
         presentScene(scene: menu!)
         
+        
 //        if let view = self.view as! SKView? {
 //            gameScene = GameScene(fileNamed:"GameScene")
 //            if let scene = gameScene, let skView = view as? SKView{

@@ -16,6 +16,7 @@ class MatchingGame: SKScene {
 
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
+    let tapMenu = UITapGestureRecognizer()
     
     var letters : [Button]!
     
@@ -27,8 +28,9 @@ class MatchingGame: SKScene {
         activeScene = self.name
         
         //Definindo o primeiro foco
-        setNeedsFocusUpdate()
-        updateFocusIfNeeded()
+        self.setNeedsFocusUpdate()
+        self.updateFocusIfNeeded()
+        
 
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
@@ -39,6 +41,11 @@ class MatchingGame: SKScene {
         tapPlayPause.addTarget(self, action: #selector(pressedPlay))
         tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
         self.view!.addGestureRecognizer(tapPlayPause)
+        
+        //Tap Menu
+        tapMenu.addTarget(self, action: #selector(pressedMenu))
+        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
+        self.view!.addGestureRecognizer(tapMenu)
         
         //Randomizando o objeto e preenchendo a matchBox
         randomNumber = arc4random_uniform(5) + 1
@@ -52,6 +59,7 @@ class MatchingGame: SKScene {
         letters = self["letter*"] as! [Button]
         
     }
+    
 
     func pressedSelect(){
         for letter in letters{
@@ -83,6 +91,10 @@ class MatchingGame: SKScene {
                 owl.speak((letter.buttonType?.rawValue)!)
             }
         }
+    }
+    
+    func pressedMenu() {
+        self.view?.presentScene(Menu(fileNamed: "Menu"))
     }
     
     func deactivateLettersFocuses() {

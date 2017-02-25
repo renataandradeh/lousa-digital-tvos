@@ -12,7 +12,9 @@ class ColorsGame: SKScene {
 
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
+    let tapMenu = UITapGestureRecognizer()
     
+    var colorPicture : SKSpriteNode?
     var pencils : [Button]!
     
     override func didMove(to view: SKView) {
@@ -21,10 +23,12 @@ class ColorsGame: SKScene {
         activeScene = self.name
         
         //Definindo o primeiro foco
-        setNeedsFocusUpdate()
-        updateFocusIfNeeded()
+        self.setNeedsFocusUpdate()
+        self.updateFocusIfNeeded()
         
         pencils = self["*Pencil"] as? [Button]
+        colorPicture = childNode(withName: "colorPicture") as? SKSpriteNode
+        colorPicture?.alpha = 0
         
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
@@ -36,10 +40,26 @@ class ColorsGame: SKScene {
         tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
         self.view!.addGestureRecognizer(tapPlayPause)
         
+        //Tap Menu
+        tapMenu.addTarget(self, action: #selector(pressedMenu))
+        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
+        self.view!.addGestureRecognizer(tapMenu)
+        
+        run(SKAction.wait(forDuration: 1.0)){
+            owl.speak("Now we gonna learn the colors. Press one of the pencils")
+        }
     }
     
     func pressedSelect(){
-
+        colorPicture?.alpha = 0
+        for pencil in pencils{
+            if pencil.isFocused{
+                colorPicture?.texture = SKTexture(imageNamed: (pencil.buttonType?.rawValue)!)
+                colorPicture?.run(SKAction.fadeAlpha(to: 1, duration: 0.5), completion: {
+                    owl.speak((pencil.buttonType?.rawValue)!)
+                })
+            }
+        }
     }
     
     func pressedPlay(){
@@ -48,6 +68,10 @@ class ColorsGame: SKScene {
                 owl.speak((pencil.buttonType?.rawValue)!)
             }
         }
+    }
+    
+    func pressedMenu() {
+        self.view?.presentScene(Menu(fileNamed: "Menu"))
     }
 
 }

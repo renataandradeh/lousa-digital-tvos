@@ -19,9 +19,10 @@ class Menu: SKScene {
     override func didMove(to view: SKView) {
         
         activeScene = self.name
-        
+
         allButtons = self["button*"] as? [Button]
         allButtons?.first?.buttonDidGetFocus()
+
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
         tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
@@ -52,8 +53,8 @@ class Menu: SKScene {
     }
     
     private func presentGame(scene: SKScene){
-        self.run(SKAction.fadeOut(withDuration: 0.8)){
+        self.run(SKAction.run({
             self.view?.presentScene(scene)
-        }
+        }))
     }
 }

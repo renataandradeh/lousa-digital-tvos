@@ -19,6 +19,7 @@ class CountingGame: SKScene {
  
     let tapGeneralSelection = UITapGestureRecognizer()
     let tapPlayPause = UITapGestureRecognizer()
+    let tapMenu = UITapGestureRecognizer()
     
     let endGame = EndGame()
     
@@ -38,8 +39,9 @@ class CountingGame: SKScene {
         fillNumbers()
         
         //Definindo o primeiro foco
-        setNeedsFocusUpdate()
-        updateFocusIfNeeded()
+        self.setNeedsFocusUpdate()
+        self.updateFocusIfNeeded()
+        
         
         fillSpacesWithObjects(number: randomAnswer!)
         
@@ -52,6 +54,16 @@ class CountingGame: SKScene {
         tapPlayPause.addTarget(self, action: #selector(pressedPlay))
         tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
         self.view!.addGestureRecognizer(tapPlayPause)
+        
+        //Tap Play Pause
+        tapPlayPause.addTarget(self, action: #selector(pressedPlay))
+        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
+        self.view!.addGestureRecognizer(tapPlayPause)
+        
+        //Tap Menu
+        tapMenu.addTarget(self, action: #selector(pressedMenu))
+        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
+        self.view!.addGestureRecognizer(tapMenu)
         
     }
     
@@ -158,5 +170,8 @@ class CountingGame: SKScene {
             }
         }
     }
-
+    
+    func pressedMenu() {
+        self.view?.presentScene(Menu(fileNamed: "Menu"))
+    }
 }
