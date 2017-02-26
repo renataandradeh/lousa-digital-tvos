@@ -285,6 +285,78 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		076E3E9D1E626E78009D8EE2 /* MatchingGame */ = {
+			isa = PBXGroup;
+			children = (
+				07C66B451E54758C00E5A818 /* MatchingGame.sks */,
+				07C66B431E54757D00E5A818 /* MatchingGame.swift */,
+			);
+			name = MatchingGame;
+			sourceTree = "<group>";
+		};
+		076E3E9E1E626E9D009D8EE2 /* CountingGame */ = {
+			isa = PBXGroup;
+			children = (
+				07DEA58D1E539115007F4EEC /* CountingGame.swift */,
+				07DEA58B1E539071007F4EEC /* CountingGame.sks */,
+			);
+			name = CountingGame;
+			sourceTree = "<group>";
+		};
+		076E3E9F1E626EBC009D8EE2 /* WormGame */ = {
+			isa = PBXGroup;
+			children = (
+				07F155861E5C6C4C00D2127E /* WormGame.sks */,
+				07F1558A1E5C6C8F00D2127E /* WormGame.swift */,
+			);
+			name = WormGame;
+			sourceTree = "<group>";
+		};
+		076E3EA01E626ED5009D8EE2 /* MenuScene */ = {
+			isa = PBXGroup;
+			children = (
+				07C0B11B1E5785FD001C6733 /* Menu.sks */,
+				07C0B11D1E57868B001C6733 /* Menu.swift */,
+			);
+			name = MenuScene;
+			sourceTree = "<group>";
+		};
+		076E3EA11E626EE8009D8EE2 /* LettersGame */ = {
+			isa = PBXGroup;
+			children = (
+				F1D0740B1E5DDB290024933D /* LettersGame.swift */,
+				F1D074091E5DD9AC0024933D /* LettersGame.sks */,
+			);
+			name = LettersGame;
+			sourceTree = "<group>";
+		};
+		076E3EA21E626F03009D8EE2 /* NumbersGame */ = {
+			isa = PBXGroup;
+			children = (
+				F16972C41E5E085500B3F196 /* NumbersGame.sks */,
+				F16972C81E5E0A0F00B3F196 /* NumbersGame.swift */,
+			);
+			name = NumbersGame;
+			sourceTree = "<group>";
+		};
+		076E3EA31E626F29009D8EE2 /* ColorsGame */ = {
+			isa = PBXGroup;
+			children = (
+				F16972C61E5E086000B3F196 /* ColorsGame.sks */,
+				07E37BF91E60D8880069ECBE /* ColorsGame.swift */,
+			);
+			name = ColorsGame;
+			sourceTree = "<group>";
+		};
+		076E3EA41E626F76009D8EE2 /* EndGame */ = {
+			isa = PBXGroup;
+			children = (
+				0734C01D1E57211200C1FC4B /* EndGame.sks */,
+				0734C0231E57225800C1FC4B /* EndGame.swift */,
+			);
+			name = EndGame;
+			sourceTree = "<group>";
+		};
 		077D5B921E5C722A0016EBFC /* NumbersBody */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,15 +425,15 @@
 		07C66B691E54A1C800E5A818 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				07C0B11B1E5785FD001C6733 /* Menu.sks */,
-				0734C01D1E57211200C1FC4B /* EndGame.sks */,
 				07FF3F571E51E44C00625748 /* GameScene.sks */,
-				07F155861E5C6C4C00D2127E /* WormGame.sks */,
-				07DEA58B1E539071007F4EEC /* CountingGame.sks */,
-				07C66B451E54758C00E5A818 /* MatchingGame.sks */,
-				F1D074091E5DD9AC0024933D /* LettersGame.sks */,
-				F16972C41E5E085500B3F196 /* NumbersGame.sks */,
-				F16972C61E5E086000B3F196 /* ColorsGame.sks */,
+				076E3EA41E626F76009D8EE2 /* EndGame */,
+				076E3EA31E626F29009D8EE2 /* ColorsGame */,
+				076E3EA21E626F03009D8EE2 /* NumbersGame */,
+				076E3EA11E626EE8009D8EE2 /* LettersGame */,
+				076E3EA01E626ED5009D8EE2 /* MenuScene */,
+				076E3E9F1E626EBC009D8EE2 /* WormGame */,
+				076E3E9E1E626E9D009D8EE2 /* CountingGame */,
+				076E3E9D1E626E78009D8EE2 /* MatchingGame */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -369,17 +441,9 @@
 		07C66B6A1E54A1EC00E5A818 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				07C0B11D1E57868B001C6733 /* Menu.swift */,
-				07DEA58D1E539115007F4EEC /* CountingGame.swift */,
-				07F1558A1E5C6C8F00D2127E /* WormGame.swift */,
 				07FF3F881E51E55500625748 /* Button.swift */,
-				07C66B431E54757D00E5A818 /* MatchingGame.swift */,
-				07E37BF91E60D8880069ECBE /* ColorsGame.swift */,
-				0734C0231E57225800C1FC4B /* EndGame.swift */,
 				C6A374E51E5B2A44000DB97F /* VoiceManager.swift */,
 				078CCEE31E61ED9800E99544 /* ActivityScene.swift */,
-				F1D0740B1E5DDB290024933D /* LettersGame.swift */,
-				F16972C81E5E0A0F00B3F196 /* NumbersGame.swift */,
 				C6986D001E5C658500BBE73D /* SoundManager.swift */,
 			);
 			name = Managers;
@@ -481,7 +545,6 @@
 				07EE6CA91E59BCDD005EFB78 /* emitter_stars.sks */,
 			);
 			name = Particles;
-			path = LousaDigital;
 			sourceTree = "<group>";
 		};
 		07F155791E5C5E2E00D2127E /* Backgrounds */ = {
@@ -520,7 +583,6 @@
 			isa = PBXGroup;
 			children = (
 				07FF3F541E51E44C00625748 /* LousaDigital */,
-				07EE6CAB1E59BCEB005EFB78 /* Particles */,
 				07FF3F6E1E51E44C00625748 /* LousaDigitalTests */,
 				07FF3F791E51E44C00625748 /* LousaDigitalUITests */,
 				07FF3F531E51E44C00625748 /* Products */,
@@ -542,11 +604,12 @@
 			children = (
 				07FF3F551E51E44C00625748 /* AppDelegate.swift */,
 				07FF3F5F1E51E44C00625748 /* GameViewController.swift */,
-				F10EF3F81E54D8FD0047EC7F /* Menu */,
+				F10EF3F81E54D8FD0047EC7F /* Menu UIKit */,
 				07C66B6A1E54A1EC00E5A818 /* Managers */,
 				07C66B691E54A1C800E5A818 /* Scenes */,
 				0712ECBC1E537C990026AF80 /* Arts */,
 				0753ED241E62683B00504F31 /* Extensions */,
+				07EE6CAB1E59BCEB005EFB78 /* Particles */,
 				07FF3F591E51E44C00625748 /* Actions.sks */,
 				07FF3F5B1E51E44C00625748 /* Game.xcassets */,
 				07FF3F5D1E51E44C00625748 /* GameScene.swift */,
@@ -575,14 +638,14 @@
 			path = LousaDigitalUITests;
 			sourceTree = "<group>";
 		};
-		F10EF3F81E54D8FD0047EC7F /* Menu */ = {
+		F10EF3F81E54D8FD0047EC7F /* Menu UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				F1699B9E1E5486D60022208D /* MenuRow.swift */,
 				F1699B9D1E5486D60022208D /* MenuCollectionViewCell.swift */,
 				F10EF3F61E54D7EA0047EC7F /* MenuViewController.swift */,
 			);
-			name = Menu;
+			name = "Menu UIKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

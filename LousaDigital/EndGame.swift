@@ -129,23 +129,28 @@ class EndGame: SKNode {
     }
     
     func colorizeStars(){
-        let star1 = stars?[0]
-        let star2 = stars?[1]
-        let star3 = stars?[2]
         let scale : CGFloat = 1.5
-        
         let colorize = SKAction.colorize(with: .yellow, colorBlendFactor: 1, duration: 0.5)
+        let wait = SKAction.wait(forDuration: 0.5)
         
-        run(SKAction.wait(forDuration: 1.0), completion:{
-            star1?.run(colorize, completion: {
-                star1?.setScale(scale)
-                star2?.run(colorize, completion: {
-                    star2?.setScale(scale)
-                    star3?.run(colorize, completion:{
-                        star3?.setScale(scale)
-                    })
-                })
-            })
+        guard let stars = stars else { return }
+        
+        let colorize1 = SKAction.run({
+            stars[0].run(colorize){
+                stars[0].setScale(scale)
+            }
         })
+        let colorize2 = SKAction.run({
+            stars[1].run(colorize){
+                stars[1].setScale(scale)
+            }
+        })
+        let colorize3 = SKAction.run({
+            stars[2].run(colorize){
+                stars[2].setScale(scale)
+            }
+        })
+        
+        run(SKAction.sequence([colorize1, wait, colorize2, wait, colorize3]))
     }
 }
