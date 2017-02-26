@@ -30,33 +30,43 @@ enum ButtonType : String {
     case buttonCounting = "Counting Game"
     case buttonLetters = "Letters Game"
     case buttonColors = "Colors Game"
+    case letterAObj = "Airplane"
+    case letterEObj = "Elephant"
+    case letterIObj = "Ice Cream"
+    case letterOObj = "Orange"
+    case letterUObj = "Umbrela"
     
     case notDefinedYet = ""
     
     init(buttonName: String){
         switch buttonName{
-            case "letter1" : self = .letterA
-            case "letter2" : self = .letterE
-            case "letter3" : self = .letterI
-            case "letter4" : self = .letterO
-            case "letter5" : self = .letterU
-            case "number1" : self = .number1
-            case "number2" : self = .number2
-            case "number3" : self = .number3
-            case "number4" : self = .number4
-            case "number5" : self = .number5
-            case "bluePencil" : self = .blueColor
-            case "greenPencil" : self = .greenColor
-            case "yellowPencil" : self = .yellowColor
-            case "orangePencil" : self = .orangeColor
-            case "pinkPencil" : self = .pinkColor
-            case "purplePencil" : self = .purpleColor
-            case "redPencil" : self = .redColor
-            case "buttonMatching" : self = .buttonMatching
-            case "buttonCounting" : self = .buttonCounting
-            case "buttonLetters" : self = .buttonLetters
-            case "buttonColors" : self = .buttonColors
-            default : self = .notDefinedYet
+        case "letter1" : self = .letterA
+        case "letter2" : self = .letterE
+        case "letter3" : self = .letterI
+        case "letter4" : self = .letterO
+        case "letter5" : self = .letterU
+        case "number1" : self = .number1
+        case "number2" : self = .number2
+        case "number3" : self = .number3
+        case "number4" : self = .number4
+        case "number5" : self = .number5
+        case "bluePencil" : self = .blueColor
+        case "greenPencil" : self = .greenColor
+        case "yellowPencil" : self = .yellowColor
+        case "orangePencil" : self = .orangeColor
+        case "pinkPencil" : self = .pinkColor
+        case "purplePencil" : self = .purpleColor
+        case "redPencil" : self = .redColor
+        case "buttonMatching" : self = .buttonMatching
+        case "buttonCounting" : self = .buttonCounting
+        case "buttonLetters" : self = .buttonLetters
+        case "buttonColors" : self = .buttonColors
+        case "letter1Obj" : self = .letterAObj
+        case "letter2Obj" : self = .letterEObj
+        case "letter3Obj" : self = .letterIObj
+        case "letter4Obj" : self = .letterOObj
+        case "letter5Obj" : self = .letterUObj
+        default : self = .notDefinedYet
         }
     }
 }

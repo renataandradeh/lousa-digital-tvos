@@ -13,11 +13,11 @@ class LettersGame: ActivityScene {
     var object: SKSpriteNode?
     var letterBox: SKSpriteNode?
     
-    var letters : [SKSpriteNode] = []
+    var letters : [Button] = []
   
     var selectedLetter : String!
     let firstMomentDuration : Double = 8
-    let secondMomentDuration : Double = 8
+    let secondMomentDuration : Double = 24
     
     override func didMove(to: SKView) {
         
@@ -31,30 +31,50 @@ class LettersGame: ActivityScene {
         self.createGestures(view: self.view!)
         
         //Preenchendo um array com todas as letras da cena
-        letters = self.scene?["letter1_*"] as! [SKSpriteNode]
+        letters = self.scene!["letter1_*"] as! [Button]
         
+        for letter in letters {
+            letter.isFocusable = false
+            letter.alpha = 0
+        }
 
         //Action customizada que checa letra por letra se sua animação terminou para poder falar
-        var lettersCopy = letters
+        var firstLetters = letters
+        var secondLetters = self.scene!["letter2_*"] as! [SKSpriteNode]
         
         let firstMomentActions = SKAction.customAction(withDuration: firstMomentDuration, actionBlock: { (_, _) in
-            if let nextLetter = lettersCopy.first, !nextLetter.hasActions(), let letterName = nextLetter.name {
+            if let nextLetter = firstLetters.first, !nextLetter.hasActions(), let letterName = nextLetter.name {
                 owl.speak(ButtonType(buttonName: letterName.replacingOccurrences(of: "1_", with: "")).rawValue)
-                lettersCopy.removeFirst()
+                firstLetters.removeFirst()
             }
         })
         
-        let fadeOut = SKAction.run({
+        let fadeOut = SKAction.group([SKAction.run({
             for letter in self.letters {
                 letter.run(SKAction.fadeAlpha(to: 0, duration: 1.0))
             }
-        })
-        
+        }), SKAction.wait(forDuration: 3.0)])
+        let slowDown = SKAction.run { 
+            self.scene?.run(SKAction.speed(to: 0.75, duration: 0.1))
+        }
         let secondMomentActions = SKAction.customAction(withDuration: secondMomentDuration, actionBlock: { (_, _) in
-            
+            if let nextLetter = secondLetters.first, !nextLetter.hasActions(), let letterName = nextLetter.name {
+                owl.speak(ButtonType(buttonName: letterName.replacingOccurrences(of: "2_", with: "")).rawValue)
+                let speak = SKAction.run({ 
+                    owl.speak(ButtonType(buttonName: letterName.replacingOccurrences(of: "2_", with: "") + "Obj").rawValue)
+                })
+                nextLetter.run(SKAction.sequence([
+                    SKAction.group([SKAction.wait(forDuration: 1.0), speak]),
+                    SKAction.wait(forDuration: 1.0),
+                    SKAction.fadeOut(withDuration: 0.5),
+                    ]))
+                secondLetters.removeFirst()
+            }
         })
         
-        run(SKAction.sequence([firstMomentActions, fadeOut]))
+        run(SKAction.sequence([firstMomentActions, fadeOut, slowDown, secondMomentActions])){
+            self.speed = 1.0
+        }
     }
     
     func processActionForMoment(moment: Int, array: [SKSpriteNode]) {
