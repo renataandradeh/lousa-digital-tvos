@@ -21,8 +21,8 @@ class LettersGame: ActivityScene {
     
     override func didMove(to: SKView) {
         
-        //Definindo o primeiro foco
-        setInitialFocus()
+//        //Definindo o primeiro foco
+//        setInitialFocus()
         
         object = childNode(withName: "object") as? SKSpriteNode
         letterBox = childNode(withName: "letterBox") as? SKSpriteNode
@@ -75,12 +75,13 @@ class LettersGame: ActivityScene {
             self.speed = 1.0
             for letter in self.letters {
                 letter.setScale(1.0)
-                letter.run(SKAction.fadeAlpha(to: 0.6, duration: 0.5)) {
+                letter.run(SKAction.fadeAlpha(to: 0.75, duration: 0.5)) {
                     letter.isFocusable = true
                 }
             }
             self.run(SKAction.wait(forDuration: 1.0)){
-                self.letters.first?.buttonDidGetFocus()
+                //self.letters.first?.buttonDidGetFocus()
+                self.setInitialFocus()
             }
         }
     }

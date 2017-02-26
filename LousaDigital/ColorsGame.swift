@@ -18,9 +18,6 @@ class ColorsGame: ActivityScene {
         //Setando a cena ativa para facilitar as transições
         activeScene = self.name
         
-        //Definindo o primeiro foco
-        setInitialFocus()
-        
         pencils = self["*Pencil"] as? [Button]
         colorPicture = childNode(withName: "colorPicture") as? SKSpriteNode
         colorPicture?.alpha = 0
@@ -28,8 +25,16 @@ class ColorsGame: ActivityScene {
         //Criando e adicionando os gestures à view
         self.createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
         
-        run(SKAction.wait(forDuration: 1.0)){
+        //Fala inicial e definição de foco
+        let waitFirst = SKAction.wait(forDuration: 1.0)
+        let speak = SKAction.run({
             owl.speak("Now we gonna learn the colors. Press one of the pencils")
+        })
+        let waitSecond = SKAction.wait(forDuration: 3.75)
+
+        run(SKAction.sequence([waitFirst, speak, waitSecond])){
+            //Definindo o primeiro foco
+            self.setInitialFocus()
         }
     }
     

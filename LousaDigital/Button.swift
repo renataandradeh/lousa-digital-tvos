@@ -81,7 +81,7 @@ class Button : SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         shadow = SKSpriteNode(texture: self.texture, color: .black, size: self.size)
-        alpha = 0.6
+        alpha = 0.75
         self.buttonType = ButtonType(buttonName: self.name!)
         isUserInteractionEnabled = true
     }
