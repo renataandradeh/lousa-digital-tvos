@@ -48,7 +48,6 @@ class LettersGame: ActivityScene {
                 firstLetters.removeFirst()
             }
         })
-        self.speed = 5
         let fadeOut = SKAction.group([SKAction.run({
             for letter in self.letters {
                 letter.run(SKAction.fadeAlpha(to: 0, duration: 1.0))
