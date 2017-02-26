@@ -29,9 +29,19 @@ class CountingGame: ActivityScene {
         //Preenchendo a cena com os elementos
         randomAnswer = arc4random_uniform(5)+1
         
+        //Onde fica a sombra do número
         box = childNode(withName: "box") as? SKSpriteNode
-        box?.texture = SKTexture(imageNamed: "shadowNumber\(randomAnswer!)")
         
+        //Fazendo a sombra do número e adicionando à box
+        let shadow = SKSpriteNode(texture: SKTexture(imageNamed: "number\(Int(randomAnswer!))"), color: .black, size: (box?.size)!)
+        shadow.setScale(1.5)
+        shadow.blendMode = SKBlendMode.alpha
+        shadow.colorBlendFactor = 1
+        shadow.alpha = 0.75
+        shadow.position = (box?.position)!
+        addChild(shadow)
+
+        //Preenchendo a cena com os números
         fillNumbers()
         
         //Definindo o primeiro foco
