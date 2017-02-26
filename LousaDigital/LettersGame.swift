@@ -2,7 +2,7 @@
 //  LettersGame.swift
 //  LousaDigital
 //
-//  Created by Bruna Costa on 22/02/17.
+//  Created by Renata Gondim Andrade Theóphilo on 22/02/17.
 //  Copyright © 2017 Renata Gondim Andrade Theóphilo. All rights reserved.
 //
 
@@ -17,7 +17,7 @@ class LettersGame: ActivityScene {
   
     var selectedLetter : String!
     let firstMomentDuration : Double = 8
-    let secondMomentDuration : Double = 24
+    let secondMomentDuration : Double = 18
     
     override func didMove(to: SKView) {
         
@@ -28,7 +28,7 @@ class LettersGame: ActivityScene {
         letterBox = childNode(withName: "letterBox") as? SKSpriteNode
         
         //Criando e adicionando os gestures à view
-        self.createGestures(view: self.view!)
+        self.createGestures(view: self.view!, actionTouch: #selector(pressedPlay), actionPlay: #selector(pressedPlay))
         
         //Preenchendo um array com todas as letras da cena
         letters = self.scene!["letter1_*"] as! [Button]
@@ -48,7 +48,7 @@ class LettersGame: ActivityScene {
                 firstLetters.removeFirst()
             }
         })
-        
+        self.speed = 5
         let fadeOut = SKAction.group([SKAction.run({
             for letter in self.letters {
                 letter.run(SKAction.fadeAlpha(to: 0, duration: 1.0))
@@ -74,32 +74,23 @@ class LettersGame: ActivityScene {
         
         run(SKAction.sequence([firstMomentActions, fadeOut, slowDown, secondMomentActions])){
             self.speed = 1.0
+            for letter in self.letters {
+                letter.setScale(1.0)
+                letter.run(SKAction.fadeAlpha(to: 0.6, duration: 0.5)) {
+                    letter.isFocusable = true
+                }
+            }
+            self.run(SKAction.wait(forDuration: 1.0)){
+                self.letters.first?.buttonDidGetFocus()
+            }
         }
     }
     
-    func processActionForMoment(moment: Int, array: [SKSpriteNode]) {
-        
-    }
-    
-    func pressedSelect(){
-        
-//        for letter in letters{
-//            if letter.isFocused  {
-//                
-//                selectedLetter = letter.name
-//                
-//                let fullNameArr = selectedLetter.characters.split{$0 == "r"}.map(String.init)
-//                 object?.texture = SKTexture(imageNamed: "object\(fullNameArr[1])")
-//                letterBox?.texture = SKTexture(imageNamed: selectedLetter)
-//            }
-//        }
-    }
-    
     func pressedPlay(){
-//        for letter in letters{
-//            if letter.isFocused{
-//                owl.speak((letter.buttonType?.rawValue)!)
-//            }
-//        }
+        for letter in letters{
+            if letter.isFocused{
+                owl.speak(ButtonType(buttonName: (letter.name?.replacingOccurrences(of: "1_", with: ""))!).rawValue)
+            }
+        }
     }
 }

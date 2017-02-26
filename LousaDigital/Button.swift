@@ -34,7 +34,7 @@ enum ButtonType : String {
     case letterEObj = "Elephant"
     case letterIObj = "Ice Cream"
     case letterOObj = "Orange"
-    case letterUObj = "Umbrela"
+    case letterUObj = "Umbrella"
     
     case notDefinedYet = ""
     
