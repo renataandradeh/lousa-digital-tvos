@@ -81,6 +81,8 @@
 		07F155841E5C5EE600D2127E /* plaque.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F155811E5C5EE600D2127E /* plaque.png */; };
 		07F155871E5C6C4C00D2127E /* WormGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07F155861E5C6C4C00D2127E /* WormGame.sks */; };
 		07F1558B1E5C6C8F00D2127E /* WormGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1558A1E5C6C8F00D2127E /* WormGame.swift */; };
+		07FE06F91E62FDC900308721 /* emitter_snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07FE06F81E62FDC900308721 /* emitter_snow.sks */; };
+		07FE06FB1E63029200308721 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FE06FA1E63029200308721 /* spark.png */; };
 		07FF3F561E51E44C00625748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F551E51E44C00625748 /* AppDelegate.swift */; };
 		07FF3F581E51E44C00625748 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07FF3F571E51E44C00625748 /* GameScene.sks */; };
 		07FF3F5A1E51E44C00625748 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07FF3F591E51E44C00625748 /* Actions.sks */; };
@@ -197,6 +199,8 @@
 		07F155811E5C5EE600D2127E /* plaque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plaque.png; sourceTree = "<group>"; };
 		07F155861E5C6C4C00D2127E /* WormGame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WormGame.sks; sourceTree = "<group>"; };
 		07F1558A1E5C6C8F00D2127E /* WormGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WormGame.swift; path = ../WormGame.swift; sourceTree = "<group>"; };
+		07FE06F81E62FDC900308721 /* emitter_snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = emitter_snow.sks; sourceTree = "<group>"; };
+		07FE06FA1E63029200308721 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		07FF3F521E51E44C00625748 /* LousaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LousaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FF3F551E51E44C00625748 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07FF3F571E51E44C00625748 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -541,6 +545,8 @@
 		07EE6CAB1E59BCEB005EFB78 /* Particles */ = {
 			isa = PBXGroup;
 			children = (
+				07FE06FA1E63029200308721 /* spark.png */,
+				07FE06F81E62FDC900308721 /* emitter_snow.sks */,
 				07EE6CAC1E59BDE1005EFB78 /* star_test.png */,
 				07EE6CA91E59BCDD005EFB78 /* emitter_stars.sks */,
 			);
@@ -781,6 +787,7 @@
 				07E37BEA1E60D5860069ECBE /* yellowPencil.png in Resources */,
 				07E37C041E60E1040069ECBE /* body3.png in Resources */,
 				07FF3F5A1E51E44C00625748 /* Actions.sks in Resources */,
+				07FE06F91E62FDC900308721 /* emitter_snow.sks in Resources */,
 				07DD16991E5F2B2E00A46084 /* owlFoot.png in Resources */,
 				07F155841E5C5EE600D2127E /* plaque.png in Resources */,
 				07DEA58C1E539071007F4EEC /* CountingGame.sks in Resources */,
@@ -823,6 +830,7 @@
 				0734C01E1E57211200C1FC4B /* EndGame.sks in Resources */,
 				07FF3F631E51E44C00625748 /* Main.storyboard in Resources */,
 				07C0B1231E579703001C6733 /* owl.png in Resources */,
+				07FE06FB1E63029200308721 /* spark.png in Resources */,
 				0734C0201E5721A700C1FC4B /* homeBtn.png in Resources */,
 				0734C00F1E5718C300C1FC4B /* shadow5.png in Resources */,
 				07EE6C9C1E59B504005EFB78 /* number3.png in Resources */,
