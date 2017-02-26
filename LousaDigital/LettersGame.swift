@@ -16,7 +16,7 @@ class LettersGame: ActivityScene {
     var letters : [Button] = []
   
     var selectedLetter : String!
-    let firstMomentDuration : Double = 8
+    let firstMomentDuration : Double = 10
     let secondMomentDuration : Double = 18
     
     override func didMove(to: SKView) {
@@ -37,6 +37,9 @@ class LettersGame: ActivityScene {
             letter.isFocusable = false
             letter.alpha = 0
         }
+        setPauseForChildren(paused: true, afterTime: 0)
+        owl.speak("Let's learn the vowels!")
+        setPauseForChildren(paused: false, afterTime: 2)
 
         //Action customizada que checa letra por letra se sua animação terminou para poder falar
         var firstLetters = letters
@@ -82,6 +85,15 @@ class LettersGame: ActivityScene {
             self.run(SKAction.wait(forDuration: 1.0)){
                 //self.letters.first?.buttonDidGetFocus()
                 self.setInitialFocus()
+            }
+        }
+    }
+    
+    func setPauseForChildren(paused : Bool, afterTime time: Double) {
+        guard let children = self.scene?.children else { return }
+        run(SKAction.wait(forDuration: time)){
+            for child in children {
+                child.isPaused = paused
             }
         }
     }
