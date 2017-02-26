@@ -14,6 +14,13 @@ class ActivityScene: SKScene {
     private let tapPlayPause = UITapGestureRecognizer()
     private let tapMenu = UITapGestureRecognizer()
     
+    func createGestures(view: SKView) {
+        //Tap Menu
+        tapMenu.addTarget(self, action: #selector(pressedMenu))
+        tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
+        view.addGestureRecognizer(tapMenu)
+    }
+    
     func createGestures(view: SKView, actionTouch: Selector?, actionPlay: Selector?){
         //Touch Pressed
         tapGeneralSelection.addTarget(self, action: actionTouch!)
