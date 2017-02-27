@@ -81,6 +81,11 @@
 		07F155841E5C5EE600D2127E /* plaque.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F155811E5C5EE600D2127E /* plaque.png */; };
 		07F155871E5C6C4C00D2127E /* WormGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07F155861E5C6C4C00D2127E /* WormGame.sks */; };
 		07F1558B1E5C6C8F00D2127E /* WormGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1558A1E5C6C8F00D2127E /* WormGame.swift */; };
+		07F5A5541E63A4B300A30AAB /* five.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07F5A54F1E63A4B300A30AAB /* five.mp3 */; };
+		07F5A5551E63A4B300A30AAB /* four.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07F5A5501E63A4B300A30AAB /* four.mp3 */; };
+		07F5A5561E63A4B300A30AAB /* one.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07F5A5511E63A4B300A30AAB /* one.mp3 */; };
+		07F5A5571E63A4B300A30AAB /* three.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07F5A5521E63A4B300A30AAB /* three.mp3 */; };
+		07F5A5581E63A4B300A30AAB /* two.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07F5A5531E63A4B300A30AAB /* two.mp3 */; };
 		07FE06F91E62FDC900308721 /* emitter_snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07FE06F81E62FDC900308721 /* emitter_snow.sks */; };
 		07FE06FB1E63029200308721 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FE06FA1E63029200308721 /* spark.png */; };
 		07FF3F561E51E44C00625748 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF3F551E51E44C00625748 /* AppDelegate.swift */; };
@@ -199,6 +204,11 @@
 		07F155811E5C5EE600D2127E /* plaque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plaque.png; sourceTree = "<group>"; };
 		07F155861E5C6C4C00D2127E /* WormGame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WormGame.sks; sourceTree = "<group>"; };
 		07F1558A1E5C6C8F00D2127E /* WormGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WormGame.swift; path = ../WormGame.swift; sourceTree = "<group>"; };
+		07F5A54F1E63A4B300A30AAB /* five.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = five.mp3; sourceTree = "<group>"; };
+		07F5A5501E63A4B300A30AAB /* four.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = four.mp3; sourceTree = "<group>"; };
+		07F5A5511E63A4B300A30AAB /* one.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = one.mp3; sourceTree = "<group>"; };
+		07F5A5521E63A4B300A30AAB /* three.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = three.mp3; sourceTree = "<group>"; };
+		07F5A5531E63A4B300A30AAB /* two.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = two.mp3; sourceTree = "<group>"; };
 		07FE06F81E62FDC900308721 /* emitter_snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = emitter_snow.sks; sourceTree = "<group>"; };
 		07FE06FA1E63029200308721 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		07FF3F521E51E44C00625748 /* LousaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LousaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -585,6 +595,26 @@
 			name = WormBody;
 			sourceTree = "<group>";
 		};
+		07F5A54D1E63A22300A30AAB /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				07F5A54E1E63A22A00A30AAB /* Numbers */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		07F5A54E1E63A22A00A30AAB /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				07F5A54F1E63A4B300A30AAB /* five.mp3 */,
+				07F5A5501E63A4B300A30AAB /* four.mp3 */,
+				07F5A5511E63A4B300A30AAB /* one.mp3 */,
+				07F5A5521E63A4B300A30AAB /* three.mp3 */,
+				07F5A5531E63A4B300A30AAB /* two.mp3 */,
+			);
+			name = Numbers;
+			sourceTree = "<group>";
+		};
 		07FF3F491E51E44C00625748 = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +638,7 @@
 		07FF3F541E51E44C00625748 /* LousaDigital */ = {
 			isa = PBXGroup;
 			children = (
+				07F5A54D1E63A22300A30AAB /* Sounds */,
 				07FF3F551E51E44C00625748 /* AppDelegate.swift */,
 				07FF3F5F1E51E44C00625748 /* GameViewController.swift */,
 				F10EF3F81E54D8FD0047EC7F /* Menu UIKit */,
@@ -790,6 +821,7 @@
 				07FE06F91E62FDC900308721 /* emitter_snow.sks in Resources */,
 				07DD16991E5F2B2E00A46084 /* owlFoot.png in Resources */,
 				07F155841E5C5EE600D2127E /* plaque.png in Resources */,
+				07F5A5541E63A4B300A30AAB /* five.mp3 in Resources */,
 				07DEA58C1E539071007F4EEC /* CountingGame.sks in Resources */,
 				075666B11E5A41180009FE7A /* number2.png in Resources */,
 				F16972C51E5E085500B3F196 /* NumbersGame.sks in Resources */,
@@ -798,6 +830,7 @@
 				07E37BF51E60D5A90069ECBE /* pink.png in Resources */,
 				07E37C061E60E1040069ECBE /* body5.png in Resources */,
 				0734C0011E5718B100C1FC4B /* object1.png in Resources */,
+				07F5A5571E63A4B300A30AAB /* three.mp3 in Resources */,
 				07EE6CA51E59B562005EFB78 /* shadowNumber4.png in Resources */,
 				07E37BF41E60D5A90069ECBE /* orange.png in Resources */,
 				0734C0051E5718B100C1FC4B /* object5.png in Resources */,
@@ -826,6 +859,7 @@
 				07E37BE71E60D5860069ECBE /* pinkPencil.png in Resources */,
 				07EE6C9D1E59B504005EFB78 /* number4.png in Resources */,
 				07F155831E5C5EE600D2127E /* bigBoard.png in Resources */,
+				07F5A5551E63A4B300A30AAB /* four.mp3 in Resources */,
 				0734C0171E5718D300C1FC4B /* letter3.png in Resources */,
 				0734C01E1E57211200C1FC4B /* EndGame.sks in Resources */,
 				07FF3F631E51E44C00625748 /* Main.storyboard in Resources */,
@@ -833,10 +867,12 @@
 				07FE06FB1E63029200308721 /* spark.png in Resources */,
 				0734C0201E5721A700C1FC4B /* homeBtn.png in Resources */,
 				0734C00F1E5718C300C1FC4B /* shadow5.png in Resources */,
+				07F5A5561E63A4B300A30AAB /* one.mp3 in Resources */,
 				07EE6C9C1E59B504005EFB78 /* number3.png in Resources */,
 				07FF3F651E51E44C00625748 /* Assets.xcassets in Resources */,
 				0734C0151E5718D300C1FC4B /* letter1.png in Resources */,
 				07E37BE81E60D5860069ECBE /* purplePencil.png in Resources */,
+				07F5A5581E63A4B300A30AAB /* two.mp3 in Resources */,
 				F16972C71E5E086000B3F196 /* ColorsGame.sks in Resources */,
 				0734C0221E5721E100C1FC4B /* restartBtn.png in Resources */,
 				0734C0191E5718D300C1FC4B /* letter5.png in Resources */,

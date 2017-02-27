@@ -12,7 +12,7 @@ class NumbersGame: ActivityScene {
     
     var object: SKSpriteNode?
     var numberBox: SKSpriteNode?
-    var numbers : [Button] = []
+    var numbers : [Button]!
     
     var rightNumber : Int? = nil
 
@@ -25,9 +25,7 @@ class NumbersGame: ActivityScene {
 
         numberBox = childNode(withName: "numberBox") as? SKSpriteNode
 
-        for i in 1...5{
-            numbers.append(childNode(withName: "number\(i)") as! Button)
-        }
+        numbers = self["number*"] as? [Button]
 
         //Criando e adicionando os gestures à view
         createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
@@ -50,10 +48,7 @@ class NumbersGame: ActivityScene {
                 }
                 
                 print("number \(numberOfItems)")
-               // object?.texture = SKTexture(imageNamed: "object\(fullNameArr[1])")
                 numberBox?.texture = SKTexture(imageNamed: selectedNumber)
-                //animação da letra movendo
-                //self.deactivateLettersFocuses()
             }
         }
     }
@@ -121,7 +116,5 @@ class NumbersGame: ActivityScene {
             space?.texture = SKTexture()
             space?.setScale(0)
         }
-        
     }
-
 }
