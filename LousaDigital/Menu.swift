@@ -12,14 +12,15 @@ class Menu: ActivityScene {
     
     var allButtons : [Button]?
     let owl = VoiceManager()
-    var buttonMatching : Button?
+    var colorsButton : Button?
 
     override func didMove(to view: SKView) {
         
         activeScene = self.name
 
         allButtons = self["button*"] as? [Button]
-        allButtons?.first?.buttonDidGetFocus()
+        colorsButton = childNode(withName: "buttonColors") as? Button
+        colorsButton?.buttonDidGetFocus()
 
         setInitialFocus()
         
