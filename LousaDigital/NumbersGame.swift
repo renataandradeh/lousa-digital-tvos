@@ -42,7 +42,7 @@ class NumbersGame: ActivityScene {
         })
 
         //Criando e adicionando os gestures à view
-        createGestures(view: self.view!, actionTouch: #selector(pressedPlay), actionPlay: #selector(pressedPlay))
+        createGestures(view: self.view!, actionPlay: #selector(pressedPlay))
     }
 
     func pressedPlay(){

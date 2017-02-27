@@ -38,12 +38,12 @@ class MatchingGame: ActivityScene {
         letters = self["letter*"] as! [Button]
         
         //Criando e adicionando os gestures à view
-        createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
+        createGestures(view: self.view!, actionPlay: #selector(pressedPlay))
         
     }
     
 
-    func pressedSelect(){
+    override func endSelected(){
         for letter in letters{
             if letter.isFocused && letter.name == "letter\(randomNumber)" {
                 //animação da letra movendo

@@ -22,8 +22,12 @@ class ColorsGame: ActivityScene {
         colorPicture = childNode(withName: "colorPicture") as? SKSpriteNode
         colorPicture?.alpha = 0
         
+        for pencil in pencils {
+            pencil.isFocusable = false
+        }
+        
         //Criando e adicionando os gestures à view
-        self.createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
+        self.createGestures(view: self.view!, actionPlay: #selector(pressedPlay))
         
         //Fala inicial e definição de foco
         let waitFirst = SKAction.wait(forDuration: 1.0)
@@ -31,14 +35,18 @@ class ColorsGame: ActivityScene {
             owl.speak("Now we gonna learn the colors. Press one of the pencils")
         })
         let waitSecond = SKAction.wait(forDuration: 3.75)
-
-        run(SKAction.sequence([waitFirst, speak, waitSecond])){
+        let setFocus = SKAction.run {
+            for pencil in self.pencils {
+                pencil.isFocusable = true
+            }
+        }
+        run(SKAction.sequence([waitFirst, speak, waitSecond, setFocus, waitFirst])){
             //Definindo o primeiro foco
             self.setInitialFocus()
         }
     }
     
-    func pressedSelect(){
+    override func endSelected(){
         colorPicture?.alpha = 0
         for pencil in pencils{
             if pencil.isFocused{

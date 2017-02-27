@@ -47,10 +47,10 @@ class WormGame: ActivityScene {
         setInitialFocus()
         
         //Criando e adicionando os gestures à view
-        createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
+        createGestures(view: self.view!, actionPlay: #selector(pressedPlay))
     }
     
-    func pressedSelect(){
+    override func endSelected(){
         for number in numberBodies{
             let currenteButton = "number\(currentNumber)"
             if number.isFocused && number.name == currenteButton{

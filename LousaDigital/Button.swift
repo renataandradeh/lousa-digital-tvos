@@ -190,8 +190,7 @@ class Button : SKSpriteNode {
         
         self.run(SKAction.group([colorizeSequence, actionSeq]))
     }
-    
-    
+
     override public var canBecomeFocused: Bool {
         get {
             return isFocusable

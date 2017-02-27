@@ -50,7 +50,7 @@ class CountingGame: ActivityScene {
         fillSpacesWithObjects(number: randomAnswer!)
         
         //Criando e adicionando os gestures à view
-        createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedPlay))
+        createGestures(view: self.view!, actionPlay: #selector(pressedPlay))
         
     }
     
@@ -130,22 +130,24 @@ class CountingGame: ActivityScene {
         }
     }
     
-    func pressedSelect(){
+    override func endSelected(){
         for number in (self["number*"] as? [Button])! {
-            if (number.isFocused) && number == answerPosition{
-                deactivateNumbers()
-                number.associatingAnimation(position: (box?.position)!, zPosFinal: 2, activeView: self.view!) {
-                    let wait = SKAction.wait(forDuration: 2.0)
-                    let block = SKAction.run({
-                        self.addChild(self.endGame)
-                    })
-                    self.run(SKAction.sequence([wait, block]), completion:{
-                        self.setNeedsFocusUpdate()
-                        self.updateFocusIfNeeded()
-                    })
+            if (number.isFocused) {
+                if number == answerPosition{
+                    deactivateNumbers()
+                    number.associatingAnimation(position: (box?.position)!, zPosFinal: 2, activeView: self.view!) {
+                        let wait = SKAction.wait(forDuration: 2.0)
+                        let block = SKAction.run({
+                            self.addChild(self.endGame)
+                        })
+                        self.run(SKAction.sequence([wait, block]), completion:{
+                            self.setNeedsFocusUpdate()
+                            self.updateFocusIfNeeded()
+                        })
+                    }
+                }else {
+                    number.associatingWrongAnimation()
                 }
-            }else if(number.isFocused) && number != answerPosition {
-                number.associatingWrongAnimation()
             }
         }
     }

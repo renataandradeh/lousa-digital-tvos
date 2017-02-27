@@ -21,9 +21,9 @@ class ActivityScene: SKScene {
         view.addGestureRecognizer(tapMenu)
     }
     
-    func createGestures(view: SKView, actionTouch: Selector?, actionPlay: Selector?){
+    func createGestures(view: SKView, actionPlay: Selector?){
         //Touch Pressed
-        tapGeneralSelection.addTarget(self, action: actionTouch!)
+        tapGeneralSelection.addTarget(self, action: #selector(pressedSelected))
         tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
         view.addGestureRecognizer(tapGeneralSelection)
         
@@ -37,6 +37,20 @@ class ActivityScene: SKScene {
         tapMenu.allowedPressTypes = [NSNumber (value: UIPressType.menu.rawValue)]
         view.addGestureRecognizer(tapMenu)
     }
+    
+    func pressedSelected(){
+        //anima
+        for child in children{
+            if let button = child as? Button, button.isFocused{
+                button.run(SKAction.sequence([SKAction.scale(by: 0.8, duration: 0.2), SKAction.scale(by: 1.25, duration: 0.2)]))
+            }
+        }
+        run(SKAction.wait(forDuration: 0.4)){
+            self.endSelected()
+        }
+    }
+    
+    func endSelected(){}
     
     func pressedMenu(){
         self.run(SKAction.run {

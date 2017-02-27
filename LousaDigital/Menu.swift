@@ -24,10 +24,12 @@ class Menu: ActivityScene {
 
         setInitialFocus()
         
-        createGestures(view: self.view!, actionTouch: #selector(pressedSelect), actionPlay: #selector(pressedSelect))
+        createGestures(view: self.view!, actionPlay: #selector(pressedPlay))
     }
     
-    func pressedSelect(){
+    func pressedPlay(){}
+    
+    override func endSelected(){
         for button in allButtons!{
             if button.isFocused{
                 switch button.name! {

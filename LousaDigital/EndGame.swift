@@ -11,7 +11,6 @@ import SpriteKit
 class EndGame: SKNode {
     
     let tapGeneralSelection = UITapGestureRecognizer()
-    let tapPlayPause = UITapGestureRecognizer()
     var background : SKSpriteNode!
     var endScreen : SKSpriteNode!
     var restart : Button!
@@ -62,14 +61,20 @@ class EndGame: SKNode {
     
     func addedToSuperview() {
         //Touch Pressed
-        tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
+        tapGeneralSelection.addTarget(self, action: #selector(pressedSelected))
         tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
         self.scene!.view?.addGestureRecognizer(tapGeneralSelection)
-        
-        //Tap Play Pause
-        tapPlayPause.addTarget(self, action: #selector(pressedSelect))
-        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-        self.scene!.view?.addGestureRecognizer(tapPlayPause)
+    }
+    
+    func pressedSelected() {
+        for child in endScreen.children{
+            if let button = child as? Button, button.isFocused{
+                button.run(SKAction.sequence([SKAction.scale(by: 0.8, duration: 0.2), SKAction.scale(by: 1.25, duration: 0.2)]))
+            }
+        }
+        run(SKAction.wait(forDuration: 0.4)){
+            self.endSelected()
+        }
     }
     
     private func endScreenAnimation() {
@@ -95,7 +100,7 @@ class EndGame: SKNode {
         self.run(SKAction.sequence([wait, emitting]))
     }
 
-    func pressedSelect(){
+    func endSelected(){
         let selectedScene : SKScene?
         if (self.restart.isFocused){
             guard let sceneName = activeScene else { return }

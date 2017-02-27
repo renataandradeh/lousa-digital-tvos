@@ -25,7 +25,7 @@ class LettersGame: ActivityScene {
         letterBox = childNode(withName: "letterBox") as? SKSpriteNode
         
         //Criando e adicionando os gestures à view
-        self.createGestures(view: self.view!, actionTouch: #selector(pressedPlay), actionPlay: #selector(pressedPlay))
+        self.createGestures(view: self.view!, actionPlay: #selector(pressedPlay))
         
         //Preenchendo um array com todas as letras da cena
         letters = self.scene!["letter1_*"] as! [Button]

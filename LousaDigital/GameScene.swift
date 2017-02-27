@@ -30,18 +30,6 @@ class GameScene: SKScene {
 //        swipeLeftRec.direction = .left
 //        self.view!.addGestureRecognizer(swipeLeftRec)
         //Touch Pressed
-        tapGeneralSelection.addTarget(self, action: #selector(pressedSelect))
-        tapGeneralSelection.allowedPressTypes = [NSNumber (value: UIPressType.select.rawValue)]
-        self.view!.addGestureRecognizer(tapGeneralSelection)
-        //Tap Play Pause
-        tapPlayPause.addTarget(self, action: #selector(pressedSelect))
-        tapPlayPause.allowedPressTypes = [NSNumber (value: UIPressType.playPause.rawValue)]
-        self.view!.addGestureRecognizer(tapPlayPause)
-        
-    }
-    
-    func pressedSelect(){
-
     }
     
     override func update(_ currentTime: TimeInterval) {
