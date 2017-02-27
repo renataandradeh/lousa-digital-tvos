@@ -55,8 +55,8 @@ class LettersGame: ActivityScene {
                 letter.run(SKAction.fadeAlpha(to: 0, duration: 1.0))
             }
         }), SKAction.wait(forDuration: 3.0)])
-        let slowDown = SKAction.run { 
-            self.scene?.run(SKAction.speed(to: 0.75, duration: 0.1))
+        let slowDown = SKAction.run {
+            self.scene?.run(SKAction.speed(to: 0.5, duration: 0))
         }
         let secondMomentActions = SKAction.customAction(withDuration: secondMomentDuration, actionBlock: { (_, _) in
             if let nextLetter = secondLetters.first, !nextLetter.hasActions(), let letterName = nextLetter.name {
