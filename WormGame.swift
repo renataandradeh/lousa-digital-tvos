@@ -66,6 +66,7 @@ class WormGame: ActivityScene {
                     let wait = SKAction.wait(forDuration: 4.0)
                     let block = SKAction.run({
                         self.deactivateNumberFocus()
+                        self.endGame.removeFromParent()
                         self.addChild(self.endGame)
                         self.setNeedsFocusUpdate()
                         self.updateFocusIfNeeded()

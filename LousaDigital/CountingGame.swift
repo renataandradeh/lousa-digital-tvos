@@ -138,6 +138,7 @@ class CountingGame: ActivityScene {
                     number.associatingAnimation(position: (box?.position)!, zPosFinal: 2, activeView: self.view!) {
                         let wait = SKAction.wait(forDuration: 2.0)
                         let block = SKAction.run({
+                            self.endGame.removeFromParent()
                             self.addChild(self.endGame)
                         })
                         self.run(SKAction.sequence([wait, block]), completion:{
