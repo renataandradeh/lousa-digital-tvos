@@ -21,9 +21,6 @@ class LettersGame: ActivityScene {
     
     override func didMove(to: SKView) {
         
-//        //Definindo o primeiro foco
-//        setInitialFocus()
-        
         object = childNode(withName: "object") as? SKSpriteNode
         letterBox = childNode(withName: "letterBox") as? SKSpriteNode
         
@@ -37,6 +34,8 @@ class LettersGame: ActivityScene {
             letter.isFocusable = false
             letter.alpha = 0
         }
+        
+        //Pausando as actions da cena para esperar a fala
         setPauseForChildren(paused: true, afterTime: 0)
         owl.speak("Let's learn the vowels!")
         setPauseForChildren(paused: false, afterTime: 2)
@@ -83,7 +82,6 @@ class LettersGame: ActivityScene {
                 }
             }
             self.run(SKAction.wait(forDuration: 1.0)){
-                //self.letters.first?.buttonDidGetFocus()
                 self.setInitialFocus()
             }
         }
