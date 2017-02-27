@@ -25,7 +25,7 @@ class LettersGame: ActivityScene {
         letterBox = childNode(withName: "letterBox") as? SKSpriteNode
         
         //Criando e adicionando os gestures à view
-        self.createGestures(view: self.view!, actionPlay: #selector(pressedPlay))
+        self.createGestures(view: self.view!, actionPlay: #selector(endSelected))
         
         //Preenchendo um array com todas as letras da cena
         letters = self.scene!["letter1_*"] as! [Button]
@@ -96,7 +96,7 @@ class LettersGame: ActivityScene {
         }
     }
     
-    func pressedPlay(){
+    override func endSelected() {
         for letter in letters{
             if letter.isFocused{
                 owl.speak(ButtonType(buttonName: (letter.name?.replacingOccurrences(of: "1_", with: ""))!).rawValue)

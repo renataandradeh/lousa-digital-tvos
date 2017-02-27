@@ -42,10 +42,10 @@ class NumbersGame: ActivityScene {
         })
 
         //Criando e adicionando os gestures à view
-        createGestures(view: self.view!, actionPlay: #selector(pressedPlay))
+        createGestures(view: self.view!, actionPlay: #selector(endSelected))
     }
 
-    func pressedPlay(){
+    override func endSelected() {
         for number in (self["number*"] as? [Button])! {
             if number.isFocused{
                 owl.speak((number.buttonType?.rawValue)!)
