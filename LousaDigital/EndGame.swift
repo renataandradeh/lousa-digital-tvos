@@ -16,7 +16,6 @@ class EndGame: SKNode {
     var endScreen : SKSpriteNode!
     var restart : Button!
     var home : Button!
-    var owlNode : SKSpriteNode!
     
     var emitterPosition1 : CGPoint?
     var emitterPosition2 : CGPoint?
@@ -33,7 +32,6 @@ class EndGame: SKNode {
         endScreen = background.childNode(withName: "endScreen") as! SKSpriteNode
         restart = endScreen.childNode(withName: "restart") as? Button
         home = endScreen.childNode(withName: "home") as? Button
-        owlNode = background.childNode(withName: "owlNode") as! SKSpriteNode
         
         background.removeFromParent()
         background.alpha = 0
@@ -76,10 +74,8 @@ class EndGame: SKNode {
     
     private func endScreenAnimation() {
         let moveEndScreen = SKAction.moveTo(y: background.size.height/4.5, duration: 0.25)
-        let moveOwl = SKAction.moveTo(y: -(background.size.height/2.9), duration: 0.25)
 
         endScreen.run(moveEndScreen)
-        owlNode.run(moveOwl)
 
         emittingStars()
     }
