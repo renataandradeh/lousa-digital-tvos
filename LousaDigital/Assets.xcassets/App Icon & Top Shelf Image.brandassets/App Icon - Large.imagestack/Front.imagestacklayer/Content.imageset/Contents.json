@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "tv",
+      "filename" : "owl_icon.png",
       "scale" : "1x"
     }
   ],
