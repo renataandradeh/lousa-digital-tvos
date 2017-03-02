@@ -38,11 +38,13 @@ class ActivityScene: SKScene {
         view.addGestureRecognizer(tapMenu)
     }
     
+    let playSound = SKAction.playSoundFileNamed("button click", waitForCompletion: false)
+    
     func pressedSelected(){
         //Anima os botões
         for child in children{
             if let button = child as? Button, button.isFocused{
-                button.run(SKAction.sequence([SKAction.scale(by: 0.8, duration: 0.2), SKAction.scale(by: 1.25, duration: 0.2)]))
+                button.run(SKAction.sequence([SKAction.scale(by: 0.8, duration: 0.2), playSound, SKAction.scale(by: 1.25, duration: 0.2)]))
             }
         }
         run(SKAction.wait(forDuration: 0.4)){
@@ -54,6 +56,7 @@ class ActivityScene: SKScene {
     
     func pressedMenu(){
         self.run(SKAction.run {
+            owl.stopSpeaking()
             self.view?.presentScene(Menu(fileNamed: "Menu"))
         }, withKey: "load")
     }

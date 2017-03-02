@@ -11,7 +11,6 @@ import SpriteKit
 class Menu: ActivityScene {
     
     var allButtons : [Button]?
-    let owl = VoiceManager()
     var colorsButton : Button?
 
     override func didMove(to view: SKView) {
@@ -57,4 +56,6 @@ class Menu: ActivityScene {
             self.view?.presentScene(scene)
         }))
     }
+    
+    
 }
