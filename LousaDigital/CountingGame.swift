@@ -44,6 +44,11 @@ class CountingGame: ActivityScene {
         //Preenchendo a cena com os números
         fillNumbers()
         
+        //Instructions for the game
+        run(SKAction.wait(forDuration: 1.0)){
+            owl.speak("Select the right number!")
+        }
+        
         //Definindo o primeiro foco
         setInitialFocus()
         
