@@ -23,6 +23,11 @@ class MatchingGame: ActivityScene {
         //Setando a cena ativa para facilitar as transições
         activeScene = self.name
         
+        //Instructions for the game
+        run(SKAction.wait(forDuration: 1.0)){
+            owl.speak("Select the number!")
+        }
+        
         //Definindo o primeiro foco
         setInitialFocus()
         

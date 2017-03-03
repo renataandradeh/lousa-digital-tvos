@@ -42,6 +42,11 @@ class WormGame: ActivityScene {
             number.position = (numberPositions[index!])
             randomNumbers.removeFirst()
         }
+       
+        //Instructions for the game
+        run(SKAction.wait(forDuration: 1.0)){
+            owl.speak("Order the numbers!")
+        }
         
         //Definindo o primeiro foco
         setInitialFocus()
