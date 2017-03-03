@@ -25,7 +25,7 @@ class MatchingGame: ActivityScene {
         
         //Instructions for the game
         run(SKAction.wait(forDuration: 1.0)){
-            owl.speak("Select the number!")
+            owl.speak("Select the right letter!")
         }
         
         //Definindo o primeiro foco
