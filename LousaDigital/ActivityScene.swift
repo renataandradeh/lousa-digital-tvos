@@ -8,6 +8,8 @@
 
 import SpriteKit
 
+let soundManager = SoundManager()
+
 class ActivityScene: SKScene {
     
     private let tapGeneralSelection = UITapGestureRecognizer()
@@ -38,6 +40,7 @@ class ActivityScene: SKScene {
         view.addGestureRecognizer(tapMenu)
     }
     
+    //som de clique dos botões
     let playSound = SKAction.playSoundFileNamed("button click", waitForCompletion: false)
     
     func pressedSelected(){

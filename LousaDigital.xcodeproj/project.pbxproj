@@ -33,6 +33,7 @@
 		075666B11E5A41180009FE7A /* number2.png in Resources */ = {isa = PBXBuildFile; fileRef = 075666B01E5A41180009FE7A /* number2.png */; };
 		075666B31E5A41200009FE7A /* shadowNumber2.png in Resources */ = {isa = PBXBuildFile; fileRef = 075666B21E5A41200009FE7A /* shadowNumber2.png */; };
 		075666BB1E5A555F0009FE7A /* number1.png in Resources */ = {isa = PBXBuildFile; fileRef = 075666BA1E5A555F0009FE7A /* number1.png */; };
+		077636571E698F97002ED7B8 /* petit_song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 077636561E698F97002ED7B8 /* petit_song.mp3 */; };
 		077D5B981E5C726F0016EBFC /* numberBody1.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D5B931E5C726F0016EBFC /* numberBody1.png */; };
 		077D5B991E5C726F0016EBFC /* numberBody2.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D5B941E5C726F0016EBFC /* numberBody2.png */; };
 		077D5B9A1E5C726F0016EBFC /* numberBody3.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D5B951E5C726F0016EBFC /* numberBody3.png */; };
@@ -175,6 +176,7 @@
 		075666B01E5A41180009FE7A /* number2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = number2.png; sourceTree = "<group>"; };
 		075666B21E5A41200009FE7A /* shadowNumber2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadowNumber2.png; sourceTree = "<group>"; };
 		075666BA1E5A555F0009FE7A /* number1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = number1.png; sourceTree = "<group>"; };
+		077636561E698F97002ED7B8 /* petit_song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = petit_song.mp3; sourceTree = "<group>"; };
 		077D5B931E5C726F0016EBFC /* numberBody1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numberBody1.png; sourceTree = "<group>"; };
 		077D5B941E5C726F0016EBFC /* numberBody2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numberBody2.png; sourceTree = "<group>"; };
 		077D5B951E5C726F0016EBFC /* numberBody3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numberBody3.png; sourceTree = "<group>"; };
@@ -684,6 +686,7 @@
 		07F5A54D1E63A22300A30AAB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				077636561E698F97002ED7B8 /* petit_song.mp3 */,
 				F16BA4791E68594B00DBDAA1 /* button click.wav */,
 				07F5A54E1E63A22A00A30AAB /* Numbers */,
 			);
@@ -970,6 +973,7 @@
 				F16BA47B1E68594B00DBDAA1 /* button click.wav in Resources */,
 				0734C0201E5721A700C1FC4B /* homeBtn.png in Resources */,
 				07CB5F691E64956400DE42D6 /* wingClosedR.png in Resources */,
+				077636571E698F97002ED7B8 /* petit_song.mp3 in Resources */,
 				071E01F61E68523E00AB3586 /* petit_name.png in Resources */,
 				0734C00F1E5718C300C1FC4B /* shadow5.png in Resources */,
 				07F5A5561E63A4B300A30AAB /* one.mp3 in Resources */,

@@ -20,10 +20,8 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         presentScene(scene: Menu(fileNamed: "Menu")!)
-        
-        
 //        if let view = self.view as! SKView? {
 //            gameScene = GameScene(fileNamed:"GameScene")
 //            if let scene = gameScene, let skView = view as? SKView{

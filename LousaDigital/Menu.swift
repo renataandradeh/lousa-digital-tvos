@@ -12,6 +12,7 @@ class Menu: ActivityScene {
     
     var allButtons : [Button]?
     var colorsButton : Button?
+    let mainSong = SKAudioNode(fileNamed: "petit_song")
 
     override func didMove(to view: SKView) {
         
@@ -24,6 +25,9 @@ class Menu: ActivityScene {
         setInitialFocus()
         
         createGestures(view: self.view!, actionPlay: #selector(pressedPlay))
+
+        addChild(mainSong)
+        mainSong.run(SKAction.play())
     }
     
     func pressedPlay(){}
@@ -52,10 +56,11 @@ class Menu: ActivityScene {
     }
     
     private func presentGame(scene: SKScene){
-        self.run(SKAction.run({
-            self.view?.presentScene(scene)
-        }))
-    }
-    
-    
+        mainSong.run(SKAction.changeVolume(to: 0.5
+            , duration: 0.3)){
+            self.run(SKAction.run({
+                self.view?.presentScene(scene)
+            }))
+        }
+    }  
 }

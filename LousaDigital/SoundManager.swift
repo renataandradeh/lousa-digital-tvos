@@ -18,8 +18,8 @@ class SoundManager {
     
     var sound : SKAction?
     
-    func playSound(named name: String) {
-        sound = SKAction.playSoundFileNamed(name, waitForCompletion: true)
+    func playMainSong() -> SKAction {
+        return (SKAction.playSoundFileNamed("petit_song", waitForCompletion: true))
     }
     
     func stop(){
