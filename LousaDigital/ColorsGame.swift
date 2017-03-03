@@ -32,7 +32,7 @@ class ColorsGame: ActivityScene {
         //Fala inicial e definição de foco
         let waitFirst = SKAction.wait(forDuration: 1.0)
         let speak = SKAction.run({
-            owl.speak("Now we gonna learn the colors. Press one of the pencils")
+            owl.speak("Its time to learn the colors. Press a pencil.")
         })
         let waitSecond = SKAction.wait(forDuration: 3.75)
         let setFocus = SKAction.run {

@@ -94,7 +94,7 @@ class EndGame: SKNode {
                 emitter.position = (i == 1 ? self.emitterPosition1 : self.emitterPosition2)!
             }
             
-            owl.speak("Congratulations! Do you want to try again?")
+            owl.speak("You did it! Good job!")
         })
         colorizeStars()
         self.run(SKAction.sequence([wait, emitting]))
