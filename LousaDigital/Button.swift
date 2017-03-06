@@ -146,7 +146,7 @@ class Button : SKSpriteNode {
             self.zPosition = 100
             let percentage = elapsedTime/CGFloat(actionDuration)
             self.alpha = 1 - percentage/2
-            self.setScale(1 + percentage * maxScale)
+            self.setScale(1.25 + percentage * maxScale)
         })
         let actionScaleDown = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
             self.zPosition = zPosFinal

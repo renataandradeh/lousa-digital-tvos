@@ -86,7 +86,7 @@ class EndGame: SKNode {
     }
  
     private func emittingStars(){
-        let wait = SKAction.wait(forDuration: 3.0)
+        let wait = SKAction.wait(forDuration: 3.25)
         let emitting = SKAction.run({
             for i in 1...2{
                 let emitter = SKEmitterNode(fileNamed: "emitter_stars")!
@@ -131,8 +131,9 @@ class EndGame: SKNode {
     
     func colorizeStars(){
         let scale : CGFloat = 1.5
-        let colorize = SKAction.colorize(with: .yellow, colorBlendFactor: 1, duration: 0.5)
+        let colorize = SKAction.colorize(with: .yellow, colorBlendFactor: 1, duration: 0.25)
         let wait = SKAction.wait(forDuration: 0.5)
+        let playSound = SKAction.playSoundFileNamed("sound_star", waitForCompletion: true)
         
         guard let stars = stars else { return }
         
@@ -152,6 +153,6 @@ class EndGame: SKNode {
             }
         })
         
-        run(SKAction.sequence([colorize1, wait, colorize2, wait, colorize3]))
+        run(SKAction.sequence([colorize1, wait, playSound, colorize2, wait, playSound, colorize3, wait, playSound]))
     }
 }
