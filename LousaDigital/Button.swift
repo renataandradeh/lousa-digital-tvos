@@ -129,7 +129,7 @@ class Button : SKSpriteNode {
             shadow?.zPosition = -1
             
         }else if !isFocused{
-            let decreaseAlpha = SKAction.fadeAlpha(to: 0.5, duration: 0.2)
+            let decreaseAlpha = SKAction.fadeAlpha(to: 0.75, duration: 0.2)
             let scaleDown = SKAction.scale(to: 1.0, duration: 0.2)
             let animation = SKAction.group([decreaseAlpha, scaleDown])
             run(animation, withKey: "buttonAnimation")
