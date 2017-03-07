@@ -9,13 +9,12 @@
 import SpriteKit
 
 class EndGame: SKNode {
-    
     let tapGeneralSelection = UITapGestureRecognizer()
     var background : SKSpriteNode!
     var endScreen : SKSpriteNode!
     var restart : Button!
     var home : Button!
-    
+
     var emitterPosition1 : CGPoint?
     var emitterPosition2 : CGPoint?
     
@@ -52,7 +51,6 @@ class EndGame: SKNode {
         self.background.run(SKAction.fadeIn(withDuration: 1), completion:{
             self.endScreenAnimation()
         })
-
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -133,7 +131,7 @@ class EndGame: SKNode {
         let scale : CGFloat = 1.5
         let colorize = SKAction.colorize(with: .yellow, colorBlendFactor: 1, duration: 0.25)
         let wait = SKAction.wait(forDuration: 0.5)
-        let playSound = SKAction.playSoundFileNamed("sound_star", waitForCompletion: true)
+        let playSoundOneStar = SKAction.playSoundFileNamed("sound_star", waitForCompletion: true)
         
         guard let stars = stars else { return }
         
@@ -153,6 +151,8 @@ class EndGame: SKNode {
             }
         })
         
-        run(SKAction.sequence([colorize1, wait, playSound, colorize2, wait, playSound, colorize3, wait, playSound]))
+        run(SKAction.sequence([colorize1, wait, playSoundOneStar, colorize2, wait, playSoundOneStar, colorize3, wait, playSoundOneStar]), completion:{
+            self.run(SKAction.playSoundFileNamed("sound_brightingStars", waitForCompletion: true))
+        })
     }
 }

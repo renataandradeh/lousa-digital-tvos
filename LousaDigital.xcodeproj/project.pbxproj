@@ -10,6 +10,7 @@
 		071E01F61E68523E00AB3586 /* petit_name.png in Resources */ = {isa = PBXBuildFile; fileRef = 071E01F51E68523E00AB3586 /* petit_name.png */; };
 		071E01FB1E6852E200AB3586 /* LeckerliOne-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 071E01F91E6852E200AB3586 /* LeckerliOne-Regular.otf */; };
 		071E01FC1E6852E200AB3586 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 071E01FA1E6852E200AB3586 /* SIL Open Font License.txt */; };
+		072CA9B61E6EFBE9001CA024 /* sound_brightingStars.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 072CA9B51E6EFBE9001CA024 /* sound_brightingStars.mp3 */; };
 		0734C0011E5718B100C1FC4B /* object1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0734BFFC1E5718B100C1FC4B /* object1.png */; };
 		0734C0021E5718B100C1FC4B /* object2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0734BFFD1E5718B100C1FC4B /* object2.png */; };
 		0734C0031E5718B100C1FC4B /* object3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0734BFFE1E5718B100C1FC4B /* object3.png */; };
@@ -154,6 +155,7 @@
 		071E01F51E68523E00AB3586 /* petit_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petit_name.png; sourceTree = "<group>"; };
 		071E01F91E6852E200AB3586 /* LeckerliOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LeckerliOne-Regular.otf"; sourceTree = "<group>"; };
 		071E01FA1E6852E200AB3586 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		072CA9B51E6EFBE9001CA024 /* sound_brightingStars.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_brightingStars.mp3; sourceTree = "<group>"; };
 		0734BFFC1E5718B100C1FC4B /* object1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object1.png; sourceTree = "<group>"; };
 		0734BFFD1E5718B100C1FC4B /* object2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object2.png; sourceTree = "<group>"; };
 		0734BFFE1E5718B100C1FC4B /* object3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = object3.png; sourceTree = "<group>"; };
@@ -691,6 +693,7 @@
 				0779D49E1E6D945F00D5AE09 /* sound_star.wav */,
 				077636561E698F97002ED7B8 /* petit_song.mp3 */,
 				F16BA4791E68594B00DBDAA1 /* button click.wav */,
+				072CA9B51E6EFBE9001CA024 /* sound_brightingStars.mp3 */,
 				07F5A54E1E63A22A00A30AAB /* Numbers */,
 			);
 			name = Sounds;
@@ -971,6 +974,7 @@
 				0734C0171E5718D300C1FC4B /* letter3.png in Resources */,
 				0734C01E1E57211200C1FC4B /* EndGame.sks in Resources */,
 				07CB5F651E64920200DE42D6 /* wingClosed.png in Resources */,
+				072CA9B61E6EFBE9001CA024 /* sound_brightingStars.mp3 in Resources */,
 				07CB5F661E64920200DE42D6 /* wingLeft.png in Resources */,
 				07FF3F631E51E44C00625748 /* Main.storyboard in Resources */,
 				07FE06FB1E63029200308721 /* spark.png in Resources */,
