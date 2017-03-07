@@ -59,7 +59,7 @@ class Menu: ActivityScene {
         mainSong.run(SKAction.changeVolume(to: 0.5
             , duration: 0.3)){
             self.run(SKAction.run({
-                self.view?.presentScene(scene)
+                self.view?.presentScene(scene, transition: SKTransition.fade(with: .white, duration: 1.0))
             }))
         }
     }  

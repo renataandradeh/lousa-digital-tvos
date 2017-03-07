@@ -34,7 +34,7 @@ class ColorsGame: ActivityScene {
         let speak = SKAction.run({
             owl.speak("Its time to learn the colors. Press a pencil.")
         })
-        let waitSecond = SKAction.wait(forDuration: 3.75)
+        let waitSecond = SKAction.wait(forDuration: 2.25)
         let setFocus = SKAction.run {
             for pencil in self.pencils {
                 pencil.isFocusable = true

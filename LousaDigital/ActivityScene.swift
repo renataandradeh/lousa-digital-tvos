@@ -60,14 +60,16 @@ class ActivityScene: SKScene {
     func pressedMenu(){
         self.run(SKAction.run {
             owl.stopSpeaking()
-            self.view?.presentScene(Menu(fileNamed: "Menu"))
+            self.view?.presentScene(Menu(fileNamed: "Menu")!, transition: SKTransition.fade(with: .white, duration: 1.0))
         }, withKey: "load")
     }
     
     func setInitialFocus(){
-        self.run(SKAction.run{
+        let wait = SKAction.wait(forDuration: 0.25)
+        let setFocus = SKAction.run{
             self.setNeedsFocusUpdate()
             self.updateFocusIfNeeded()
-        }, withKey: "load")
+        }
+        self.run(SKAction.sequence([wait, setFocus]), withKey: "load")
     }
 }
