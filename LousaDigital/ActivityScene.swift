@@ -58,10 +58,14 @@ class ActivityScene: SKScene {
     func endSelected(){}
     
     func pressedMenu(){
-        self.run(SKAction.run {
-            owl.stopSpeaking()
-            self.view?.presentScene(Menu(fileNamed: "Menu")!, transition: SKTransition.fade(with: .white, duration: 1.0))
-        }, withKey: "load")
+        if activeScene == "Menu" {
+            exit(EXIT_SUCCESS)
+        }else{
+            self.run(SKAction.run {
+                owl.stopSpeaking()
+                self.view?.presentScene(Menu(fileNamed: "Menu")!, transition: SKTransition.fade(with: .white, duration: 1.0))
+            }, withKey: "load")
+        }
     }
     
     func setInitialFocus(){

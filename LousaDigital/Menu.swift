@@ -16,6 +16,7 @@ class Menu: ActivityScene {
 
     override func didMove(to view: SKView) {
         
+        //Setando a cena ativa para facilitar as transições
         activeScene = self.name
 
         allButtons = self["button*"] as? [Button]

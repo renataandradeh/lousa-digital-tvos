@@ -14,6 +14,9 @@ class NumbersGame: ActivityScene {
     let totalAnimationTime : TimeInterval = 59
     
     override func didMove(to: SKView) {
+        
+        //Setando a cena ativa para facilitar as transições
+        activeScene = self.name
 
         numbers = self["number*"] as? [Button]
         

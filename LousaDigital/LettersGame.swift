@@ -23,6 +23,9 @@ class LettersGame: ActivityScene {
     
     override func didMove(to: SKView) {
         
+        //Setando a cena ativa para facilitar as transições
+        activeScene = self.name
+        
         object = childNode(withName: "object") as? SKSpriteNode
         letterBox = childNode(withName: "letterBox") as? SKSpriteNode
         
