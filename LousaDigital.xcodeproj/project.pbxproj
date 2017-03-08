@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071221CC1E70515A00D7B0B7 /* sound_blue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 071221C51E70515A00D7B0B7 /* sound_blue.mp3 */; };
+		071221CD1E70515A00D7B0B7 /* sound_green.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 071221C61E70515A00D7B0B7 /* sound_green.mp3 */; };
+		071221CE1E70515A00D7B0B7 /* sound_orangeColor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 071221C71E70515A00D7B0B7 /* sound_orangeColor.mp3 */; };
+		071221CF1E70515A00D7B0B7 /* sound_pink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 071221C81E70515A00D7B0B7 /* sound_pink.mp3 */; };
+		071221D11E70515A00D7B0B7 /* sound_red.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 071221CA1E70515A00D7B0B7 /* sound_red.mp3 */; };
+		071221D21E70515A00D7B0B7 /* sound_yellow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 071221CB1E70515A00D7B0B7 /* sound_yellow.mp3 */; };
+		071221DC1E70562100D7B0B7 /* sound_purple.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 071221DB1E70562100D7B0B7 /* sound_purple.mp3 */; };
 		071E01F61E68523E00AB3586 /* petit_name.png in Resources */ = {isa = PBXBuildFile; fileRef = 071E01F51E68523E00AB3586 /* petit_name.png */; };
 		071E01FB1E6852E200AB3586 /* LeckerliOne-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 071E01F91E6852E200AB3586 /* LeckerliOne-Regular.otf */; };
 		071E01FC1E6852E200AB3586 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 071E01FA1E6852E200AB3586 /* SIL Open Font License.txt */; };
@@ -68,7 +75,6 @@
 		07E37BEA1E60D5860069ECBE /* yellowPencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E37BE31E60D5860069ECBE /* yellowPencil.png */; };
 		07E37BF21E60D5A90069ECBE /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E37BEB1E60D5A90069ECBE /* blue.png */; };
 		07E37BF31E60D5A90069ECBE /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E37BEC1E60D5A90069ECBE /* green.png */; };
-		07E37BF41E60D5A90069ECBE /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E37BED1E60D5A90069ECBE /* orange.png */; };
 		07E37BF51E60D5A90069ECBE /* pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E37BEE1E60D5A90069ECBE /* pink.png */; };
 		07E37BF61E60D5A90069ECBE /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E37BEF1E60D5A90069ECBE /* purple.png */; };
 		07E37BF71E60D5A90069ECBE /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 07E37BF01E60D5A90069ECBE /* red.png */; };
@@ -191,6 +197,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071221C51E70515A00D7B0B7 /* sound_blue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_blue.mp3; sourceTree = "<group>"; };
+		071221C61E70515A00D7B0B7 /* sound_green.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_green.mp3; sourceTree = "<group>"; };
+		071221C71E70515A00D7B0B7 /* sound_orangeColor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_orangeColor.mp3; sourceTree = "<group>"; };
+		071221C81E70515A00D7B0B7 /* sound_pink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_pink.mp3; sourceTree = "<group>"; };
+		071221CA1E70515A00D7B0B7 /* sound_red.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_red.mp3; sourceTree = "<group>"; };
+		071221CB1E70515A00D7B0B7 /* sound_yellow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_yellow.mp3; sourceTree = "<group>"; };
+		071221DB1E70562100D7B0B7 /* sound_purple.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_purple.mp3; sourceTree = "<group>"; };
 		071E01F51E68523E00AB3586 /* petit_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petit_name.png; sourceTree = "<group>"; };
 		071E01F91E6852E200AB3586 /* LeckerliOne-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LeckerliOne-Regular.otf"; sourceTree = "<group>"; };
 		071E01FA1E6852E200AB3586 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
@@ -252,7 +265,6 @@
 		07E37BE31E60D5860069ECBE /* yellowPencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowPencil.png; sourceTree = "<group>"; };
 		07E37BEB1E60D5A90069ECBE /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		07E37BEC1E60D5A90069ECBE /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
-		07E37BED1E60D5A90069ECBE /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
 		07E37BEE1E60D5A90069ECBE /* pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink.png; sourceTree = "<group>"; };
 		07E37BEF1E60D5A90069ECBE /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
 		07E37BF01E60D5A90069ECBE /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
@@ -699,7 +711,6 @@
 			children = (
 				07E37BEB1E60D5A90069ECBE /* blue.png */,
 				07E37BEC1E60D5A90069ECBE /* green.png */,
-				07E37BED1E60D5A90069ECBE /* orange.png */,
 				07E37BEE1E60D5A90069ECBE /* pink.png */,
 				07E37BEF1E60D5A90069ECBE /* purple.png */,
 				07E37BF01E60D5A90069ECBE /* red.png */,
@@ -849,9 +860,24 @@
 			name = SoundNumbers;
 			sourceTree = "<group>";
 		};
+		07F317681E704FD50099E447 /* SoundColors */ = {
+			isa = PBXGroup;
+			children = (
+				071221C51E70515A00D7B0B7 /* sound_blue.mp3 */,
+				071221C61E70515A00D7B0B7 /* sound_green.mp3 */,
+				071221DB1E70562100D7B0B7 /* sound_purple.mp3 */,
+				071221C71E70515A00D7B0B7 /* sound_orangeColor.mp3 */,
+				071221C81E70515A00D7B0B7 /* sound_pink.mp3 */,
+				071221CA1E70515A00D7B0B7 /* sound_red.mp3 */,
+				071221CB1E70515A00D7B0B7 /* sound_yellow.mp3 */,
+			);
+			name = SoundColors;
+			sourceTree = "<group>";
+		};
 		07F5A54D1E63A22300A30AAB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				07F317681E704FD50099E447 /* SoundColors */,
 				077636561E698F97002ED7B8 /* petit_song.mp3 */,
 				07F317531E7043F60099E447 /* SoundNumbers */,
 				07F317161E7041690099E447 /* SoundStars */,
@@ -1062,6 +1088,7 @@
 				07EE6CA31E59B562005EFB78 /* shadowNumber1.png in Resources */,
 				07E3E1671E68A2BF008A1389 /* thumb_worm.png in Resources */,
 				07EE6CA61E59B562005EFB78 /* shadowNumber5.png in Resources */,
+				071221D11E70515A00D7B0B7 /* sound_red.mp3 in Resources */,
 				07E37BE51E60D5860069ECBE /* greenPencil.png in Resources */,
 				07F3172A1E7041C30099E447 /* sound_umbrella.mp3 in Resources */,
 				07F317461E7042640099E447 /* sound_itstimetolearn.mp3 in Resources */,
@@ -1090,6 +1117,7 @@
 				07F3174B1E7042640099E447 /* sound_orderthenumbers.mp3 in Resources */,
 				07F3174C1E7042640099E447 /* sound_putthenumbercorrectorder.mp3 in Resources */,
 				0734C0021E5718B100C1FC4B /* object2.png in Resources */,
+				071221CE1E70515A00D7B0B7 /* sound_orangeColor.mp3 in Resources */,
 				07F155871E5C6C4C00D2127E /* WormGame.sks in Resources */,
 				07F3174D1E7042640099E447 /* sound_selectanactivity.mp3 in Resources */,
 				07FF3F581E51E44C00625748 /* GameScene.sks in Resources */,
@@ -1098,6 +1126,7 @@
 				077D5B9B1E5C726F0016EBFC /* numberBody4.png in Resources */,
 				07F3175F1E7044080099E447 /* sound_2.mp3 in Resources */,
 				07EE6CAD1E59BDE1005EFB78 /* star_test.png in Resources */,
+				071221CD1E70515A00D7B0B7 /* sound_green.mp3 in Resources */,
 				07E37C031E60E1040069ECBE /* body2.png in Resources */,
 				078352501E64877600FF0E65 /* owlBody.png in Resources */,
 				07EC7F741E6845AF00483975 /* icon_petit.png in Resources */,
@@ -1108,6 +1137,7 @@
 				07DD16991E5F2B2E00A46084 /* owlFoot.png in Resources */,
 				07F3174F1E7042640099E447 /* sound_selecttherightletter.mp3 in Resources */,
 				07F155841E5C5EE600D2127E /* plaque.png in Resources */,
+				071221DC1E70562100D7B0B7 /* sound_purple.mp3 in Resources */,
 				0783525A1E6489B800FF0E65 /* eye2.png in Resources */,
 				07F5A5541E63A4B300A30AAB /* five.mp3 in Resources */,
 				07F317421E7042640099E447 /* sound_awesome_v3.mp3 in Resources */,
@@ -1116,6 +1146,7 @@
 				F16972C51E5E085500B3F196 /* NumbersGame.sks in Resources */,
 				07F317261E7041C30099E447 /* sound_airplane.mp3 in Resources */,
 				0734C0181E5718D300C1FC4B /* letter4.png in Resources */,
+				071221D21E70515A00D7B0B7 /* sound_yellow.mp3 in Resources */,
 				07E37BE61E60D5860069ECBE /* orangePencil.png in Resources */,
 				07E37BF51E60D5A90069ECBE /* pink.png in Resources */,
 				07F317481E7042640099E447 /* sound_letslearnourletters.mp3 in Resources */,
@@ -1123,7 +1154,6 @@
 				0734C0011E5718B100C1FC4B /* object1.png in Resources */,
 				07F5A5571E63A4B300A30AAB /* three.mp3 in Resources */,
 				07EE6CA51E59B562005EFB78 /* shadowNumber4.png in Resources */,
-				07E37BF41E60D5A90069ECBE /* orange.png in Resources */,
 				07E3E1651E68A2BF008A1389 /* thumb_match.png in Resources */,
 				0779D49F1E6D945F00D5AE09 /* sound_star.wav in Resources */,
 				0734C0051E5718B100C1FC4B /* object5.png in Resources */,
@@ -1150,6 +1180,8 @@
 				07F317201E70419C0099E447 /* sound_u.mp3 in Resources */,
 				07F317441E7042640099E447 /* sound_imwaiting_v2.mp3 in Resources */,
 				07F3171F1E70419C0099E447 /* sound_o.mp3 in Resources */,
+				071221CC1E70515A00D7B0B7 /* sound_blue.mp3 in Resources */,
+				071221CF1E70515A00D7B0B7 /* sound_pink.mp3 in Resources */,
 				07C0B11C1E5785FD001C6733 /* Menu.sks in Resources */,
 				07E37BF71E60D5A90069ECBE /* red.png in Resources */,
 				F16BA4751E6853C300DBDAA1 /* color_thumbnails.png in Resources */,

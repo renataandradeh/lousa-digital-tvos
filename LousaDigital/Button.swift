@@ -24,7 +24,7 @@ enum ButtonType : String {
     case yellowColor = "yellow"
     case pinkColor = "pink"
     case purpleColor = "purple"
-    case orangeColor = "orange"
+    case orangeColor = "orangeColor"
     case redColor = "red"
     case buttonMatching = "Matching Game"
     case buttonCounting = "Counting Game"

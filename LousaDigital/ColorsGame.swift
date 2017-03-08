@@ -31,16 +31,13 @@ class ColorsGame: ActivityScene {
         
         //Fala inicial e definição de foco
         let waitFirst = SKAction.wait(forDuration: 1.0)
-        let speak = SKAction.run({
-            owl.speak("Its time to learn the colors. Press a pencil.")
-        })
-        let waitSecond = SKAction.wait(forDuration: 2.25)
+        let speak = SKAction.playSoundFileNamed("sound_letslearncolors", waitForCompletion: true)
         let setFocus = SKAction.run {
             for pencil in self.pencils {
                 pencil.isFocusable = true
             }
         }
-        run(SKAction.sequence([waitFirst, speak, waitSecond, setFocus, waitFirst])){
+        run(SKAction.sequence([waitFirst, speak, setFocus])){
             //Definindo o primeiro foco
             self.setInitialFocus()
         }
@@ -52,7 +49,8 @@ class ColorsGame: ActivityScene {
             if pencil.isFocused{
                 colorPicture?.texture = SKTexture(imageNamed: (pencil.buttonType?.rawValue)!)
                 colorPicture?.run(SKAction.fadeAlpha(to: 1, duration: 0.5), completion: {
-                    owl.speak((pencil.buttonType?.rawValue)!)
+                    let colorName = "sound_\((pencil.buttonType?.rawValue)!)"
+                    self.run(SKAction.playSoundFileNamed(colorName, waitForCompletion: true))
                 })
             }
         }
@@ -61,7 +59,8 @@ class ColorsGame: ActivityScene {
     func pressedPlay(){
         for pencil in pencils {
             if pencil.isFocused {
-                owl.speak((pencil.buttonType?.rawValue)!)
+                let colorName = "sound_\((pencil.buttonType?.rawValue)!)"
+                run(SKAction.playSoundFileNamed(colorName, waitForCompletion: true))
             }
         }
     }
