@@ -25,7 +25,7 @@ class MatchingGame: ActivityScene {
         
         //Instructions for the game
         run(SKAction.wait(forDuration: 1.0)){
-            owl.speak("Select the right letter!")
+            self.run(SKAction.playSoundFileNamed("sound_selecttherightletter", waitForCompletion: true))
         }
         
         //Definindo o primeiro foco
@@ -76,7 +76,7 @@ class MatchingGame: ActivityScene {
     func pressedPlay(){
         for letter in letters{
             if letter.isFocused{
-                owl.speak((letter.buttonType?.rawValue)!)
+                run(SKAction.playSoundFileNamed((letter.buttonType?.rawValue)!, waitForCompletion: true))
             }
         }
     }
