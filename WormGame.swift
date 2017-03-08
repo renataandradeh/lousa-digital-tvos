@@ -43,9 +43,9 @@ class WormGame: ActivityScene {
             randomNumbers.removeFirst()
         }
        
-        //Instructions for the game
+        //Instruções para a atividade
         run(SKAction.wait(forDuration: 1.0)){
-            owl.speak("Order the numbers!")
+           self.run(SKAction.playSoundFileNamed("sound_orderthenumbers", waitForCompletion: true))
         }
         
         //Definindo o primeiro foco
@@ -92,7 +92,7 @@ class WormGame: ActivityScene {
     func pressedPlay(){
         for number in numberBodies {
             if number.isFocused{
-                owl.speak((number.buttonType?.rawValue)!)
+                run(SKAction.playSoundFileNamed((number.buttonType?.rawValue)!, waitForCompletion: true))
             }
         }
     }
