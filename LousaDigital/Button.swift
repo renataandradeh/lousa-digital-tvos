@@ -9,11 +9,11 @@
 import SpriteKit
 
 enum ButtonType : String {
-    case letterA = "a"
-    case letterE = "e"
-    case letterI = "i"
-    case letterO = "o"
-    case letterU = "u"
+    case letterA = "sound_a"
+    case letterE = "sound_e"
+    case letterI = "sound_i"
+    case letterO = "sound_o"
+    case letterU = "sound_u"
     case number1 = "1"
     case number2 = "2"
     case number3 = "3"
@@ -30,11 +30,11 @@ enum ButtonType : String {
     case buttonCounting = "Counting Game"
     case buttonLetters = "Letters Game"
     case buttonColors = "Colors Game"
-    case letterAObj = "Airplane"
-    case letterEObj = "Elephant"
-    case letterIObj = "Ice Cream"
-    case letterOObj = "Orange"
-    case letterUObj = "Umbrella"
+    case letterAObj = "sound_airplane"
+    case letterEObj = "sound_elephant"
+    case letterIObj = "sound_icecream"
+    case letterOObj = "sound_orange"
+    case letterUObj = "sound_umbrella"
     
     case notDefinedYet = ""
     
