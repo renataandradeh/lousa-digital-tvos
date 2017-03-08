@@ -24,8 +24,13 @@ class NumbersGame: ActivityScene {
         }
         
         //Pausando as actions da cena para esperar a fala
+        scene?.speed = 0.75
+        let speakPhrase = SKAction.playSoundFileNamed("sound_letslearnournumbers", waitForCompletion: true)
+        let wait = SKAction.wait(forDuration: 0.5)
         setPauseForChildren(paused: true, afterTime: 0)
-        owl.speak("Let's learn the numbers!")
+        run(SKAction.sequence([wait, speakPhrase]), completion: {
+            self.scene?.speed = 1.0
+        })
         setPauseForChildren(paused: false, afterTime: 2)
         
         //Aguardando o final de toda a animaçao para mostrar novamente todos os números.
@@ -48,7 +53,7 @@ class NumbersGame: ActivityScene {
     override func endSelected() {
         for number in (self["number*"] as? [Button])! {
             if number.isFocused{
-                owl.speak((number.buttonType?.rawValue)!)
+                self.run(SKAction.playSoundFileNamed((number.buttonType?.rawValue)!, waitForCompletion: true))
             }
         }
     }
