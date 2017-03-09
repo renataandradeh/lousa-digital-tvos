@@ -67,12 +67,13 @@ class EndGame: SKNode {
     }
     
     func pressedSelected() {
+		let playSoundClick = SKAction.playSoundFileNamed("sound_click", waitForCompletion: true)
         for child in endScreen.children{
             if let button = child as? Button, button.isFocused{
-                button.run(SKAction.sequence([SKAction.scale(by: 0.8, duration: 0.2), SKAction.scale(by: 1.25, duration: 0.2)]))
+                button.run(SKAction.sequence([SKAction.scale(by: 0.8, duration: 0.2),playSoundClick, SKAction.scale(by: 1.25, duration: 0.2)]))
             }
         }
-        run(SKAction.wait(forDuration: 0.4)){
+        run(SKAction.wait(forDuration: 0.2)){
             self.endSelected()
         }
     }
