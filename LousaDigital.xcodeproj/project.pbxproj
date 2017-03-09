@@ -177,15 +177,15 @@
 		F1699BA01E5486D60022208D /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1699B9E1E5486D60022208D /* MenuRow.swift */; };
 		F16BA4751E6853C300DBDAA1 /* color_thumbnails.png in Resources */ = {isa = PBXBuildFile; fileRef = F16BA4741E6853C300DBDAA1 /* color_thumbnails.png */; };
 		F16BA47B1E68594B00DBDAA1 /* button click.wav in Resources */ = {isa = PBXBuildFile; fileRef = F16BA4791E68594B00DBDAA1 /* button click.wav */; };
+		F19A0A4C1E717A26007475F6 /* nuvemM.png in Resources */ = {isa = PBXBuildFile; fileRef = F19A0A4B1E717A26007475F6 /* nuvemM.png */; };
+		F19A0A4E1E717A4C007475F6 /* arbustoRosa.png in Resources */ = {isa = PBXBuildFile; fileRef = F19A0A4D1E717A4C007475F6 /* arbustoRosa.png */; };
 		F1C7B9271E704AF500EE2F14 /* arbustoAmarelo.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B91F1E704AF500EE2F14 /* arbustoAmarelo.png */; };
-		F1C7B9281E704AF500EE2F14 /* arbustoRosa.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9201E704AF500EE2F14 /* arbustoRosa.png */; };
 		F1C7B9291E704AF500EE2F14 /* arbustoRosaG.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9211E704AF500EE2F14 /* arbustoRosaG.png */; };
 		F1C7B92A1E704AF500EE2F14 /* arbustoVerde.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9221E704AF500EE2F14 /* arbustoVerde.png */; };
 		F1C7B92B1E704AF500EE2F14 /* arbustoVerdeG.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9231E704AF500EE2F14 /* arbustoVerdeG.png */; };
 		F1C7B92C1E704AF500EE2F14 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9241E704AF500EE2F14 /* back.png */; };
 		F1C7B92D1E704AF500EE2F14 /* Branco.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9251E704AF500EE2F14 /* Branco.png */; };
 		F1C7B92E1E704AF500EE2F14 /* nuvemG.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9261E704AF500EE2F14 /* nuvemG.png */; };
-		F1C7B9311E704E6900EE2F14 /* nuvemM.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B92F1E704E6900EE2F14 /* nuvemM.png */; };
 		F1C7B9321E704E6900EE2F14 /* nuvemP.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9301E704E6900EE2F14 /* nuvemP.png */; };
 		F1D0740A1E5DD9AC0024933D /* LettersGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1D074091E5DD9AC0024933D /* LettersGame.sks */; };
 		F1D0740C1E5DDB290024933D /* LettersGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D0740B1E5DDB290024933D /* LettersGame.swift */; };
@@ -385,6 +385,8 @@
 		F1699B9E1E5486D60022208D /* MenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 		F16BA4741E6853C300DBDAA1 /* color_thumbnails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color_thumbnails.png; sourceTree = "<group>"; };
 		F16BA4791E68594B00DBDAA1 /* button click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button click.wav"; sourceTree = "<group>"; };
+		F19A0A4B1E717A26007475F6 /* nuvemM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuvemM.png; sourceTree = "<group>"; };
+		F19A0A4D1E717A4C007475F6 /* arbustoRosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbustoRosa.png; sourceTree = "<group>"; };
 		F1C7B91F1E704AF500EE2F14 /* arbustoAmarelo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbustoAmarelo.png; sourceTree = "<group>"; };
 		F1C7B9201E704AF500EE2F14 /* arbustoRosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbustoRosa.png; sourceTree = "<group>"; };
 		F1C7B9211E704AF500EE2F14 /* arbustoRosaG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbustoRosaG.png; sourceTree = "<group>"; };
@@ -773,6 +775,8 @@
 			children = (
 				07F155801E5C5EE600D2127E /* bigBoard.png */,
 				F1C7B91F1E704AF500EE2F14 /* arbustoAmarelo.png */,
+				F19A0A4B1E717A26007475F6 /* nuvemM.png */,
+				F19A0A4D1E717A4C007475F6 /* arbustoRosa.png */,
 				F1C7B9201E704AF500EE2F14 /* arbustoRosa.png */,
 				F1C7B9211E704AF500EE2F14 /* arbustoRosaG.png */,
 				F1C7B9221E704AF500EE2F14 /* arbustoVerde.png */,
@@ -1165,6 +1169,7 @@
 				071221CD1E70515A00D7B0B7 /* sound_green.mp3 in Resources */,
 				07E37C031E60E1040069ECBE /* body2.png in Resources */,
 				078352501E64877600FF0E65 /* owlBody.png in Resources */,
+				F19A0A4E1E717A4C007475F6 /* arbustoRosa.png in Resources */,
 				07EC7F741E6845AF00483975 /* icon_petit.png in Resources */,
 				07E37BEA1E60D5860069ECBE /* yellowPencil.png in Resources */,
 				07E37C041E60E1040069ECBE /* body3.png in Resources */,
@@ -1173,6 +1178,7 @@
 				F1C7B92A1E704AF500EE2F14 /* arbustoVerde.png in Resources */,
 				07DD16991E5F2B2E00A46084 /* owlFoot.png in Resources */,
 				07F3174F1E7042640099E447 /* sound_selecttherightletter.mp3 in Resources */,
+				F19A0A4C1E717A26007475F6 /* nuvemM.png in Resources */,
 				07F155841E5C5EE600D2127E /* plaque.png in Resources */,
 				071221DC1E70562100D7B0B7 /* sound_purple.mp3 in Resources */,
 				0783525A1E6489B800FF0E65 /* eye2.png in Resources */,
@@ -1245,8 +1251,7 @@
 				07F3171C1E70419C0099E447 /* sound_a.mp3 in Resources */,
 				072CA9BA1E6F001A001CA024 /* button_home.png in Resources */,
 				07F5A5551E63A4B300A30AAB /* four.mp3 in Resources */,
-				F1C7B9311E704E6900EE2F14 /* nuvemM.png in Resources */,
-				F1C7B9281E704AF500EE2F14 /* arbustoRosa.png in Resources */,
+				07F317511E7042640099E447 /* sound_welldone.mp3 in Resources */,
 				0734C0171E5718D300C1FC4B /* letter3.png in Resources */,
 				0734C01E1E57211200C1FC4B /* EndGame.sks in Resources */,
 				07CB5F651E64920200DE42D6 /* wingClosed.png in Resources */,
