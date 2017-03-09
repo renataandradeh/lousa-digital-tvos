@@ -1475,7 +1475,7 @@
 				DEVELOPMENT_TEAM = B8R742385D;
 				INFOPLIST_FILE = LousaDigital/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bepid.LousaDigital;
+				PRODUCT_BUNDLE_IDENTIFIER = uketeam.petit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1489,7 +1489,7 @@
 				DEVELOPMENT_TEAM = B8R742385D;
 				INFOPLIST_FILE = LousaDigital/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bepid.LousaDigital;
+				PRODUCT_BUNDLE_IDENTIFIER = uketeam.petit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
