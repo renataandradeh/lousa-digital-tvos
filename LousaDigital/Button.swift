@@ -81,7 +81,7 @@ class Button : SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         shadow = SKSpriteNode(texture: self.texture, color: .black, size: self.size)
-        alpha = 0.75
+        alpha = 0.85
         self.buttonType = ButtonType(buttonName: self.name!)
         isUserInteractionEnabled = true
     }
@@ -129,7 +129,7 @@ class Button : SKSpriteNode {
             shadow?.zPosition = -1
             
         }else if !isFocused{
-            let decreaseAlpha = SKAction.fadeAlpha(to: 0.75, duration: 0.2)
+            let decreaseAlpha = SKAction.fadeAlpha(to: 0.85, duration: 0.2)
             let scaleDown = SKAction.scale(to: 1.0, duration: 0.2)
             let animation = SKAction.group([decreaseAlpha, scaleDown])
             run(animation, withKey: "buttonAnimation")
