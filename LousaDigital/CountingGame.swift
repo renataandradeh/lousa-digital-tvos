@@ -45,9 +45,14 @@ class CountingGame: ActivityScene {
         fillNumbers()
         
         //Instruções para a atividade
-        run(SKAction.wait(forDuration: 1.0)){
-            self.run(SKAction.playSoundFileNamed("sound_selectrightnumber", waitForCompletion: true))
+        if name != lastSceneLoaded{
+            run(SKAction.wait(forDuration: 1.0)){
+                self.run(SKAction.playSoundFileNamed("sound_selectrightnumber", waitForCompletion: true))
+            }
         }
+        
+        //Seta a variável que controla qual a última cena carregada para não ficar repetindo as instruções sempre que restartar
+        lastSceneLoaded = scene?.name
         
         //Definindo o primeiro foco
         setInitialFocus()

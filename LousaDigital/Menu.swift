@@ -15,6 +15,8 @@ class Menu: ActivityScene {
     let mainSong = SKAudioNode(fileNamed: "petit_song")
 
     override func didMove(to view: SKView) {
+        //
+        lastSceneLoaded = name
         
         //Setando a cena ativa para facilitar as transições
         activeScene = self.name

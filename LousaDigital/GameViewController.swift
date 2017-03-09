@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 
 var activeScene : String?
+var lastSceneLoaded : String?
 let owl = VoiceManager()
 
 let tapGeneralSelection = UITapGestureRecognizer()

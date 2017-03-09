@@ -11,9 +11,6 @@ import SpriteKit
 let soundManager = SoundManager()
 
 class ActivityScene: SKScene {
-    
-    var didSpeakInstructions = false
-    
     private let tapGeneralSelection = UITapGestureRecognizer()
     private let tapPlayPause = UITapGestureRecognizer()
     private let tapMenu = UITapGestureRecognizer()
@@ -42,8 +39,8 @@ class ActivityScene: SKScene {
         view.addGestureRecognizer(tapMenu)
     }
     
-    //som de clique dos botões
-    let playSound = SKAction.playSoundFileNamed("button click", waitForCompletion: false)
+    //Som de clique dos botões
+    let playSound = SKAction.playSoundFileNamed("sound_click", waitForCompletion: false)
     
     func pressedSelected(){
         //Anima os botões
@@ -52,7 +49,7 @@ class ActivityScene: SKScene {
                 button.run(SKAction.sequence([SKAction.scale(by: 0.8, duration: 0.2), playSound, SKAction.scale(by: 1.25, duration: 0.2)]))
             }
         }
-        run(SKAction.wait(forDuration: 0.4)){
+        run(SKAction.wait(forDuration: 0.2)){
             self.endSelected()
         }
     }

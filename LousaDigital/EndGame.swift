@@ -52,7 +52,7 @@ class EndGame: SKNode {
             self.endScreenAnimation()
         })
         
-        speechs = ["awesome_v1", "goodjob", "welldone", "youdid", "wannatryagain"]
+        speechs = ["awesome_v1", "goodjob", "welldone", "youdid"]
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -86,7 +86,7 @@ class EndGame: SKNode {
     }
  
     private func emittingStars(){
-        let wait = SKAction.wait(forDuration: 3.25)
+        let wait = SKAction.wait(forDuration: 2.0)
         let emitting = SKAction.run({
             for i in 1...2{
                 let emitter = SKEmitterNode(fileNamed: "emitter_stars")!
@@ -132,8 +132,8 @@ class EndGame: SKNode {
     
     func colorizeStars(){
         let scale : CGFloat = 1.5
-        let colorize = SKAction.colorize(with: .yellow, colorBlendFactor: 1, duration: 0.25)
-        let wait = SKAction.wait(forDuration: 0.5)
+        let colorize = SKAction.colorize(with: .yellow, colorBlendFactor: 1, duration: 0.20)
+        let wait = SKAction.wait(forDuration: 0.25)
         let playSoundOneStar = SKAction.playSoundFileNamed("sound_star", waitForCompletion: true)
         
         guard let stars = stars else { return }
