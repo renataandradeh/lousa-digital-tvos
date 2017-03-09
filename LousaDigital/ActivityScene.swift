@@ -12,6 +12,8 @@ let soundManager = SoundManager()
 
 class ActivityScene: SKScene {
     
+    var didSpeakInstructions = false
+    
     private let tapGeneralSelection = UITapGestureRecognizer()
     private let tapPlayPause = UITapGestureRecognizer()
     private let tapMenu = UITapGestureRecognizer()
@@ -62,7 +64,6 @@ class ActivityScene: SKScene {
             exit(EXIT_SUCCESS)
         }else{
             self.run(SKAction.run {
-                owl.stopSpeaking()
                 self.view?.presentScene(Menu(fileNamed: "Menu")!, transition: SKTransition.fade(with: .white, duration: 1.0))
             }, withKey: "load")
         }

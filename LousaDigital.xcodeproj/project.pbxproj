@@ -55,6 +55,8 @@
 		0784C8E81E5DB801007A1D1C /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 0784C8E71E5DB801007A1D1C /* board.png */; };
 		078CCEE41E61ED9800E99544 /* ActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078CCEE31E61ED9800E99544 /* ActivityScene.swift */; };
 		07B1B44F1E70BD2500E6F26C /* sound_e.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07B1B44E1E70BD2500E6F26C /* sound_e.mp3 */; };
+		07B1B4511E70CC4900E6F26C /* sound_rightMatch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07B1B4501E70CC4900E6F26C /* sound_rightMatch.mp3 */; };
+		07B1B4531E70CC7A00E6F26C /* sound_complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07B1B4521E70CC7A00E6F26C /* sound_complete.mp3 */; };
 		07C0B11C1E5785FD001C6733 /* Menu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07C0B11B1E5785FD001C6733 /* Menu.sks */; };
 		07C0B11E1E57868B001C6733 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0B11D1E57868B001C6733 /* Menu.swift */; };
 		07C66B441E54757D00E5A818 /* MatchingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C66B431E54757D00E5A818 /* MatchingGame.swift */; };
@@ -245,6 +247,8 @@
 		0784C8E71E5DB801007A1D1C /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
 		078CCEE31E61ED9800E99544 /* ActivityScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityScene.swift; sourceTree = "<group>"; };
 		07B1B44E1E70BD2500E6F26C /* sound_e.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_e.mp3; sourceTree = "<group>"; };
+		07B1B4501E70CC4900E6F26C /* sound_rightMatch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_rightMatch.mp3; sourceTree = "<group>"; };
+		07B1B4521E70CC7A00E6F26C /* sound_complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound_complete.mp3; sourceTree = "<group>"; };
 		07C0B11B1E5785FD001C6733 /* Menu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Menu.sks; sourceTree = "<group>"; };
 		07C0B11D1E57868B001C6733 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		07C66B431E54757D00E5A818 /* MatchingGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchingGame.swift; sourceTree = "<group>"; };
@@ -829,6 +833,8 @@
 		07F317151E70415B0099E447 /* SoundButtons */ = {
 			isa = PBXGroup;
 			children = (
+				07B1B4501E70CC4900E6F26C /* sound_rightMatch.mp3 */,
+				07B1B4521E70CC7A00E6F26C /* sound_complete.mp3 */,
 				F16BA4791E68594B00DBDAA1 /* button click.wav */,
 			);
 			name = SoundButtons;
@@ -1166,6 +1172,7 @@
 				0734C0161E5718D300C1FC4B /* letter2.png in Resources */,
 				07F317501E7042640099E447 /* sound_wannatryagain.mp3 in Resources */,
 				07FF3F5C1E51E44C00625748 /* Game.xcassets in Resources */,
+				07B1B4531E70CC7A00E6F26C /* sound_complete.mp3 in Resources */,
 				07F317651E7044080099E447 /* sound_8.mp3 in Resources */,
 				07F317661E7044080099E447 /* sound_9.mp3 in Resources */,
 				07E37C0A1E60E1C30069ECBE /* head.png in Resources */,
@@ -1211,6 +1218,7 @@
 				07CB5F661E64920200DE42D6 /* wingLeft.png in Resources */,
 				07FF3F631E51E44C00625748 /* Main.storyboard in Resources */,
 				07FE06FB1E63029200308721 /* spark.png in Resources */,
+				07B1B4511E70CC4900E6F26C /* sound_rightMatch.mp3 in Resources */,
 				F16BA47B1E68594B00DBDAA1 /* button click.wav in Resources */,
 				07CB5F691E64956400DE42D6 /* wingClosedR.png in Resources */,
 				077636571E698F97002ED7B8 /* petit_song.mp3 in Resources */,

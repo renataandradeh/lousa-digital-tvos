@@ -142,6 +142,9 @@ class Button : SKSpriteNode {
         let actionDuration : Double = 0.8
         let maxScale : CGFloat = 2.0
         
+        //som de acerto
+        run(SKAction.playSoundFileNamed("sound_rightMatch", waitForCompletion: false))
+        
         let actionScaleUp = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
             self.zPosition = 100
             let percentage = elapsedTime/CGFloat(actionDuration)

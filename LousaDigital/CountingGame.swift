@@ -46,7 +46,7 @@ class CountingGame: ActivityScene {
         
         //Instruções para a atividade
         run(SKAction.wait(forDuration: 1.0)){
-            self.run(SKAction.playSoundFileNamed("sound_selecttherightnumber", waitForCompletion: true))
+            self.run(SKAction.playSoundFileNamed("sound_selectrightnumber", waitForCompletion: true))
         }
         
         //Definindo o primeiro foco

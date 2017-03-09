@@ -22,10 +22,12 @@ class MatchingGame: ActivityScene {
         
         //Setando a cena ativa para facilitar as transições
         activeScene = self.name
-        
-        //Instructions for the game
-        run(SKAction.wait(forDuration: 1.0)){
-            self.run(SKAction.playSoundFileNamed("sound_selecttherightletter", waitForCompletion: true))
+
+        //Instruções para a atividade
+        if !didSpeakInstructions{
+            run(SKAction.wait(forDuration: 1.0)){
+                self.run(SKAction.playSoundFileNamed("sound_selecttherightletter", waitForCompletion: true))
+            }
         }
         
         //Definindo o primeiro foco
@@ -68,7 +70,6 @@ class MatchingGame: ActivityScene {
             }else if letter.isFocused && letter.name != "letter\(randomNumber)"{
                 //Voz falando: "Try Again!"
                 letter.associatingWrongAnimation()
-                print("errou")
             }
         }
     }
