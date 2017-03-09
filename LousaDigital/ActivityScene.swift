@@ -12,6 +12,8 @@ let soundManager = SoundManager()
 
 class ActivityScene: SKScene {
     
+    var didSpeakInstructions = false
+    
     private let tapGeneralSelection = UITapGestureRecognizer()
     private let tapPlayPause = UITapGestureRecognizer()
     private let tapMenu = UITapGestureRecognizer()
@@ -58,10 +60,13 @@ class ActivityScene: SKScene {
     func endSelected(){}
     
     func pressedMenu(){
-        self.run(SKAction.run {
-            owl.stopSpeaking()
-            self.view?.presentScene(Menu(fileNamed: "Menu")!, transition: SKTransition.fade(with: .white, duration: 1.0))
-        }, withKey: "load")
+        if activeScene == "Menu" {
+            exit(EXIT_SUCCESS)
+        }else{
+            self.run(SKAction.run {
+                self.view?.presentScene(Menu(fileNamed: "Menu")!, transition: SKTransition.fade(with: .white, duration: 1.0))
+            }, withKey: "load")
+        }
     }
     
     func setInitialFocus(){

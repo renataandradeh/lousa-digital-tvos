@@ -20,7 +20,7 @@ class EndGame: SKNode {
     
     var stars : [SKSpriteNode]?
     
-    var shadow : SKSpriteNode?
+    var speechs : [String]!
     
     override init() {
         super.init()
@@ -51,6 +51,8 @@ class EndGame: SKNode {
         self.background.run(SKAction.fadeIn(withDuration: 1), completion:{
             self.endScreenAnimation()
         })
+        
+        speechs = ["awesome_v1", "goodjob", "welldone", "youdid", "wannatryagain"]
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -91,8 +93,9 @@ class EndGame: SKNode {
                 self.endScreen.addChild(emitter)
                 emitter.position = (i == 1 ? self.emitterPosition1 : self.emitterPosition2)!
             }
-            
-            owl.speak("You did it! Good job!")
+            //Fala de encerramento
+            let index = Int(arc4random_uniform(UInt32(self.speechs.count)))
+            self.run(SKAction.playSoundFileNamed("sound_\(self.speechs[index])", waitForCompletion: true))
         })
         colorizeStars()
         self.run(SKAction.sequence([wait, emitting]))

@@ -44,9 +44,9 @@ class CountingGame: ActivityScene {
         //Preenchendo a cena com os números
         fillNumbers()
         
-        //Instructions for the game
+        //Instruções para a atividade
         run(SKAction.wait(forDuration: 1.0)){
-            owl.speak("Select the right number!")
+            self.run(SKAction.playSoundFileNamed("sound_selectrightnumber", waitForCompletion: true))
         }
         
         //Definindo o primeiro foco
@@ -161,7 +161,7 @@ class CountingGame: ActivityScene {
     func pressedPlay(){
         for number in (self["number*"] as? [Button])! {
             if number.isFocused{
-                owl.speak((number.buttonType?.rawValue)!)
+                run(SKAction.playSoundFileNamed((number.buttonType?.rawValue)!, waitForCompletion: true))
             }
         }
     }

@@ -9,32 +9,32 @@
 import SpriteKit
 
 enum ButtonType : String {
-    case letterA = "a"
-    case letterE = "e"
-    case letterI = "i"
-    case letterO = "o"
-    case letterU = "u"
-    case number1 = "1"
-    case number2 = "2"
-    case number3 = "3"
-    case number4 = "4"
-    case number5 = "5"
+    case letterA = "sound_a"
+    case letterE = "sound_e"
+    case letterI = "sound_i"
+    case letterO = "sound_o"
+    case letterU = "sound_u"
+    case number1 = "sound_1"
+    case number2 = "sound_2"
+    case number3 = "sound_3"
+    case number4 = "sound_4"
+    case number5 = "sound_5"
     case blueColor = "blue"
     case greenColor = "green"
     case yellowColor = "yellow"
     case pinkColor = "pink"
     case purpleColor = "purple"
-    case orangeColor = "orange"
+    case orangeColor = "orangeColor"
     case redColor = "red"
     case buttonMatching = "Matching Game"
     case buttonCounting = "Counting Game"
     case buttonLetters = "Letters Game"
     case buttonColors = "Colors Game"
-    case letterAObj = "Airplane"
-    case letterEObj = "Elephant"
-    case letterIObj = "Ice Cream"
-    case letterOObj = "Orange"
-    case letterUObj = "Umbrella"
+    case letterAObj = "sound_airplane"
+    case letterEObj = "sound_elephant"
+    case letterIObj = "sound_icecream"
+    case letterOObj = "sound_orange"
+    case letterUObj = "sound_umbrella"
     
     case notDefinedYet = ""
     
@@ -141,6 +141,9 @@ class Button : SKSpriteNode {
 
         let actionDuration : Double = 0.8
         let maxScale : CGFloat = 2.0
+        
+        //som de acerto
+        run(SKAction.playSoundFileNamed("sound_rightMatch", waitForCompletion: false))
         
         let actionScaleUp = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
             self.zPosition = 100

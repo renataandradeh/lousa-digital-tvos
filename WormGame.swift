@@ -43,9 +43,9 @@ class WormGame: ActivityScene {
             randomNumbers.removeFirst()
         }
        
-        //Instructions for the game
+        //Instruções para a atividade
         run(SKAction.wait(forDuration: 1.0)){
-            owl.speak("Order the numbers!")
+           self.run(SKAction.playSoundFileNamed("sound_putthenumbercorrectorder", waitForCompletion: true))
         }
         
         //Definindo o primeiro foco
@@ -67,8 +67,11 @@ class WormGame: ActivityScene {
                 })
                 
                 if currentNumber == 5 {
+                    let playSoundComplete = SKAction.playSoundFileNamed("sound_complete", waitForCompletion: true)
                     
-                    let wait = SKAction.wait(forDuration: 4.0)
+                    let waitFirst = SKAction.wait(forDuration: 2.0)
+                    let waitSecond = SKAction.wait(forDuration: 2.0)
+
                     let block = SKAction.run({
                         self.deactivateNumberFocus()
                         self.endGame.removeFromParent()
@@ -76,7 +79,7 @@ class WormGame: ActivityScene {
                         self.setNeedsFocusUpdate()
                         self.updateFocusIfNeeded()
                     })
-                    self.run(SKAction.sequence([wait, block]))
+                    self.run(SKAction.sequence([waitFirst, playSoundComplete, waitSecond, block]))
                     
                 }else{
                     number.isFocused = false
@@ -92,7 +95,7 @@ class WormGame: ActivityScene {
     func pressedPlay(){
         for number in numberBodies {
             if number.isFocused{
-                owl.speak((number.buttonType?.rawValue)!)
+                run(SKAction.playSoundFileNamed((number.buttonType?.rawValue)!, waitForCompletion: true))
             }
         }
     }
@@ -102,11 +105,14 @@ class WormGame: ActivityScene {
         let actionDuration : Double = 0.8
         let maxScale : CGFloat = 1.3
         
+        //som de acerto
+        run(SKAction.playSoundFileNamed("sound_rightMatch", waitForCompletion: false))
+        
         let actionScaleUp = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
             number.zPosition = 100
             let percentage = elapsedTime/CGFloat(actionDuration)
             number.alpha = 1 - percentage/2
-            number.setScale(1 + percentage * maxScale)
+            number.setScale(1.25 + percentage * maxScale)
         })
         
         let actionScaleDown = SKAction.customAction(withDuration: actionDuration, actionBlock: { (node, elapsedTime) in
