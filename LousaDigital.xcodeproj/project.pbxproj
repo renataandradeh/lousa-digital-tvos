@@ -130,6 +130,16 @@
 		F1699BA01E5486D60022208D /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1699B9E1E5486D60022208D /* MenuRow.swift */; };
 		F16BA4751E6853C300DBDAA1 /* color_thumbnails.png in Resources */ = {isa = PBXBuildFile; fileRef = F16BA4741E6853C300DBDAA1 /* color_thumbnails.png */; };
 		F16BA47B1E68594B00DBDAA1 /* button click.wav in Resources */ = {isa = PBXBuildFile; fileRef = F16BA4791E68594B00DBDAA1 /* button click.wav */; };
+		F1C7B9271E704AF500EE2F14 /* arbustoAmarelo.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B91F1E704AF500EE2F14 /* arbustoAmarelo.png */; };
+		F1C7B9281E704AF500EE2F14 /* arbustoRosa.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9201E704AF500EE2F14 /* arbustoRosa.png */; };
+		F1C7B9291E704AF500EE2F14 /* arbustoRosaG.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9211E704AF500EE2F14 /* arbustoRosaG.png */; };
+		F1C7B92A1E704AF500EE2F14 /* arbustoVerde.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9221E704AF500EE2F14 /* arbustoVerde.png */; };
+		F1C7B92B1E704AF500EE2F14 /* arbustoVerdeG.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9231E704AF500EE2F14 /* arbustoVerdeG.png */; };
+		F1C7B92C1E704AF500EE2F14 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9241E704AF500EE2F14 /* back.png */; };
+		F1C7B92D1E704AF500EE2F14 /* Branco.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9251E704AF500EE2F14 /* Branco.png */; };
+		F1C7B92E1E704AF500EE2F14 /* nuvemG.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9261E704AF500EE2F14 /* nuvemG.png */; };
+		F1C7B9311E704E6900EE2F14 /* nuvemM.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B92F1E704E6900EE2F14 /* nuvemM.png */; };
+		F1C7B9321E704E6900EE2F14 /* nuvemP.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C7B9301E704E6900EE2F14 /* nuvemP.png */; };
 		F1D0740A1E5DD9AC0024933D /* LettersGame.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1D074091E5DD9AC0024933D /* LettersGame.sks */; };
 		F1D0740C1E5DDB290024933D /* LettersGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D0740B1E5DDB290024933D /* LettersGame.swift */; };
 /* End PBXBuildFile section */
@@ -281,6 +291,16 @@
 		F1699B9E1E5486D60022208D /* MenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 		F16BA4741E6853C300DBDAA1 /* color_thumbnails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color_thumbnails.png; sourceTree = "<group>"; };
 		F16BA4791E68594B00DBDAA1 /* button click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "button click.wav"; sourceTree = "<group>"; };
+		F1C7B91F1E704AF500EE2F14 /* arbustoAmarelo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbustoAmarelo.png; sourceTree = "<group>"; };
+		F1C7B9201E704AF500EE2F14 /* arbustoRosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbustoRosa.png; sourceTree = "<group>"; };
+		F1C7B9211E704AF500EE2F14 /* arbustoRosaG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbustoRosaG.png; sourceTree = "<group>"; };
+		F1C7B9221E704AF500EE2F14 /* arbustoVerde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbustoVerde.png; sourceTree = "<group>"; };
+		F1C7B9231E704AF500EE2F14 /* arbustoVerdeG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arbustoVerdeG.png; sourceTree = "<group>"; };
+		F1C7B9241E704AF500EE2F14 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		F1C7B9251E704AF500EE2F14 /* Branco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Branco.png; sourceTree = "<group>"; };
+		F1C7B9261E704AF500EE2F14 /* nuvemG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuvemG.png; sourceTree = "<group>"; };
+		F1C7B92F1E704E6900EE2F14 /* nuvemM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuvemM.png; sourceTree = "<group>"; };
+		F1C7B9301E704E6900EE2F14 /* nuvemP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuvemP.png; sourceTree = "<group>"; };
 		F1D074091E5DD9AC0024933D /* LettersGame.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LettersGame.sks; sourceTree = "<group>"; };
 		F1D0740B1E5DDB290024933D /* LettersGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LettersGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -659,6 +679,16 @@
 			isa = PBXGroup;
 			children = (
 				07F155801E5C5EE600D2127E /* bigBoard.png */,
+				F1C7B91F1E704AF500EE2F14 /* arbustoAmarelo.png */,
+				F1C7B9201E704AF500EE2F14 /* arbustoRosa.png */,
+				F1C7B9211E704AF500EE2F14 /* arbustoRosaG.png */,
+				F1C7B9221E704AF500EE2F14 /* arbustoVerde.png */,
+				F1C7B9231E704AF500EE2F14 /* arbustoVerdeG.png */,
+				F1C7B9241E704AF500EE2F14 /* back.png */,
+				F1C7B9251E704AF500EE2F14 /* Branco.png */,
+				F1C7B9261E704AF500EE2F14 /* nuvemG.png */,
+				F1C7B92F1E704E6900EE2F14 /* nuvemM.png */,
+				F1C7B9301E704E6900EE2F14 /* nuvemP.png */,
 				07F155811E5C5EE600D2127E /* plaque.png */,
 				0784C8E71E5DB801007A1D1C /* board.png */,
 			);
@@ -846,7 +876,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Renata Gondim Andrade Theóphilo";
 				TargetAttributes = {
 					07FF3F511E51E44C00625748 = {
@@ -926,6 +956,7 @@
 				07E37C041E60E1040069ECBE /* body3.png in Resources */,
 				07FF3F5A1E51E44C00625748 /* Actions.sks in Resources */,
 				07FE06F91E62FDC900308721 /* emitter_snow.sks in Resources */,
+				F1C7B92A1E704AF500EE2F14 /* arbustoVerde.png in Resources */,
 				07DD16991E5F2B2E00A46084 /* owlFoot.png in Resources */,
 				07F155841E5C5EE600D2127E /* plaque.png in Resources */,
 				0783525A1E6489B800FF0E65 /* eye2.png in Resources */,
@@ -944,6 +975,7 @@
 				07E3E1651E68A2BF008A1389 /* thumb_match.png in Resources */,
 				0779D49F1E6D945F00D5AE09 /* sound_star.wav in Resources */,
 				0734C0051E5718B100C1FC4B /* object5.png in Resources */,
+				F1C7B9291E704AF500EE2F14 /* arbustoRosaG.png in Resources */,
 				07E37C051E60E1040069ECBE /* body4.png in Resources */,
 				077D5B981E5C726F0016EBFC /* numberBody1.png in Resources */,
 				07EE6CA41E59B562005EFB78 /* shadowNumber3.png in Resources */,
@@ -958,6 +990,7 @@
 				077D5B9A1E5C726F0016EBFC /* numberBody3.png in Resources */,
 				0734C00C1E5718C300C1FC4B /* shadow2.png in Resources */,
 				07C0B11C1E5785FD001C6733 /* Menu.sks in Resources */,
+				F1C7B9271E704AF500EE2F14 /* arbustoAmarelo.png in Resources */,
 				07E37BF71E60D5A90069ECBE /* red.png in Resources */,
 				F16BA4751E6853C300DBDAA1 /* color_thumbnails.png in Resources */,
 				07E37BF21E60D5A90069ECBE /* blue.png in Resources */,
@@ -968,11 +1001,15 @@
 				0784C8E81E5DB801007A1D1C /* board.png in Resources */,
 				07E3E1691E68A4B3008A1389 /* owl_shadow.png in Resources */,
 				07E37BF61E60D5A90069ECBE /* purple.png in Resources */,
+				F1C7B92B1E704AF500EE2F14 /* arbustoVerdeG.png in Resources */,
+				F1C7B92E1E704AF500EE2F14 /* nuvemG.png in Resources */,
 				07E37BE71E60D5860069ECBE /* pinkPencil.png in Resources */,
 				07EE6C9D1E59B504005EFB78 /* number4.png in Resources */,
 				07F155831E5C5EE600D2127E /* bigBoard.png in Resources */,
 				072CA9BA1E6F001A001CA024 /* button_home.png in Resources */,
 				07F5A5551E63A4B300A30AAB /* four.mp3 in Resources */,
+				F1C7B9311E704E6900EE2F14 /* nuvemM.png in Resources */,
+				F1C7B9281E704AF500EE2F14 /* arbustoRosa.png in Resources */,
 				0734C0171E5718D300C1FC4B /* letter3.png in Resources */,
 				0734C01E1E57211200C1FC4B /* EndGame.sks in Resources */,
 				07CB5F651E64920200DE42D6 /* wingClosed.png in Resources */,
@@ -990,10 +1027,13 @@
 				07FF3F651E51E44C00625748 /* Assets.xcassets in Resources */,
 				0734C0151E5718D300C1FC4B /* letter1.png in Resources */,
 				07E37BE81E60D5860069ECBE /* purplePencil.png in Resources */,
+				F1C7B92D1E704AF500EE2F14 /* Branco.png in Resources */,
 				07F5A5581E63A4B300A30AAB /* two.mp3 in Resources */,
 				F16972C71E5E086000B3F196 /* ColorsGame.sks in Resources */,
 				07E3E1641E68A2BF008A1389 /* thumb_letters.png in Resources */,
 				0734C0191E5718D300C1FC4B /* letter5.png in Resources */,
+				F1C7B92C1E704AF500EE2F14 /* back.png in Resources */,
+				F1C7B9321E704E6900EE2F14 /* nuvemP.png in Resources */,
 				07E3E1661E68A2BF008A1389 /* thumb_numbers.png in Resources */,
 				07CB5F671E64920200DE42D6 /* wingRight.png in Resources */,
 				F1D0740A1E5DD9AC0024933D /* LettersGame.sks in Resources */,
@@ -1104,6 +1144,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1153,6 +1194,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
